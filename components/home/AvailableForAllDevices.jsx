@@ -2,14 +2,13 @@ import React from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import Image from 'next/image';
 
-
 const AvailableForAllDevices = () => {
   return (
     <SectionLayout bg={'bg-[#F8F8F8]'}>
-      <div className='flex flex-col md:flex-row justify-center items-center bg-white md:mx-20 md:my-6 p-5 md:p-16'>
+      <div className='flex flex-col-reverse md:flex-row justify-center items-center bg-white md:mx-20 md:my-6 p-5 md:p-16'>
         <div className={`flex-1`}>
           <h2
-            className={`text-stone-950 font-bold text-3xl md:text-5xl mt-5 mb-2 text-center md:text-left !leading-tight`}
+            className={`text-stone-950 font-bold text-3xl md:text-5xl mt-16 md:mt-5 mb-2 text-center md:text-left !leading-tight`}
           >
             Available <br />
             For All Devices

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Navbar,
   NavbarBrand,
@@ -8,15 +8,24 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Link,
-  Button,
 } from '@nextui-org/react';
 import { LuUser2 } from 'react-icons/lu';
 import { IoCall } from 'react-icons/io5';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function MainNavbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!isDropdownVisible);
+  };
+
+
 
   const menuItems = [
     { title: 'Software', slug: '/software' },
@@ -28,12 +37,14 @@ export default function MainNavbar() {
     <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth='2xl' className='py-4'>
       <NavbarContent>
         <NavbarBrand>
-          <Image
-            src={'/assets/site-logo/swop-logo.png'}
-            alt='Swop Logo'
-            width={140}
-            height={100}
-          />
+          <Link href={'/'}>
+            <Image
+              src={'/assets/site-logo/swop-logo.png'}
+              alt='Swop Logo'
+              width={140}
+              height={100}
+            />
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
@@ -42,17 +53,23 @@ export default function MainNavbar() {
         justify='center'
       >
         <NavbarItem>
-          <Image
-            src={'/assets/site-logo/navicon.png'}
-            alt='Swop Logo'
-            width={40}
-            height={40}
-          />
+          <Link href={'/'}>
+            <Image
+              src={'/assets/site-logo/navicon.png'}
+              alt='Swop Logo'
+              width={40}
+              height={40}
+            />
+          </Link>
         </NavbarItem>
         {menuItems?.map((el, index) => (
           <>
             <NavbarItem>
-              <Link color='foreground' href={el.slug}>
+              <Link
+            
+                href={el.slug}
+                className={`text-md md:text-lg ${pathname === el.slug ? 'text-[#AF97D4]' : ''}`}
+              >
                 {el?.title}
               </Link>
             </NavbarItem>
@@ -61,7 +78,7 @@ export default function MainNavbar() {
       </NavbarContent>
       <NavbarContent justify='end' className='flex items-center'>
         <NavbarItem className='hidden md:block'>
-          <div className='flex items-center gap-x-2 bg-[#F6F6F6] p-2 rounded-full'>
+          <div className='flex items-center gap-x-2 bg-[#F6F6F6] p-2 rounded-full text-md md:text-lg font-semibold'>
             <p>Get Demo</p>
             <div className='bg-[#282828] p-2 rounded-full'>
               <IoCall className='w-5 h-5 text-white' />
@@ -80,7 +97,10 @@ export default function MainNavbar() {
       </NavbarContent>
       <NavbarMenu className='mt-10'>
         {menuItems?.map((el, index) => (
-          <NavbarMenuItem key={index}>
+          <NavbarMenuItem
+            key={index}
+          
+          >
             <Link
               className='w-full text-black text-center'
               href={el?.slug}

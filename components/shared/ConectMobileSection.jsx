@@ -1,76 +1,63 @@
+'use client';
 import React from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import Image from 'next/image';
+import { PiCardsThreeLight } from 'react-icons/pi';
+
+import { IoIosWatch } from 'react-icons/io';
+import { GrTransaction } from 'react-icons/gr';
+import { IoRestaurantOutline, IoCodeSharp } from 'react-icons/io5';
+import { RiChatSettingsLine } from 'react-icons/ri';
 
 const featuresInfoLeft = [
-  {
-    title: 'Share Social Media',
-    text: 'Instantly share your social account in one tap with everyone.',
-  },
-  {
-    title: 'Message',
-    text: 'Instantly connect with friends and family through real-time text communication.',
-  },
-  {
-    title: 'Transactions',
-    text: 'Securely manage and track your financial transactions with ease and precision.',
-  },
-  {
-    title: 'Audio Music',
-    text: 'Easily share your favorite music tracks with friends and connections.',
-  },
+  { icon: IoIosWatch, title: 'Business Cards' },
+  { icon: IoIosWatch, title: 'Wearables' },
+  { icon: GrTransaction, title: 'Transactions' },
 ];
 
 const featuresInfoRight = [
-  {
-    title: 'Share Social Media',
-    text: 'Easily share your favorite music tracks with friends and connections.',
-  },
-  {
-    title: 'Redeem links',
-    text: 'Redeem links seamlessly for accessing exclusive offers and rewards.',
-  },
-  {
-    title: 'Products Sell',
-    text: 'Easily list and sell products to a wide audience effortlessly.',
-  },
-  {
-    title: 'Blog Posts',
-    text: 'Create and share insightful blog posts to engage and inform your audience.',
-  },
+  { icon: IoRestaurantOutline, title: 'Hospitality/Restaurants' },
+  { icon: RiChatSettingsLine, title: 'Customize' },
+  { icon: IoCodeSharp, title: 'Embeddables' },
 ];
+
+const FeatureItem = ({ icon: Icon, title }) => (
+  <div className='p-2 bg-white rounded-full w-40 h-40 flex flex-col items-center justify-center border border-[#737373]'>
+    <Icon className='w-8 h-8 text-[#737373]' />
+    <h2 className='mt-2 text-lg text-[#737373] text-center font-normal'>
+      {title}
+    </h2>
+  </div>
+);
 
 const ConectMobileSection = () => {
   return (
     <SectionLayout>
-      <h2
-        className={`text-stone-950 font-normal text-xl md:text-4xl text-center !leading-none`}
-      >
+      <h2 className='text-stone-950 font-normal text-xl md:text-4xl text-center leading-none'>
         <strong>Hardware</strong> built to connect
         <br /> you with your <strong>customers</strong>.
       </h2>
-
       <p className='text-lg text-stone-950 text-center mt-4 max-w-[700px] mx-auto'>
         Attach your Everything Link to devices to route customers where they
         need to go, keeping everything organized and making it easier to
         generate leads, gather reviews, take payments, offer promotions, and
         more.
       </p>
-
+      <div className='mt-16 mb-12 md:mb-0'>
+        <Image
+          width={120}
+          height={120}
+          src={'/assets/hardware/products/topicon.png'}
+          alt='Link icon'
+          className='mx-auto'
+        />
+      </div>
       <div className='grid grid-cols-1 md:grid-cols-3 items-center justify-between gap-0 md:gap-14 md:mt-10'>
-        <div className={``}>
-          {featuresInfoLeft?.map((el, index) => (
-            <div className='my-10 bg-[#EFEFEF] p-4 rounded-lg' key={index}>
-              <h2 className='mb-2 text-xl text-stone-950 text-center md:text-left font-bold'>
-                {el.title}
-              </h2>
-              <p className='text-lg text-stone-950 text-center md:text-left mt-1'>
-                {el.text}
-              </p>
-            </div>
+        <div className='flex flex-col justify-center gap-10 md:gap-28 mx-auto'>
+          {featuresInfoLeft.map((el, index) => (
+            <FeatureItem key={index} icon={el.icon} title={el.title} />
           ))}
         </div>
-
         <div>
           <Image
             width={400}
@@ -80,17 +67,9 @@ const ConectMobileSection = () => {
             className='mx-auto md:mt-8'
           />
         </div>
-
-        <div className={``}>
-          {featuresInfoRight?.map((el, index) => (
-            <div className='my-10 bg-[#EFEFEF] p-4 rounded-lg' key={index}>
-              <h2 className='mb-2 text-xl text-stone-950 text-center md:text-left font-bold'>
-                {el.title}
-              </h2>
-              <p className='text-lg text-stone-950 text-center md:text-left mt-1'>
-                {el.text}
-              </p>
-            </div>
+        <div className='flex flex-col justify-center gap-10 md:gap-28 mx-auto'>
+          {featuresInfoRight.map((el, index) => (
+            <FeatureItem key={index} icon={el.icon} title={el.title} />
           ))}
         </div>
       </div>

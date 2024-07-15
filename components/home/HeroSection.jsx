@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
-
 const HeroSection = () => {
   const variants = {
     hidden: { opacity: 0, y: 20 },
@@ -15,9 +14,9 @@ const HeroSection = () => {
 
   return (
     <SectionLayout>
-      <div className='grid grid-cols-1 md:grid-cols-2 items-center'>
+      <div className='flex flex-col-reverse md:flex-row items-center'>
         <motion.div
-          className=''
+          className='flex-1'
           initial='hidden'
           animate='visible'
           exit={{ opacity: 0, transition: { duration: 1 } }}
@@ -56,7 +55,7 @@ const HeroSection = () => {
             </Link>
           </motion.div>
         </motion.div>
-        <div className='flex justify-center'>
+        <div className='flex justify-center flex-1'>
           <div>
             <Image
               width={400}
