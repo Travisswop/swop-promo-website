@@ -69,7 +69,7 @@ const DevicesInteraction = () => {
         without the swop app downloaded.
       </p>
 
-      <div className='flex justify-center mt-8 md:mt-0 mx-auto'>
+      <div className='flex justify-center mt-8 md:mt-5 mx-auto'>
         <Link
           href={''}
           className='text-black bg-none hover:bg-black hover:text-white font-medium text-md md:text-lg px-0 md:px-8 py-2 mb-2 flex items-center justify-center rounded-full w-48 bg-[#F5F5F5] mb-6'
