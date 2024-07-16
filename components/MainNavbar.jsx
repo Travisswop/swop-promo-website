@@ -25,8 +25,6 @@ export default function MainNavbar() {
     setDropdownVisible(!isDropdownVisible);
   };
 
-
-
   const menuItems = [
     { title: 'Software', slug: '/software' },
     { title: 'Hardware', slug: '/hardware' },
@@ -34,7 +32,11 @@ export default function MainNavbar() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth='2xl' className='py-4'>
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      maxWidth='2xl'
+      className='py-4 bg-transparent'
+    >
       <NavbarContent>
         <NavbarBrand>
           <Link href={'/'}>
@@ -66,7 +68,6 @@ export default function MainNavbar() {
           <>
             <NavbarItem>
               <Link
-            
                 href={el.slug}
                 className={`text-md md:text-lg ${pathname === el.slug ? 'text-[#AF97D4]' : ''}`}
               >
@@ -97,10 +98,7 @@ export default function MainNavbar() {
       </NavbarContent>
       <NavbarMenu className='mt-10'>
         {menuItems?.map((el, index) => (
-          <NavbarMenuItem
-            key={index}
-          
-          >
+          <NavbarMenuItem key={index}>
             <Link
               className='w-full text-black text-center'
               href={el?.slug}

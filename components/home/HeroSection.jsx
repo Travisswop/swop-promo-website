@@ -14,7 +14,7 @@ const HeroSection = () => {
 
   return (
     <SectionLayout>
-      <div className='flex flex-col-reverse md:flex-row items-center'>
+      <div className='flex flex-col-reverse md:flex-row items-center '>
         <motion.div
           className='flex-1'
           initial='hidden'
