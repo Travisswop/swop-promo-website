@@ -121,11 +121,11 @@ const FaqSection = () => {
   );
   return (
     <SectionLayout>
-      <div className='bg-[#F3F3F3] flex items-center justify-center gap-4 p-4 rounded-md mx-auto w-[750px] text-lg font-semibold '>
+      <div className='bg-[#F3F3F3] flex flex-col md:flex-row items-center justify-center gap-4 p-4 rounded-md mx-auto md:w-[750px] text-md md:text-lg font-semibold '>
         <p>{`Sign up for text and support`}</p>
-        <span>|</span>
+        <span className='hidden md:block'>|</span>
         <p>{`Text ‘SWOP’ to 67839`}</p>
-        <span>|</span>
+        <span className='hidden md:block'>|</span>
         <p>{`Email us: support@swopme.co`}</p>
       </div>
       <h2
