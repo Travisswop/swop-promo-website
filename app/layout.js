@@ -11,16 +11,16 @@ const baloo = Baloo_2({ subsets: ['latin'] });
 export const metadata = {
   title: 'Swop Website',
   description: '',
-  metadataBase: new URL('https://trip-law-new-website.vercel.app'),
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en-US': '/en-USA',
-    },
-  },
-  openGraph: {
-    images: '/opengraph-image.jpg',
-  },
+  // metadataBase: new URL('https://trip-law-new-website.vercel.app'),
+  // alternates: {
+  //   canonical: '/',
+  //   languages: {
+  //     'en-US': '/en-USA',
+  //   },
+  // },
+  // openGraph: {
+  //   images: '/opengraph-image.jpg',
+  // },
 };
 
 export default function RootLayout({ children }) {
