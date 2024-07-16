@@ -16,7 +16,7 @@ const featuresInfoLeft = [
 ];
 
 const featuresInfoRight = [
-  { icon: IoRestaurantOutline, title: 'Hospitality/Restaurants' },
+  { icon: IoRestaurantOutline, title: 'Hospitality' },
   { icon: RiChatSettingsLine, title: 'Customize' },
   { icon: IoCodeSharp, title: 'Embeddables' },
 ];
