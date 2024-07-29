@@ -1,19 +1,19 @@
 import AvailableForAllDevices from '@/components/home/AvailableForAllDevices';
-import DashboardFlow from '@/components/home/DashboardFlow';
+import DashboardSwoppleSection from '@/components/home/DashboardSwoppleSection';
 import FeaturesSection from '@/components/home/FeaturesSection';
 import HeroSection from '@/components/home/HeroSection';
 import LinkSection from '@/components/home/LinkSection';
-import SwoppleSection from '@/components/home/SwoppleSection';
 
 export default function Home() {
   return (
     <main className='w-full'>
-      <HeroSection />
-      <LinkSection />
-      <DashboardFlow />
-      <SwoppleSection />
-      <FeaturesSection />
-      <AvailableForAllDevices />
+      <div className=''>
+        <HeroSection />
+        <LinkSection />
+        <DashboardSwoppleSection />
+        <FeaturesSection />
+        <AvailableForAllDevices />
+      </div>
     </main>
   );
 }

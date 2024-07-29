@@ -2,12 +2,14 @@ import React from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import Image from 'next/image';
 import Link from 'next/link';
+import ProductCards from './ProductCards';
 
 const productInfo = [
   {
     size: '20mm',
     img: '/assets/hardware/products/business-cards.png',
     title: 'Business Cards',
+    slug: 'business-cards',
     decs: `Crafted for durability on textiles. These Tags have
             a re-enforced flange for sewing into garments,
             textiles, and fabrics. They are also waterproof.`,
@@ -16,6 +18,7 @@ const productInfo = [
     size: '30mm',
     img: '/assets/hardware/products/wearables.png',
     title: 'Wearables',
+    slug: 'wearables',
     decs: `Ideal for curved surfaces. Bonds firmly to metal,
           plastic, paper, and glass, offering a sleek profile
           for subtle integration.`,
@@ -25,6 +28,7 @@ const productInfo = [
     size: '30mm',
     img: '/assets/hardware/products/restaurants.png',
     title: 'Restaurants',
+    slug: 'restaurants',
     decs: `Offers a prominent branding space for flat
           surfaces, ideal for use on books, packaging, and
           stationary items.`,
@@ -33,6 +37,7 @@ const productInfo = [
     size: '20mm',
     img: '/assets/hardware/products/customize.png',
     title: 'Customize',
+    slug: 'customize',
     decs: `Crafted for durability on textiles. These Tags have
           a re-enforced flange for sewing into garments,
           textiles, and fabrics. They are also waterproof.`,
@@ -41,6 +46,7 @@ const productInfo = [
     size: '20mm',
     img: '/assets/hardware/products/embeddables.png',
     title: 'Transactions',
+    slug: 'transactions',
     decs: `Crafted for durability on textiles. These Tags have
           a re-enforced flange for sewing into garments,
           textiles, and fabrics. They are also waterproof.`,
@@ -49,6 +55,7 @@ const productInfo = [
     size: '20mm',
     img: '/assets/hardware/products/embeddables.png',
     title: 'Embeddables',
+    slug: 'embeddables',
     decs: `Crafted for durability on textiles. These Tags have
             a re-enforced flange for sewing into garments,
             textiles, and fabrics. They are also waterproof.`,
@@ -78,7 +85,11 @@ const DevicesInteraction = () => {
         </Link>
       </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-3 items-center justify-between gap-10 md:gap-14 md:mt-10'>
+      <div className='mt-8'>
+        <ProductCards productList={productInfo} />
+      </div>
+
+      {/* <div className='grid grid-cols-1 md:grid-cols-3 items-center justify-between gap-10 md:gap-14 md:mt-10'>
         {productInfo?.map((el, index) => (
           <div key={index} className='bg-[#F5F5F5] p-5 rounded-xl'>
             <p className='text-lg text-stone-950 text-center mt-4 max-w-[600px] mx-auto'>
@@ -100,7 +111,7 @@ const DevicesInteraction = () => {
             <p className='text-lg text-stone-950 text-center mt-1'>{el.decs}</p>
           </div>
         ))}
-      </div>
+      </div> */}
     </SectionLayout>
   );
 };

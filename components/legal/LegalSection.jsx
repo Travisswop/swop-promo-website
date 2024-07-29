@@ -12,7 +12,7 @@ const LegalSection = () => {
   return (
     <SectionLayout>
       <h2
-        className={`text-stone-950 font-normal text-xl md:text-4xl text-center !leading-none`}
+        className={`text-stone-950 font-normal text-2xl md:text-4xl text-center !leading-none`}
       >
         <strong>Legal</strong>
       </h2>
@@ -22,27 +22,28 @@ const LegalSection = () => {
         chance to grow with us. Find your perfect job and start making an impact
         today.
       </p>
-      <div className='md:mx-32 mt-16 mx-auto'>
+      <div className='md:mx-32 mt-10 mx-auto'>
         <div className='flex flex-wrap gap-4 justify-center'>
           <Tabs
             aria-label='Options'
             selectedKey={selected}
             onSelectionChange={setSelected}
             variant='underlined'
+            className='bg-transparent'
           >
             <Tab
               key='privacy-policy'
               title='Privacy Policy'
               className='text-md md:text-xl'
             >
-              <Card className='border-none shadow-none'>
+              <Card className='border-none shadow-none p-0 md:p-5'>
                 <CardBody>
                   <PrivacyAndPolicy />
                 </CardBody>
               </Card>
             </Tab>
             <Tab key='returns' title='Returns' className='text-md md:text-xl'>
-              <Card className='border-none shadow-none'>
+              <Card className='border-none shadow-none p-0 md:p-5'>
                 <CardBody>
                   <Returns />
                 </CardBody>
@@ -53,7 +54,7 @@ const LegalSection = () => {
               title='Terms & Conditions'
               className='text-md md:text-xl'
             >
-              <Card className='border-none shadow-none'>
+              <Card className='border-none shadow-none p-0 md:p-5'>
                 <CardBody>
                   <TermsAndConditions />
                 </CardBody>

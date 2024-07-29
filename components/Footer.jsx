@@ -29,7 +29,7 @@ const Footer = () => {
                 </Link>
               </div>
               <div className='flex flex-1 justify-center'>
-                <ul className='text-black font-normal text-base list-none ml-0 flex flex-col md:flex-row items-center justify-center text-center'>
+                <ul className='text-black font-normal text-md md:text-lg list-none ml-0 flex flex-col md:flex-row items-center justify-center text-center'>
                   {SITECONFIG?.footer?.quick_links?.map((el, index) => (
                     <li className='mb-4 flex items-center ' key={index}>
                       <Link href={el.slug} className='hover:underline'>
@@ -52,7 +52,7 @@ const Footer = () => {
                     alt='Swop QR COde'
                     className=''
                   />
-                  <p className='text-black font-normal text-base text-center w-28'>
+                  <p className='text-black font-normal text-md md:text-lg text-center w-28'>
                     Scan To Get The App
                   </p>
                 </div>
@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
           <hr className='my-6 border-gray-600 sm:mx-auto dark:border-gray-700 lg:my-8' />
           <div className='flex flex-col md:flex-row items-center justify-center md:justify-between'>
-            <p className='text-black font-normal text-base text-center mb-4 md:mb-0'>
+            <p className='text-black font-normal text-md md:text-lg text-center mb-4 md:mb-0'>
               ©2024 Swop ®All Rights Reserved.
             </p>
             <div className='flex items-center gap-x-2'>

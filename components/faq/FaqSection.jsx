@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import parse from 'html-react-parser';
 import { Accordion, AccordionItem, TableHeader } from '@nextui-org/react';
 import SectionLayout from '../shared/SectionLayout';
+import FaqSilder from './FaqSilder';
 
 const generalInfo = [
   {
@@ -144,14 +145,23 @@ const FaqSection = () => {
       >
         <strong>{`Frequently Asked Questions (FAQ)`}</strong>
       </h2>
-      <div className='mx-6 md:mx-32 mt-16'>
+      <div className='mx-6 md:mx-32 mt-8 md:mt-12'>
+        <FaqSilder />
+      </div>
+
+      <div className='mx-6 md:mx-32 mt-8 md:mt-16 '>
         <Accordion
-          className='border-2 shadow-lg p-10 rounded-lg'
+          className='border-2 shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5'
           // style={{ border: '1px solid red' }}
         >
           <AccordionItem
             aria-label='Accordion 1'
-            title={'Troubleshooting SWOP'}
+            title={
+              <strong className='text-xl md:text-2xl font-bold'>
+                Troubleshooting SWOP
+              </strong>
+            }
+            className='text-[18px] md:text-lg '
           >
             {`We warmly welcome you to SWOP, when you come to SWOP, For Near-field
             Communication Related Process and functions, we collect your
@@ -162,63 +172,80 @@ const FaqSection = () => {
           </AccordionItem>
         </Accordion>
       </div>
-      <div className='mx-6 md:mx-32 mt-16 border-2 shadow-lg p-10 rounded-lg'>
-        <h1 className='text-2xl font-bold ml-2'>
+      <div className='mx-6 md:mx-32 mt-16 border-2 shadow-lg rounded-lg'>
+        <h1 className='text-2xl font-bold ml-1 !px-5 !md:px-10 mt-6'>
           General <span>💎</span>
         </h1>
         <Accordion
           selectedKeys={generalSlectedKeys}
           onSelectionChange={setGeneralSelectedKeys}
-          className='border-none'
+          className='shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5'
           // style={{ border: '1px solid red' }}
         >
           {generalInfo?.map((el, index) => (
             <AccordionItem
               key={el.id}
               aria-label='Accordion 1'
-              title={el.jobTitle}
+              title={
+                <div className='text-xl md:text-[22px] font-medium'>
+                  {el.jobTitle}
+                </div>
+              }
+              className='text-[18px] md:text-lg '
             >
               {parse(el.jobDesc)}
             </AccordionItem>
           ))}
         </Accordion>
       </div>
-      <div className='mx-6 md:mx-32 mt-16 border-2 shadow-lg p-10 rounded-lg'>
-        <h1 className='text-2xl font-bold ml-2'>
+
+      <div className='mx-6 md:mx-32 mt-16 border-2 shadow-lg rounded-lg'>
+        <h1 className='text-2xl font-bold ml-1 !px-5 !md:px-10 mt-6'>
           Compatibility <span>🤝</span>
         </h1>
         <Accordion
           selectedKeys={compatibilitySelectedKeys}
           onSelectionChange={setCompatibilitySelectedKeys}
-          className='border-none'
+          className='shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5'
           // style={{ border: '1px solid red' }}
         >
           {compatibilityInfo?.map((el, index) => (
             <AccordionItem
               key={el.id}
               aria-label='Accordion 1'
-              title={el.jobTitle}
+              title={
+                <div className='text-xl md:text-[22px] font-medium'>
+                  {el.jobTitle}
+                </div>
+              }
+              className='text-[18px] md:text-lg '
             >
               {parse(el.jobDesc)}
             </AccordionItem>
           ))}
         </Accordion>
       </div>
-      <div className='mx-6 md:mx-32 mt-16 border-2 shadow-lg p-10 rounded-lg'>
-        <h1 className='text-2xl font-bold ml-2'>
+
+      <div className='mx-6 md:mx-32 mt-16 border-2 shadow-lg rounded-lg'>
+        <h1 className='text-2xl font-bold ml-1 !px-5 !md:px-10 mt-6'>
           Shipping <span>🚚</span>
         </h1>
         <Accordion
           selectedKeys={sahippingSlectedKeys}
           onSelectionChange={setShippingSelectedKeys}
-          className='border-none'
+          className='shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5'
           // style={{ border: '1px solid red' }}
         >
           {sahippingInfo?.map((el, index) => (
             <AccordionItem
               key={el.id}
               aria-label='Accordion 1'
-              title={el.jobTitle}
+              title={
+                <div className='text-xl md:text-[22px] font-medium'>
+                  {el.jobTitle}
+                </div>
+              }
+              className='text-[18px] md:text-lg '
             >
               {parse(el.jobDesc)}
             </AccordionItem>

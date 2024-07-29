@@ -31,7 +31,7 @@ const SwoppleSection = () => {
   return (
     <SectionLayout>
       <h2
-        className={`text-stone-950 font-medium text-xl md:text-3xl mt-5 mb-14 text-center leading-normal `}
+        className={`text-stone-950 font-medium text-2xl md:text-4xl mt-5 mb-14 text-center leading-normal `}
       >
         Earn
         <strong> Swopple </strong>
@@ -68,14 +68,14 @@ const SwoppleSection = () => {
           </div>
         ))}
       </div>
-      <dir className='flex justify-center mt-8'>
+      <div className='flex justify-center mx-auto'>
         <Link
           href={''}
-          className='text-black bg-none hover:bg-black hover:text-white font-medium text-sm md:text-lg px-2 md:px-8 py-2 me-0 md:me-6 mb-2 border-2 border-black items-center justify-center flex rounded-xl w-48'
+          className='text-black bg-none hover:bg-black hover:text-white font-medium text-sm md:text-lg px-2 md:px-8 py-2 mb-2 border-2 border-black items-center justify-center flex rounded-xl w-[45%] md:w-[13%] mx-auto'
         >
           Learn More
         </Link>
-      </dir>
+      </div>
     </SectionLayout>
   );
 };

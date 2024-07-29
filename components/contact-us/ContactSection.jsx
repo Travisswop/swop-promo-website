@@ -90,9 +90,9 @@ const ContactSection = () => {
   };
 
   return (
-    <SectionLayout bg='bg-white'>
+    <SectionLayout>
       <h2
-        className={`text-stone-950 font-normal text-xl md:text-4xl text-center !leading-none`}
+        className={`text-stone-950 font-normal text-2xl md:text-4xl text-center !leading-none`}
       >
         <strong>Have Some Questions?</strong>
       </h2>
@@ -101,9 +101,9 @@ const ContactSection = () => {
         {`The NFC hype isn’t what it once was, but it’s still a handy feature you
         should take advantage of, or at least get to know. The NFC hype isn’t`}
       </p>
-      <div className='grid grid-cols-1 lg:grid-cols-2 md:gap-x-10 gap-x-0 items-center mt-20'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 md:gap-x-10 gap-x-0 items-center mt-12 md:mt-20'>
         <div className='flex space-y-4 justify-center'>
-          <div className=''>
+          <div className='w-[300px] md:w-[400px] h-auto'>
             <Image
               width={400}
               height={400}
@@ -112,7 +112,7 @@ const ContactSection = () => {
             />
           </div>
         </div>
-        <div className='flex flex-col mt-12 md:mt-0 p-8'>
+        <div className='flex flex-col mt-6 md:mt-0 p-8'>
           <form className='w-full' onSubmit={handleSubmit}>
             <div class='mb-6 w-full'>
               <input

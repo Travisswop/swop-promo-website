@@ -28,12 +28,17 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={baloo.className}>
         <Providers>
-          <div className='text-black bg-white overflow-x-hidden'>
-            <MainNavbar />
-            {children}
-            <Analytics />
-            <SpeedInsights />
-            <Footer />
+          <div className='relative'>
+            {/* Background mash gradient */}
+            <div className='gradient-circle-top absolute top-[-150px] left-[-800px] w-[100%] h-[1020px] z-1' />
+            <div className='text-black overflow-x-hidden'>
+              <MainNavbar />
+              {/* Main Body Data */}
+              <div className='relative z-10'>{children}</div>
+              <Analytics />
+              <SpeedInsights />
+              <Footer />
+            </div>
           </div>
         </Providers>
       </body>

@@ -51,7 +51,7 @@ const LinkSection = () => {
   return (
     <SectionLayout>
       <h2
-        className={`text-stone-950 font-medium text-xl md:text-3xl mt-5 mb-4 text-center !leading-normal`}
+        className={`text-stone-950 font-medium text-2xl md:text-4xl text-center !leading-normal`}
       >
         One{' '}
         <>
@@ -61,7 +61,7 @@ const LinkSection = () => {
         Of Your Interactions
       </h2>
 
-      <div className='grid grid-cols-1 md:grid-cols-3 items-start justify-between gap-14 mt-24'>
+      <div className='grid grid-cols-1 md:grid-cols-3 items-start justify-between gap-14 mt-10 md:mt-24'>
         {linkInfo?.map((el, index) => (
           <div key={index}>
             <div
@@ -75,7 +75,7 @@ const LinkSection = () => {
                 className='mx-auto'
               />
             </div>
-            <p className='mb-4 text-lg text-stone-950 text-center mt-6'>
+            <p className='mb-4 text-xl md:text-[20px] text-stone-950 text-center mt-6'>
               <span className={`${el.textColor}`}> {el.highlightText}</span>{' '}
               {el.text}
             </p>

@@ -40,7 +40,7 @@ const jobsPostInfo = [
   <td style="width: 145.75px;"><strong>&nbsp;Mid Level</strong></td>
   <td style="width: 145.75px;"><strong>&nbsp;Full Time</strong></td>
   <td style="width: 145.75px;"><strong>&nbsp;Engineering</strong></td>
-  <td style="width: 145.75px;"><strong>&nbsp;$ 50K - $80K / Yearly</strong></td>
+  <td style="width: 180px;"><strong>&nbsp;$ 50K - $80K / Yearly</strong></td>
   </tr>
   </tbody>
   </table>
@@ -81,7 +81,7 @@ const jobsPostInfo = [
   <td style="width: 145.75px;"><strong>&nbsp;Mid Level</strong></td>
   <td style="width: 145.75px;"><strong>&nbsp;Full Time</strong></td>
   <td style="width: 145.75px;"><strong>&nbsp;Engineering</strong></td>
-  <td style="width: 145.75px;"><strong>&nbsp;$ 50K - $80K / Yearly</strong></td>
+  <td style="width: 180px;"><strong>&nbsp;$ 50K - $80K / Yearly</strong></td>
   </tr>
   </tbody>
   </table>
@@ -122,7 +122,7 @@ const jobsPostInfo = [
   <td style="width: 145.75px;"><strong>&nbsp;Mid Level</strong></td>
   <td style="width: 145.75px;"><strong>&nbsp;Full Time</strong></td>
   <td style="width: 145.75px;"><strong>&nbsp;Engineering</strong></td>
-  <td style="width: 145.75px;"><strong>&nbsp;$ 50K - $80K / Yearly</strong></td>
+  <td style="width: 180px;"><strong>&nbsp;$ 50K - $80K / Yearly</strong></td>
   </tr>
   </tbody>
   </table>
@@ -151,7 +151,7 @@ const jobsPostInfo = [
   <p>🏆 Competitive salary and benefits</p>
   <p>🚀 Be part of a company that values innovation and excellence</p>
   <p>&nbsp;</p>
-  <table style="height: 72px;" width="611">
+  <table style="height: 72px;" width="700">
   <tbody>
   <tr>
   <td style="width: 145.75px;">&nbsp;Seniority Level</td>
@@ -163,7 +163,7 @@ const jobsPostInfo = [
   <td style="width: 145.75px;"><strong>&nbsp;Mid Level</strong></td>
   <td style="width: 145.75px;"><strong>&nbsp;Full Time</strong></td>
   <td style="width: 145.75px;"><strong>&nbsp;Engineering</strong></td>
-  <td style="width: 145.75px;"><strong>&nbsp;$ 50K - $80K / Yearly</strong></td>
+  <td style="width: 180px;"><strong>&nbsp;$ 50K - $80K / Yearly</strong></td>
   </tr>
   </tbody>
   </table>
@@ -177,28 +177,33 @@ const JobSection = () => {
   return (
     <SectionLayout>
       <h2
-        className={`text-stone-950 font-normal text-xl md:text-4xl text-center !leading-none`}
+        className={`text-stone-950 font-normal text-2xl md:text-4xl text-center !leading-none`}
       >
         <strong>Jobs</strong>
       </h2>
 
-      <p className='text-lg text-stone-950 text-center mt-4 max-w-[620px] mx-auto'>
+      <p className='text-lg md:text-xl text-stone-950 text-center mt-4 max-w-[620px] mx-auto'>
         Discover rewarding career paths, innovative work environments, and the
         chance to grow with us. Find your perfect job and start making an impact
         today.
       </p>
-      <div className='mx-6 md:mx-32 mt-16'>
+      <div className='mx-6 md:mx-32 mt-16 '>
         <Accordion
           selectedKeys={selectedKeys}
           onSelectionChange={setSelectedKeys}
-          className='border-2 shadow-lg p-10 rounded-lg'
+          className='border-2 shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5 bg-white'
           // style={{ border: '1px solid red' }}
         >
           {jobsPostInfo?.map((el, index) => (
             <AccordionItem
               key={el.id}
               aria-label='Accordion 1'
-              title={el.jobTitle}
+              title={
+                <div className='text-xl md:text-[24px] font-medium'>
+                  {el.jobTitle}
+                </div>
+              }
+              className='text-[18px] md:text-lg '
             >
               {parse(el.jobDesc)}
             </AccordionItem>
