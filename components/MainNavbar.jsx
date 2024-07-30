@@ -79,12 +79,15 @@ export default function MainNavbar() {
       </NavbarContent>
       <NavbarContent justify='end' className='flex items-center'>
         <NavbarItem className='hidden md:block'>
-          <div className='flex items-center gap-x-2 bg-[#F6F6F6] p-2 rounded-full text-md md:text-lg font-semibold'>
+          <Link
+            href={'/get-demo'}
+            className='flex items-center gap-x-2 bg-[#F6F6F6] p-2 rounded-full text-md md:text-lg font-semibold'
+          >
             <p>Get Demo</p>
             <div className='bg-[#282828] p-2 rounded-full'>
               <IoCall className='w-5 h-5 text-white' />
             </div>
-          </div>
+          </Link>
         </NavbarItem>
         <NavbarItem className='hidden md:block'>
           <div className='bg-[#F6F6F6] p-3 rounded-full'>

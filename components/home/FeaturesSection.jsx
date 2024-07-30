@@ -60,12 +60,12 @@ const FeaturesSection = () => {
   return (
     <SectionLayout>
       <h2
-        className={`text-stone-950 font-medium text-xl md:text-3xl text-center !leading-normal `}
+        className={`text-stone-950 font-medium text-2xl md:text-4xl text-center !leading-normal `}
       >
         <strong>Features</strong>
       </h2>
 
-      <div className='grid grid-cols-1 md:grid-cols-3 items-center justify-between gap-0 md:gap-14 md:mt-10'>
+      <div className='grid grid-cols-1 md:grid-cols-3 items-center justify-between gap-0 md:gap-14 md:mt-4'>
         <div>
           {featuresInfoLeft?.map((el, index) => (
             <div

@@ -16,20 +16,20 @@ const Footer = () => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-6 justify-center md:justify-between items-center'>
               <div className='flex flex-1 justify-center md:justify-start'>
                 <Link
-                  href='https://trip-law.com'
+                  href='/'
                   className='flex items-center justify-start cursor-pointer'
                 >
                   <Image
-                    width={150}
+                    width={180}
                     height={100}
                     src={'/assets/site-logo/swop-logo.png'}
-                    alt='Trip Low'
+                    alt='Swop'
                     className='object-cover'
                   />
                 </Link>
               </div>
               <div className='flex flex-1 justify-center'>
-                <ul className='text-black font-normal text-md md:text-lg list-none ml-0 flex flex-col md:flex-row items-center justify-center text-center'>
+                <ul className='text-black font-normal text-lg md:text-lg list-none ml-0 flex flex-col md:flex-row items-center justify-center text-center'>
                   {SITECONFIG?.footer?.quick_links?.map((el, index) => (
                     <li className='mb-4 flex items-center ' key={index}>
                       <Link href={el.slug} className='hover:underline'>
