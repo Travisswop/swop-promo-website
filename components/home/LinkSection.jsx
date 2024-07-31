@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import Image from 'next/image';
+import RevealUpMotion from '../motion/RevealUpMotion';
 
 const linkInfo = [
   {
@@ -50,36 +51,40 @@ const linkInfo = [
 const LinkSection = () => {
   return (
     <SectionLayout>
-      <h2
-        className={`text-stone-950 font-medium text-2xl md:text-4xl text-center !leading-normal`}
-      >
-        One{' '}
-        <>
-          <strong>Link</strong>
-        </>{' '}
-        For All <br />
-        Of Your Interactions
-      </h2>
+      <RevealUpMotion>
+        <h2
+          className={`text-stone-950 font-medium text-2xl md:text-4xl text-center !leading-normal`}
+        >
+          One{' '}
+          <>
+            <strong>Link</strong>
+          </>{' '}
+          For All <br />
+          Of Your Interactions
+        </h2>
+      </RevealUpMotion>
 
       <div className='grid grid-cols-1 md:grid-cols-3 items-start justify-between gap-14 mt-10 md:mt-24'>
         {linkInfo?.map((el, index) => (
-          <div key={index}>
-            <div
-              className={`${el.iconColor} rounded-md p-4 w-20 h-20 flex justify-center mx-auto`}
-            >
-              <Image
-                width={60}
-                height={50}
-                src={el.icon}
-                alt='Link icon'
-                className='mx-auto'
-              />
+          <RevealUpMotion key={index}>
+            <div>
+              <div
+                className={`${el.iconColor} rounded-md p-4 w-20 h-20 flex justify-center mx-auto`}
+              >
+                <Image
+                  width={60}
+                  height={50}
+                  src={el.icon}
+                  alt='Link icon'
+                  className='mx-auto'
+                />
+              </div>
+              <p className='mb-4 text-xl md:text-[20px] text-stone-950 text-center mt-6'>
+                <span className={`${el.textColor}`}> {el.highlightText}</span>{' '}
+                {el.text}
+              </p>
             </div>
-            <p className='mb-4 text-xl md:text-[20px] text-stone-950 text-center mt-6'>
-              <span className={`${el.textColor}`}> {el.highlightText}</span>{' '}
-              {el.text}
-            </p>
-          </div>
+          </RevealUpMotion>
         ))}
       </div>
     </SectionLayout>

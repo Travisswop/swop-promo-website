@@ -10,7 +10,7 @@ import {
 import parse from 'html-react-parser';
 import Image from 'next/image';
 import { Mulish, Bitter } from 'next/font/google';
-import CardMotion from '../motion/CardMotion';
+import CardMotion from '../motion/RevealLeftMotion';
 import ServicesButton from './ServicesButton';
 
 const bitter = Bitter({ subsets: ['latin'] });

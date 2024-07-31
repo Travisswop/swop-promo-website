@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import Link from 'next/link';
-import CardMotion from '../motion/CardMotion';
+import CardMotion from '../motion/RevealLeftMotion';
 import Image from 'next/image';
 
 const PageHeroSection = ({ image, title }) => {

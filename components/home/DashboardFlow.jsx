@@ -1,20 +1,23 @@
 import React from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import Image from 'next/image';
+import RevealUpMotion from '../motion/RevealUpMotion';
 
 const DashboardFlow = () => {
   return (
     <SectionLayout>
-      <h2
-        className={`text-stone-950 font-medium text-2xl md:text-4xl mt-5 mb-14 text-center !leading-normal`}
-      >
-        One
-        <>
-          <strong> Dashboard </strong>
-        </>
-        To manage your teams links <br />
-        and entire customer Interaction <strong>flow</strong>
-      </h2>
+      <RevealUpMotion>
+        <h2
+          className={`text-stone-950 font-medium text-2xl md:text-4xl mt-5 mb-14 text-center !leading-normal`}
+        >
+          One
+          <>
+            <strong> Dashboard </strong>
+          </>
+          To manage your teams links <br />
+          and entire customer Interaction <strong>flow</strong>
+        </h2>
+      </RevealUpMotion>
 
       <div className=''>
         <div className={` rounded-md p-4 flex justify-center mx-auto`}>

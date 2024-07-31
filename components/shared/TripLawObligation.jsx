@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React from 'react';
 import SectionLayout from '../shared/SectionLayout';
-import CardMotion from '../motion/CardMotion';
+import CardMotion from '../motion/RevealLeftMotion';
 import { Mulish, Bitter } from 'next/font/google';
 import { motion, AnimatePresence } from 'framer-motion';
 

@@ -135,11 +135,12 @@ const FaqSection = () => {
         <strong>How Can We Help?</strong>
       </h2>
 
-      <p className='text-lg text-stone-950 text-center mt-4 max-w-[620px] mx-auto'>
+      <p className='text-lg text-stone-950 text-center mt-4 max-w-[620px] mx-auto px-6 md:px-0'>
         Discover rewarding career paths, innovative work environments, and the
         chance to grow with us. Find your perfect job and start making an impact
         today.
       </p>
+
       <h2
         className={`text-stone-950 font-normal text-xl md:text-4xl text-center !leading-none mt-10`}
       >
@@ -149,7 +150,7 @@ const FaqSection = () => {
         <FaqSilder />
       </div>
 
-      <div className='mx-6 md:mx-32 mt-8 md:mt-16 '>
+      <div className='mx-6 md:mx-32 mt-8 md:mt-16 bg-white'>
         <Accordion
           className='border-2 shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5'
           // style={{ border: '1px solid red' }}
@@ -172,7 +173,7 @@ const FaqSection = () => {
           </AccordionItem>
         </Accordion>
       </div>
-      <div className='mx-6 md:mx-32 mt-16 border-2 shadow-lg rounded-lg'>
+      <div className='mx-6 md:mx-32 mt-8 md:mt-16 border-2 shadow-lg rounded-lg bg-white'>
         <h1 className='text-2xl font-bold ml-1 !px-5 !md:px-10 mt-6'>
           General <span>💎</span>
         </h1>
@@ -199,7 +200,7 @@ const FaqSection = () => {
         </Accordion>
       </div>
 
-      <div className='mx-6 md:mx-32 mt-16 border-2 shadow-lg rounded-lg'>
+      <div className='mx-6 md:mx-32 mt-8 md:mt-16 border-2 shadow-lg rounded-lg bg-white'>
         <h1 className='text-2xl font-bold ml-1 !px-5 !md:px-10 mt-6'>
           Compatibility <span>🤝</span>
         </h1>
@@ -226,7 +227,7 @@ const FaqSection = () => {
         </Accordion>
       </div>
 
-      <div className='mx-6 md:mx-32 mt-16 border-2 shadow-lg rounded-lg'>
+      <div className='mx-6 md:mx-32 mt-8 md:mt-16 border-2 shadow-lg rounded-lg bg-white'>
         <h1 className='text-2xl font-bold ml-1 !px-5 !md:px-10 mt-6'>
           Shipping <span>🚚</span>
         </h1>

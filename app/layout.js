@@ -28,15 +28,9 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={baloo.className}>
         <Providers>
-          {/* Background mash gradient */}
-          {/* <div className='gradient-circle-top absolute top-[-10px] left-[-800px] w-[100%] h-[1020px] z-1' /> */}
-          {/* <div className='absolute left-[-35%] top-[25%] md:top-[-5%] bottom-0 w-full gradient-circle-top h-[20%] md:h-[25%]' /> */}
-          {/* 
-              <MainNavbar /> */}
-          {/* Main Body Data */}
           <div className='text-black overflow-x-hidden'>
             <MainNavbar />
-            <div className=''>{children}</div>
+            <div className='mt-20'>{children}</div>
             <Analytics />
             <SpeedInsights />
             <Footer />

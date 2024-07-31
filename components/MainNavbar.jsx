@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Navbar,
   NavbarBrand,
@@ -14,16 +14,37 @@ import { IoCall } from 'react-icons/io5';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
+import { CgMenuLeft } from 'react-icons/cg';
+import { IoCloseOutline } from 'react-icons/io5';
+
+const debounce = (func, wait) => {
+  let timeout;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+};
 
 export default function MainNavbar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const router = useRouter();
-  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const [navbarColor, setNavbarColor] = useState(false);
 
-  const toggleDropdown = () => {
-    setDropdownVisible(!isDropdownVisible);
-  };
+  const handleScroll = debounce(() => {
+    if (window.scrollY >= 100) {
+      setNavbarColor(true);
+    } else {
+      setNavbarColor(false);
+    }
+  }, 100);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [handleScroll]);
 
   const menuItems = [
     { title: 'Software', slug: '/software' },
@@ -33,9 +54,10 @@ export default function MainNavbar() {
 
   return (
     <Navbar
+      isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       maxWidth='2xl'
-      className='py-4 bg-transparent'
+      className={`py-0 md:py-2 fixed top-0 transition-colors duration-300 ${navbarColor ? '!bg-white' : 'bg-transparent'}`}
     >
       <NavbarContent>
         <NavbarBrand>
@@ -43,8 +65,9 @@ export default function MainNavbar() {
             <Image
               src={'/assets/site-logo/swop-logo.png'}
               alt='Swop Logo'
-              width={140}
+              width={150}
               height={100}
+              className='w-[90px] md:w-[150px] h-auto'
             />
           </Link>
         </NavbarBrand>
@@ -78,14 +101,14 @@ export default function MainNavbar() {
         ))}
       </NavbarContent>
       <NavbarContent justify='end' className='flex items-center'>
-        <NavbarItem className='hidden md:block'>
+        <NavbarItem className=''>
           <Link
             href={'/get-demo'}
-            className='flex items-center gap-x-2 bg-[#F6F6F6] p-2 rounded-full text-md md:text-lg font-semibold'
+            className='flex items-center gap-x-2 bg-[#F6F6F6] p-1.5 md:p-2 rounded-full text-sm md:text-lg font-semibold'
           >
             <p>Get Demo</p>
-            <div className='bg-[#282828] p-2 rounded-full'>
-              <IoCall className='w-5 h-5 text-white' />
+            <div className='bg-[#282828] p-1 md:p-2 rounded-full'>
+              <IoCall className='w-3 h-3 md:w-5 md:h-5 text-white' />
             </div>
           </Link>
         </NavbarItem>
@@ -99,13 +122,14 @@ export default function MainNavbar() {
           className='md:hidden'
         />
       </NavbarContent>
-      <NavbarMenu className='mt-10'>
+
+      <NavbarMenu className='pt-5'>
         {menuItems?.map((el, index) => (
-          <NavbarMenuItem key={index}>
+          <NavbarMenuItem key={index} className='flex flex-row '>
             <Link
-              className='w-full text-black text-center'
+              className='w-full text-black text-center !text-xl font-medium py-1'
               href={el?.slug}
-              size='lg'
+              onClick={() => setIsMenuOpen(false)}
             >
               {el?.title}
             </Link>

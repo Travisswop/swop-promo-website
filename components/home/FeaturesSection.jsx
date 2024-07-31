@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import Image from 'next/image';
+import RevealUpMotion from '../motion/RevealUpMotion';
 
 const featuresInfoLeft = [
   {
@@ -59,79 +60,81 @@ const featuresInfoRight = [
 const FeaturesSection = () => {
   return (
     <SectionLayout>
-      <h2
-        className={`text-stone-950 font-medium text-2xl md:text-4xl text-center !leading-normal `}
-      >
-        <strong>Features</strong>
-      </h2>
+      <RevealUpMotion>
+        <h2
+          className={`text-stone-950 font-medium text-2xl md:text-4xl text-center !leading-normal `}
+        >
+          <strong>Features</strong>
+        </h2>
+      </RevealUpMotion>
 
       <div className='grid grid-cols-1 md:grid-cols-3 items-center justify-between gap-0 md:gap-14 md:mt-4'>
         <div>
           {featuresInfoLeft?.map((el, index) => (
-            <div
-              className='flex flex-col md:flex-row items-center justify-end my-28 gap-x-10'
-              key={index}
-            >
-              <div className='order-2 md:order-1'>
-                <h2 className='mb-2 text-xl text-stone-950 text-center md:text-right font-bold mt-6 md:mt-0'>
-                  {el.title}
-                </h2>
-                <p className='text-lg text-stone-950 text-center md:text-right mt-1'>
-                  {el.text}
-                </p>
+            <RevealUpMotion key={index}>
+              <div className='flex flex-col md:flex-row items-center justify-end my-28 gap-x-10'>
+                <div className='order-2 md:order-1'>
+                  <h2 className='mb-2 text-xl text-stone-950 text-center md:text-right font-bold mt-6 md:mt-0'>
+                    {el.title}
+                  </h2>
+                  <p className='text-lg text-stone-950 text-center md:text-right mt-1'>
+                    {el.text}
+                  </p>
+                </div>
+                <div
+                  className={`${el.iconColor} p-6 rounded-2xl w-[100px] h-[80px] order-1 md:order-1 flex justify-center items-center `}
+                >
+                  <Image
+                    src={el.icon}
+                    alt='Feature icon'
+                    className='w-[40px] h-[40px]'
+                    width={40}
+                    height={40}
+                  />
+                </div>
               </div>
-              <div
-                className={`${el.iconColor} p-6 rounded-2xl w-[100px] h-[80px] order-1 md:order-1 flex justify-center items-center `}
-              >
-                <Image
-                  src={el.icon}
-                  alt='Feature icon'
-                  className='w-[40px] h-[40px]'
-                  width={40}
-                  height={40}
-                />
-              </div>
-            </div>
+            </RevealUpMotion>
           ))}
         </div>
 
-        <div>
-          <Image
-            width={400}
-            height={50}
-            src={'/assets/home/features-mobile.png'}
-            alt='Link icon'
-            className='mx-auto md:mt-8'
-          />
-        </div>
+        <RevealUpMotion>
+          <div>
+            <Image
+              width={400}
+              height={50}
+              src={'/assets/home/features-mobile.png'}
+              alt='Link icon'
+              className='mx-auto md:mt-8'
+            />
+          </div>
+        </RevealUpMotion>
 
         <div>
           {featuresInfoRight?.map((el, index) => (
-            <div
-              className='flex flex-col md:flex-row items-center justify-start my-28 gap-x-10'
-              key={index}
-            >
-              <div
-                className={`${el.iconColor} p-6 rounded-2xl w-[100px] h-[80px] order-1 md:order-1 flex justify-center items-center`}
-              >
-                <Image
-                  src={el.icon}
-                  alt='Feature icon'
-                  className='w-[40px] h-[40px]'
-                  width={40}
-                  height={40}
-                />
-              </div>
+            <RevealUpMotion key={index}>
+              <div className='flex flex-col md:flex-row items-center justify-start my-28 gap-x-10'>
+                <div
+                  className={`${el.iconColor} p-6 rounded-2xl w-[100px] h-[80px] order-1 md:order-1 flex justify-center items-center`}
+                >
+                  <Image
+                    src={el.icon}
+                    alt='Feature icon'
+                    className='w-[40px] h-[40px]'
+                    width={40}
+                    height={40}
+                  />
+                </div>
 
-              <div className='order-2 md:order-2 mt-6 md:mt-0'>
-                <h2 className='mb-2 text-xl text-stone-950 text-center md:text-left font-bold'>
-                  {el.title}
-                </h2>
-                <p className='text-lg text-stone-950 text-center md:text-left mt-1'>
-                  {el.text}
-                </p>
+                <div className='order-2 md:order-2 mt-6 md:mt-0'>
+                  <h2 className='mb-2 text-xl text-stone-950 text-center md:text-left font-bold'>
+                    {el.title}
+                  </h2>
+                  <p className='text-lg text-stone-950 text-center md:text-left mt-1'>
+                    {el.text}
+                  </p>
+                </div>
               </div>
-            </div>
+            </RevealUpMotion>
           ))}
         </div>
       </div>

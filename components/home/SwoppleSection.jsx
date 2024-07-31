@@ -2,6 +2,7 @@ import React from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import Image from 'next/image';
 import Link from 'next/link';
+import RevealUpMotion from '../motion/RevealUpMotion';
 
 const linkInfo = [
   {
@@ -30,52 +31,55 @@ const linkInfo = [
 const SwoppleSection = () => {
   return (
     <SectionLayout>
-      <h2
-        className={`text-stone-950 font-medium text-2xl md:text-4xl mt-5 mb-14 text-center leading-normal `}
-      >
-        Earn
-        <strong> Swopple </strong>
-        Connecting <br />
-        with<strong> others</strong>
-      </h2>
+      <RevealUpMotion>
+        <h2
+          className={`text-stone-950 font-medium text-2xl md:text-4xl mt-5 mb-14 text-center leading-normal `}
+        >
+          Earn
+          <strong> Swopple </strong>
+          Connecting <br />
+          with<strong> others</strong>
+        </h2>
+      </RevealUpMotion>
 
       <div className='grid grid-cols-1 md:grid-cols-3 items-start justify-between gap-14 mt-24'>
         {linkInfo.map((el, index) => (
-          <div
-            key={index}
-            className={`${el.bgColor} rounded-xl pt-10 px-10 mb-10`}
-          >
-            <div
-              className={`${el.iconColor} rounded-md p-4 w-20 h-20 flex justify-center mx-auto mt-[-80px]`}
-            >
-              <Image
-                width={60}
-                height={50}
-                src={el.icon}
-                alt='Link icon'
-                className='mx-auto'
-              />
+          <RevealUpMotion key={index}>
+            <div className={`${el.bgColor} rounded-xl pt-10 px-10 mb-10`}>
+              <div
+                className={`${el.iconColor} rounded-md p-4 w-20 h-20 flex justify-center mx-auto mt-[-80px]`}
+              >
+                <Image
+                  width={60}
+                  height={50}
+                  src={el.icon}
+                  alt='Link icon'
+                  className='mx-auto'
+                />
+              </div>
+              <div className='py-10'>
+                <h2 className='mb-2 text-xl text-stone-950 text-center mt-6 font-bold'>
+                  {el.title}
+                </h2>
+                <p className='mb-4 text-lg text-stone-950 text-center mt-1'>
+                  {el.text}
+                </p>
+              </div>
+              <div className={`${el.iconColor} rounded-t-2xl h-4`} />
             </div>
-            <div className='py-10'>
-              <h2 className='mb-2 text-xl text-stone-950 text-center mt-6 font-bold'>
-                {el.title}
-              </h2>
-              <p className='mb-4 text-lg text-stone-950 text-center mt-1'>
-                {el.text}
-              </p>
-            </div>
-            <div className={`${el.iconColor} rounded-t-2xl h-4`} />
-          </div>
+          </RevealUpMotion>
         ))}
       </div>
-      <div className='flex justify-center mx-auto'>
-        <Link
-          href={''}
-          className='text-black bg-none hover:bg-black hover:text-white font-medium text-sm md:text-lg px-2 md:px-8 py-2 mb-2 border-2 border-black items-center justify-center flex rounded-xl w-[45%] md:w-[13%] mx-auto'
-        >
-          Learn More
-        </Link>
-      </div>
+      <RevealUpMotion>
+        <div className='flex justify-center mx-auto'>
+          <Link
+            href={''}
+            className='text-black bg-none hover:bg-black hover:text-white font-medium text-sm md:text-lg px-2 md:px-8 py-2 mb-2 border-2 border-black items-center justify-center flex rounded-xl w-[45%] md:w-[13%] mx-auto'
+          >
+            Learn More
+          </Link>
+        </div>
+      </RevealUpMotion>
     </SectionLayout>
   );
 };

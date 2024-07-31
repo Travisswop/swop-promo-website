@@ -52,7 +52,7 @@ const Footer = () => {
                     alt='Swop QR COde'
                     className=''
                   />
-                  <p className='text-black font-normal text-md md:text-lg text-center w-28'>
+                  <p className='text-black font-normal text-md md:text-lg text-center w-28 !leading-5 mt-2'>
                     Scan To Get The App
                   </p>
                 </div>
