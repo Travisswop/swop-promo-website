@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import parse from 'html-react-parser';
 import { Accordion, AccordionItem } from '@nextui-org/react';
+import RevealUpMotion from '../motion/RevealUpMotion';
 
 const jobsPostInfo = [
   {
@@ -176,39 +177,43 @@ const JobSection = () => {
 
   return (
     <SectionLayout>
-      <h2
-        className={`text-stone-950 font-normal text-2xl md:text-4xl text-center !leading-none`}
-      >
-        <strong>Jobs</strong>
-      </h2>
-
-      <p className='text-lg md:text-xl text-stone-950 text-center mt-4 max-w-[620px] mx-auto'>
-        Discover rewarding career paths, innovative work environments, and the
-        chance to grow with us. Find your perfect job and start making an impact
-        today.
-      </p>
-      <div className='mx-6 md:mx-32 mt-16 '>
-        <Accordion
-          selectedKeys={selectedKeys}
-          onSelectionChange={setSelectedKeys}
-          className='border-2 shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5 bg-white'
-          // style={{ border: '1px solid red' }}
+      <RevealUpMotion>
+        <h2
+          className={`text-stone-950 font-normal text-2xl md:text-4xl text-center !leading-none`}
         >
-          {jobsPostInfo?.map((el, index) => (
-            <AccordionItem
-              key={el.id}
-              aria-label='Accordion 1'
-              title={
-                <div className='text-xl md:text-[24px] font-medium'>
-                  {el.jobTitle}
-                </div>
-              }
-              className='text-[18px] md:text-lg '
-            >
-              {parse(el.jobDesc)}
-            </AccordionItem>
-          ))}
-        </Accordion>
+          <strong>Jobs</strong>
+        </h2>
+        <p className='text-lg md:text-xl text-stone-950 text-center mt-4 max-w-[620px] mx-auto'>
+          Discover rewarding career paths, innovative work environments, and the
+          chance to grow with us. Find your perfect job and start making an
+          impact today.
+        </p>
+      </RevealUpMotion>
+
+      <div className='mx-6 md:mx-32 mt-16 '>
+        <RevealUpMotion>
+          <Accordion
+            selectedKeys={selectedKeys}
+            onSelectionChange={setSelectedKeys}
+            className='border-2 shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5 bg-white'
+            // style={{ border: '1px solid red' }}
+          >
+            {jobsPostInfo?.map((el, index) => (
+              <AccordionItem
+                key={el.id}
+                aria-label='Accordion 1'
+                title={
+                  <div className='text-xl md:text-[24px] font-medium'>
+                    {el.jobTitle}
+                  </div>
+                }
+                className='text-[18px] md:text-lg '
+              >
+                {parse(el.jobDesc)}
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </RevealUpMotion>
       </div>
     </SectionLayout>
   );

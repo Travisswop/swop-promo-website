@@ -57,7 +57,7 @@ export default function MainNavbar() {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       maxWidth='2xl'
-      className={`py-0 md:py-2 fixed top-0 transition-colors duration-300 ${navbarColor ? '!bg-white' : 'bg-transparent'}`}
+      className={`py-0 md:py-2 fixed top-0 transition-colors duration-300 ${navbarColor ? '!bg-white shadow-small' : 'bg-transparent'}`}
     >
       <NavbarContent>
         <NavbarBrand>

@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import Image from 'next/image';
+import RevealUpMotion from '../motion/RevealUpMotion';
 
 const clientComments = [
   {
@@ -44,131 +45,142 @@ const clientComments = [
 const ProductDetails = () => {
   return (
     <SectionLayout>
-      <div class='grid grid-col-1 md:grid-rows-2 grid-flow-col gap-4 items-stretch justify-center'>
-        <div class='row-span-1 bg-gradient-to-br from-[#FAFAFA] to-[#F5F5F5] p-5 rounded-xl w-[500px] h-auto'>
-          <div>
-            <Image
-              width={400}
-              height={50}
-              src={'/assets/hardware/security-meets-agility.png'}
-              alt='Link icon'
-              className='mx-auto'
-            />
-          </div>
-          <h2 className='mt-3 text-2xl text-stone-950 text-center font-bold'>
-            Security meets agility.
-          </h2>
-          <p className='text-lg text-stone-950 text-center mt-1'>
-            Tag¹ provides a secure gateway to deep experiences. Adapt your
-            message while safeguarding brand integrity.
-          </p>
-        </div>
-        <div class='row-span-1 bg-gradient-to-br from-[#FAFAFA] to-[#F5F5F5] p-5 rounded-xl w-[500px] h-auto'>
-          <div>
-            <Image
-              width={400}
-              height={50}
-              src={'/assets/hardware/trigger-interactivity-on-contact.png'}
-              alt='Link icon'
-              className='mx-auto'
-            />
-          </div>
-          <h2 className='mt-3 text-2xl text-stone-950 text-center font-bold'>
-            Trigger interactivity on contact.
-          </h2>
-          <p className='text-lg text-stone-950 text-center mt-1'>
-            Tag¹ facilitates an instant and reliable connection. Activate
-            immersive brand experiences with just a tap.
-          </p>
-        </div>
-        <div class='row-span-1 md:row-span-2 bg-gradient-to-br from-[#FAFAFA] to-[#F5F5F5] p-5 rounded-xl w-[500px]'>
-          <div className=''>
-            <h2 className='mt-3 text-2xl text-stone-950 text-center font-bold  '>
-              Proximity is all it takes.
-            </h2>
+      <RevealUpMotion>
+        <div class='grid grid-col-1 md:grid-rows-2 grid-flow-col gap-4 items-stretch justify-center'>
+          <div class='row-span-1 bg-gradient-to-br from-[#FAFAFA] to-[#F5F5F5] p-5 rounded-xl w-[500px] h-auto'>
             <div>
               <Image
-                width={120}
+                width={400}
                 height={50}
-                src={'/assets/hardware/proximity-takes.png'}
+                src={'/assets/hardware/security-meets-agility.png'}
                 alt='Link icon'
-                className='mx-auto py-44'
+                className='mx-auto'
               />
             </div>
-
-            <p className='text-lg text-stone-950 text-center mt-1 bottom-0'>
-              Your audience never has to install an app, or update anything, to
-              access your digital experiences. They simply tap on a Tag to
-              experience your latest campaign.
-            </p>
+            <h2 className='mt-3 text-2xl text-stone-950 text-center font-bold'>
+              Security meets agility.
+            </h2>
             <p className='text-lg text-stone-950 text-center mt-1'>
-              Seamless. Simple. Smart.
+              Tag¹ provides a secure gateway to deep experiences. Adapt your
+              message while safeguarding brand integrity.
+            </p>
+          </div>
+
+          <div class='row-span-1 bg-gradient-to-br from-[#FAFAFA] to-[#F5F5F5] p-5 rounded-xl w-[500px] h-auto'>
+            <div>
+              <Image
+                width={400}
+                height={50}
+                src={'/assets/hardware/trigger-interactivity-on-contact.png'}
+                alt='Link icon'
+                className='mx-auto'
+              />
+            </div>
+            <h2 className='mt-3 text-2xl text-stone-950 text-center font-bold'>
+              Trigger interactivity on contact.
+            </h2>
+            <p className='text-lg text-stone-950 text-center mt-1'>
+              Tag¹ facilitates an instant and reliable connection. Activate
+              immersive brand experiences with just a tap.
+            </p>
+          </div>
+
+          <div class='row-span-1 md:row-span-2 bg-gradient-to-br from-[#FAFAFA] to-[#F5F5F5] p-5 rounded-xl w-[500px]'>
+            <div className=''>
+              <h2 className='mt-3 text-2xl text-stone-950 text-center font-bold  '>
+                Proximity is all it takes.
+              </h2>
+              <div>
+                <Image
+                  width={120}
+                  height={50}
+                  src={'/assets/hardware/proximity-takes.png'}
+                  alt='Link icon'
+                  className='mx-auto py-44'
+                />
+              </div>
+
+              <p className='text-lg text-stone-950 text-center mt-1 bottom-0'>
+                Your audience never has to install an app, or update anything,
+                to access your digital experiences. They simply tap on a Tag to
+                experience your latest campaign.
+              </p>
+              <p className='text-lg text-stone-950 text-center mt-1'>
+                Seamless. Simple. Smart.
+              </p>
+            </div>
+          </div>
+
+          <div class='row-span-1 bg-gradient-to-br from-[#FAFAFA] to-[#F5F5F5] p-5 rounded-xl w-[500px] h-auto'>
+            <div>
+              <Image
+                width={400}
+                height={50}
+                src={'/assets/hardware/datapoints-for-each-tap.png'}
+                alt='Link icon'
+                className='mx-auto'
+              />
+            </div>
+            <h2 className='mt-3 text-2xl text-stone-950 text-center font-bold'>
+              Datapoints for each tap.
+            </h2>
+            <p className='text-lg text-stone-950 text-center mt-1'>
+              Tag¹ is built for data on tap. Gain access to data points upon tap
+              and optimize engagement with actionable data.
+            </p>
+          </div>
+
+          <div class='row-span-1 bg-gradient-to-br from-[#FAFAFA] to-[#F5F5F5] p-5 rounded-xl w-[500px] h-auto'>
+            <div>
+              <Image
+                width={400}
+                height={50}
+                src={'/assets/hardware/createdf-tangible-products.png'}
+                alt='Link icon'
+                className='mx-auto'
+              />
+            </div>
+            <h2 className='mt-3 text-2xl text-stone-950 text-center font-bold'>
+              Created for the world of tangible products.
+            </h2>
+            <p className='text-lg text-stone-950 text-center mt-1'>
+              Tag¹ is designed to add a digital layer to your physical products.
+              As such, explore a variety of form factors and styles for various
+              products.
             </p>
           </div>
         </div>
-        <div class='row-span-1 bg-gradient-to-br from-[#FAFAFA] to-[#F5F5F5] p-5 rounded-xl w-[500px] h-auto'>
-          <div>
-            <Image
-              width={400}
-              height={50}
-              src={'/assets/hardware/datapoints-for-each-tap.png'}
-              alt='Link icon'
-              className='mx-auto'
-            />
-          </div>
-          <h2 className='mt-3 text-2xl text-stone-950 text-center font-bold'>
-            Datapoints for each tap.
-          </h2>
-          <p className='text-lg text-stone-950 text-center mt-1'>
-            Tag¹ is built for data on tap. Gain access to data points upon tap
-            and optimize engagement with actionable data.
-          </p>
-        </div>
-        <div class='row-span-1 bg-gradient-to-br from-[#FAFAFA] to-[#F5F5F5] p-5 rounded-xl w-[500px] h-auto'>
-          <div>
-            <Image
-              width={400}
-              height={50}
-              src={'/assets/hardware/createdf-tangible-products.png'}
-              alt='Link icon'
-              className='mx-auto'
-            />
-          </div>
-          <h2 className='mt-3 text-2xl text-stone-950 text-center font-bold'>
-            Created for the world of tangible products.
-          </h2>
-          <p className='text-lg text-stone-950 text-center mt-1'>
-            Tag¹ is designed to add a digital layer to your physical products.
-            As such, explore a variety of form factors and styles for various
-            products.
-          </p>
-        </div>
-      </div>
-      <h2
-        className={`text-stone-950 font-normal text-xl md:text-5xl text-center !leading-none mt-16`}
-      >
-        What people say
-      </h2>
+      </RevealUpMotion>
+      <RevealUpMotion>
+        <h2
+          className={`text-stone-950 font-normal text-xl md:text-5xl text-center !leading-none mt-16`}
+        >
+          What people say
+        </h2>
+      </RevealUpMotion>
+
       <div className='grid grid-cols-1 md:grid-cols-3 items-center gap-4 mt-10'>
         {clientComments?.map((el, index) => (
-          <div className='bg-[#FFFFFF] rounded-xl p-6 shadow-lg'>
-            <div className='flex items-start justify-start gap-3'>
-              <Image
-                width={50}
-                height={50}
-                src={el?.img}
-                alt='Link icon'
-                className=''
-              />
-              <div>
-                <h2 className='text-2xl text-stone-950 font-normal'>
-                  {el?.name}
-                </h2>
-                <p className='text-sm text-stone-950'> {el?.title}</p>
+          <RevealUpMotion key={index}>
+            <div className='bg-[#FFFFFF] rounded-xl p-6 shadow-lg'>
+              <div className='flex items-start justify-start gap-3'>
+                <Image
+                  width={50}
+                  height={50}
+                  src={el?.img}
+                  alt='Link icon'
+                  className=''
+                />
+                <div>
+                  <h2 className='text-2xl text-stone-950 font-normal'>
+                    {el?.name}
+                  </h2>
+                  <p className='text-sm text-stone-950'> {el?.title}</p>
+                </div>
               </div>
+              <p className='text-xl text-stone-950 mt-1'>{el?.desc}</p>
             </div>
-            <p className='text-xl text-stone-950 mt-1'>{el?.desc}</p>
-          </div>
+          </RevealUpMotion>
         ))}
       </div>
     </SectionLayout>

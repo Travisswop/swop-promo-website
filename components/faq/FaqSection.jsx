@@ -4,6 +4,7 @@ import parse from 'html-react-parser';
 import { Accordion, AccordionItem, TableHeader } from '@nextui-org/react';
 import SectionLayout from '../shared/SectionLayout';
 import FaqSilder from './FaqSilder';
+import RevealUpMotion from '../motion/RevealUpMotion';
 
 const generalInfo = [
   {
@@ -122,137 +123,155 @@ const FaqSection = () => {
   );
   return (
     <SectionLayout>
-      <div className='bg-[#F3F3F3] flex flex-col md:flex-row items-center justify-center gap-4 p-4 rounded-md mx-auto md:w-[750px] text-md md:text-lg font-semibold '>
-        <p>{`Sign up for text and support`}</p>
-        <span className='hidden md:block'>|</span>
-        <p>{`Text ‘SWOP’ to 67839`}</p>
-        <span className='hidden md:block'>|</span>
-        <p>{`Email us: support@swopme.co`}</p>
-      </div>
-      <h2
-        className={`text-stone-950 font-normal text-xl md:text-4xl text-center !leading-none mt-6`}
-      >
-        <strong>How Can We Help?</strong>
-      </h2>
+      <RevealUpMotion>
+        <div className='bg-[#F3F3F3] flex flex-col md:flex-row items-center justify-center gap-4 p-4 rounded-md mx-auto md:w-[750px] text-md md:text-lg font-semibold '>
+          <p>{`Sign up for text and support`}</p>
+          <span className='hidden md:block'>|</span>
+          <p>{`Text ‘SWOP’ to 67839`}</p>
+          <span className='hidden md:block'>|</span>
+          <p>{`Email us: support@swopme.co`}</p>
+        </div>
+      </RevealUpMotion>
 
-      <p className='text-lg text-stone-950 text-center mt-4 max-w-[620px] mx-auto px-6 md:px-0'>
-        Discover rewarding career paths, innovative work environments, and the
-        chance to grow with us. Find your perfect job and start making an impact
-        today.
-      </p>
-
-      <h2
-        className={`text-stone-950 font-normal text-xl md:text-4xl text-center !leading-none mt-10`}
-      >
-        <strong>{`Frequently Asked Questions (FAQ)`}</strong>
-      </h2>
-      <div className='mx-6 md:mx-32 mt-8 md:mt-12'>
-        <FaqSilder />
-      </div>
-
-      <div className='mx-6 md:mx-32 mt-8 md:mt-16 bg-white'>
-        <Accordion
-          className='border-2 shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5'
-          // style={{ border: '1px solid red' }}
+      <RevealUpMotion>
+        <h2
+          className={`text-stone-950 font-normal text-xl md:text-4xl text-center !leading-none mt-6`}
         >
-          <AccordionItem
-            aria-label='Accordion 1'
-            title={
-              <strong className='text-xl md:text-2xl font-bold'>
-                Troubleshooting SWOP
-              </strong>
-            }
-            className='text-[18px] md:text-lg '
+          <strong>How Can We Help?</strong>
+        </h2>
+      </RevealUpMotion>
+
+      <RevealUpMotion>
+        <p className='text-lg text-stone-950 text-center mt-4 max-w-[620px] mx-auto px-6 md:px-0'>
+          Discover rewarding career paths, innovative work environments, and the
+          chance to grow with us. Find your perfect job and start making an
+          impact today.
+        </p>
+      </RevealUpMotion>
+
+      <RevealUpMotion>
+        <h2
+          className={`text-stone-950 font-normal text-xl md:text-4xl text-center !leading-none mt-10`}
+        >
+          <strong>{`Frequently Asked Questions (FAQ)`}</strong>
+        </h2>
+        <div className='mx-6 md:mx-32 mt-8 md:mt-12'>
+          <FaqSilder />
+        </div>
+      </RevealUpMotion>
+
+      <RevealUpMotion>
+        <div className='mx-6 md:mx-32 mt-8 md:mt-16 bg-white'>
+          <Accordion
+            className='border-2 shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5'
+            // style={{ border: '1px solid red' }}
           >
-            {`We warmly welcome you to SWOP, when you come to SWOP, For Near-field
+            <AccordionItem
+              aria-label='Accordion 1'
+              title={
+                <strong className='text-xl md:text-2xl font-bold'>
+                  Troubleshooting SWOP
+                </strong>
+              }
+              className='text-[18px] md:text-lg '
+            >
+              {`We warmly welcome you to SWOP, when you come to SWOP, For Near-field
             Communication Related Process and functions, we collect your
             information. We value your trust, we own our responsibility to
             retain, preserve and protect your data as per Cyber Laws
             recommendations and we know how to safeguard our valued customer's
             (“USERS”) information.`}
-          </AccordionItem>
-        </Accordion>
-      </div>
-      <div className='mx-6 md:mx-32 mt-8 md:mt-16 border-2 shadow-lg rounded-lg bg-white'>
-        <h1 className='text-2xl font-bold ml-1 !px-5 !md:px-10 mt-6'>
-          General <span>💎</span>
-        </h1>
-        <Accordion
-          selectedKeys={generalSlectedKeys}
-          onSelectionChange={setGeneralSelectedKeys}
-          className='shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5'
-          // style={{ border: '1px solid red' }}
-        >
-          {generalInfo?.map((el, index) => (
-            <AccordionItem
-              key={el.id}
-              aria-label='Accordion 1'
-              title={
-                <div className='text-xl md:text-[22px] font-medium'>
-                  {el.jobTitle}
-                </div>
-              }
-              className='text-[18px] md:text-lg '
-            >
-              {parse(el.jobDesc)}
             </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
+          </Accordion>
+        </div>
+      </RevealUpMotion>
 
-      <div className='mx-6 md:mx-32 mt-8 md:mt-16 border-2 shadow-lg rounded-lg bg-white'>
-        <h1 className='text-2xl font-bold ml-1 !px-5 !md:px-10 mt-6'>
-          Compatibility <span>🤝</span>
-        </h1>
-        <Accordion
-          selectedKeys={compatibilitySelectedKeys}
-          onSelectionChange={setCompatibilitySelectedKeys}
-          className='shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5'
-          // style={{ border: '1px solid red' }}
-        >
-          {compatibilityInfo?.map((el, index) => (
-            <AccordionItem
-              key={el.id}
-              aria-label='Accordion 1'
-              title={
-                <div className='text-xl md:text-[22px] font-medium'>
-                  {el.jobTitle}
-                </div>
-              }
-              className='text-[18px] md:text-lg '
-            >
-              {parse(el.jobDesc)}
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
+      <RevealUpMotion>
+        <div className='mx-6 md:mx-32 mt-8 md:mt-16 border-2 shadow-lg rounded-lg bg-white'>
+          <h1 className='text-2xl font-bold ml-1 !px-5 !md:px-10 mt-6'>
+            General <span>💎</span>
+          </h1>
+          <Accordion
+            selectedKeys={generalSlectedKeys}
+            onSelectionChange={setGeneralSelectedKeys}
+            className='shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5'
+            // style={{ border: '1px solid red' }}
+          >
+            {generalInfo?.map((el, index) => (
+              <AccordionItem
+                key={el.id}
+                aria-label='Accordion 1'
+                title={
+                  <div className='text-xl md:text-[22px] font-medium'>
+                    {el.jobTitle}
+                  </div>
+                }
+                className='text-[18px] md:text-lg '
+              >
+                {parse(el.jobDesc)}
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </RevealUpMotion>
 
-      <div className='mx-6 md:mx-32 mt-8 md:mt-16 border-2 shadow-lg rounded-lg bg-white'>
-        <h1 className='text-2xl font-bold ml-1 !px-5 !md:px-10 mt-6'>
-          Shipping <span>🚚</span>
-        </h1>
-        <Accordion
-          selectedKeys={sahippingSlectedKeys}
-          onSelectionChange={setShippingSelectedKeys}
-          className='shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5'
-          // style={{ border: '1px solid red' }}
-        >
-          {sahippingInfo?.map((el, index) => (
-            <AccordionItem
-              key={el.id}
-              aria-label='Accordion 1'
-              title={
-                <div className='text-xl md:text-[22px] font-medium'>
-                  {el.jobTitle}
-                </div>
-              }
-              className='text-[18px] md:text-lg '
-            >
-              {parse(el.jobDesc)}
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
+      <RevealUpMotion>
+        <div className='mx-6 md:mx-32 mt-8 md:mt-16 border-2 shadow-lg rounded-lg bg-white'>
+          <h1 className='text-2xl font-bold ml-1 !px-5 !md:px-10 mt-6'>
+            Compatibility <span>🤝</span>
+          </h1>
+          <Accordion
+            selectedKeys={compatibilitySelectedKeys}
+            onSelectionChange={setCompatibilitySelectedKeys}
+            className='shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5'
+            // style={{ border: '1px solid red' }}
+          >
+            {compatibilityInfo?.map((el, index) => (
+              <AccordionItem
+                key={el.id}
+                aria-label='Accordion 1'
+                title={
+                  <div className='text-xl md:text-[22px] font-medium'>
+                    {el.jobTitle}
+                  </div>
+                }
+                className='text-[18px] md:text-lg '
+              >
+                {parse(el.jobDesc)}
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </RevealUpMotion>
+
+      <RevealUpMotion>
+        <div className='mx-6 md:mx-32 mt-8 md:mt-16 border-2 shadow-lg rounded-lg bg-white'>
+          <h1 className='text-2xl font-bold ml-1 !px-5 !md:px-10 mt-6'>
+            Shipping <span>🚚</span>
+          </h1>
+          <Accordion
+            selectedKeys={sahippingSlectedKeys}
+            onSelectionChange={setShippingSelectedKeys}
+            className='shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5'
+            // style={{ border: '1px solid red' }}
+          >
+            {sahippingInfo?.map((el, index) => (
+              <AccordionItem
+                key={el.id}
+                aria-label='Accordion 1'
+                title={
+                  <div className='text-xl md:text-[22px] font-medium'>
+                    {el.jobTitle}
+                  </div>
+                }
+                className='text-[18px] md:text-lg '
+              >
+                {parse(el.jobDesc)}
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </RevealUpMotion>
     </SectionLayout>
   );
 };
