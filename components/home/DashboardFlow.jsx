@@ -20,7 +20,7 @@ const DashboardFlow = () => {
       </RevealUpMotion>
 
       <div className=''>
-        <div className={` rounded-md p-4 flex justify-center mx-auto`}>
+        <div className={`rounded-md flex justify-center mx-auto mt[]`}>
           <Image
             width={900}
             height={750}

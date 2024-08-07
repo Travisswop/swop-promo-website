@@ -97,6 +97,57 @@ const featuresInfoRight = [
   },
 ];
 
+const featuresInfoAll = [
+  {
+    icon: '/assets/home/features-icon/image 2172-7.png',
+    iconColor: 'bg-[#FFFB95]',
+    title: 'Share Social Media',
+    text: 'Instantly share your social account in one tap with everyone.',
+  },
+  {
+    icon: '/assets/home/features-icon/image 2172-4.png',
+    iconColor: 'bg-[#B4FFB7]',
+    title: 'Message',
+    text: 'Instantly connect with friends and family through real-time text communication.',
+  },
+  {
+    icon: '/assets/home/features-icon/image 2172-3.png',
+    iconColor: 'bg-[#FF9898]',
+    title: 'Transactions',
+    text: 'Securely manage and track your financial transactions with ease and precision.',
+  },
+  {
+    icon: '/assets/home/features-icon/image 2172-2.png',
+    iconColor: 'bg-[#83D0FF]',
+    title: 'Audio Music',
+    text: 'Easily share your favorite music tracks with friends and connections.',
+  },
+  {
+    icon: '/assets/home/features-icon/image 2172-6.png',
+    iconColor: 'bg-[#83D0FF]',
+    title: 'Share Social Media',
+    text: 'Easily share your favorite music tracks with friends and connections.',
+  },
+  {
+    icon: '/assets/home/features-icon/image 2172-5.png',
+    iconColor: 'bg-[#B4FFB7]',
+    title: 'Redeem links',
+    text: 'Redeem links seamlessly for accessing exclusive offers and rewards.',
+  },
+  {
+    icon: '/assets/home/features-icon/image 2172.png',
+    iconColor: 'bg-[#FF9898]',
+    title: 'Products Sell',
+    text: 'Easily list and sell products to a wide audience effortlessly.',
+  },
+  {
+    icon: '/assets/home/features-icon/image 2172-1.png',
+    iconColor: 'bg-[#FFFB95]',
+    title: 'Blog Posts',
+    text: 'Create and share insightful blog posts to engage and inform your audience.',
+  },
+];
+
 const FeaturesSection = () => {
   const centerImageRef = useRef(null);
   const featuresLeftRef = useRef(null);
@@ -133,8 +184,6 @@ const FeaturesSection = () => {
       featuresRightControls.start('hidden');
     }
   }, [featuresLeftInView, featuresRightControls]);
-
-  // sm: md: lg: xl: 2xl:
 
   return (
     <SectionLayout>
@@ -259,59 +308,14 @@ const FeaturesSection = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* <motion.div
-          ref={featuresRightRef}
-          variants={container}
-          initial='hidden'
-          animate={featuresRightControls}
-        >
-          {featuresInfoRight.map((el, index) => (
-            <motion.div
-              key={index}
-              className='flex flex-col md:flex-row items-center justify-start my-24 gap-x-10 itemRight'
-              variants={itemRight}
-            >
-              <div
-                className={`${el.iconColor} p-5 rounded-3xl flex justify-center items-center`}
-              >
-                <Image
-                  src={el.icon}
-                  alt='Feature icon'
-                  className='w-[40px] h-[40px]'
-                  width={40}
-                  height={40}
-                />
-              </div>
-
-              <div className='w-[75%]'>
-                <h2 className='mb-2 text-xl text-stone-950 text-center md:text-left font-bold'>
-                  {el.title}
-                </h2>
-                <p className='text-lg text-stone-950 text-center md:text-left mt-1'>
-                  {el.text}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div> */}
       </motion.div>
+
+      {/* For mobile feature bottom part*/}
+
       <div className='mt-8 lg:hidden'>
-        {featuresInfoRight.map((el, index) => (
+        {featuresInfoAll?.map((el, index) => (
           <RevealUpMotion key={index}>
             <div className='flex flex-col items-center bg-[#EFEFEF] p-4 rounded-md my-4'>
-              {/* <div
-              className={`${el.iconColor} p-5 rounded-3xl flex justify-center items-center`}
-            >
-              <Image
-                src={el.icon}
-                alt='Feature icon'
-                className='w-[40px] h-[40px]'
-                width={40}
-                height={40}
-              />
-            </div> */}
-
               <div className='w-[100%]'>
                 <h2 className='mb-1 text-lg text-stone-950 ttext-left font-bold'>
                   {el.title}
