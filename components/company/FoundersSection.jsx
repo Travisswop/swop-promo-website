@@ -45,7 +45,9 @@ const FoundersSection = () => {
         >
           Founders
         </h2>
+      </RevealUpMotion>
 
+      <RevealUpMotion>
         <p className='text-lg text-stone-950 text-center'>
           Core Values and Ethics in Leadership
         </p>
