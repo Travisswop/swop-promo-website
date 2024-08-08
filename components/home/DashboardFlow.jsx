@@ -1,6 +1,5 @@
 import React from 'react';
 import SectionLayout from '../shared/SectionLayout';
-import Image from 'next/image';
 import ScrollMotionEffect from '../motion/ScrollMotionEffect';
 
 const DashboardFlow = () => {
@@ -19,25 +18,16 @@ const DashboardFlow = () => {
         </h2>
       </ScrollMotionEffect>
 
-      <div className=''>
-        <ScrollMotionEffect effect='fade-up' duration='2000'>
-          <div className={`rounded-md flex justify-center mx-auto mt[]`}>
-            <Image
-              width={900}
-              height={750}
-              src={'/assets/home/dashboard-flow.jpg'}
-              alt='Dashboard Flow'
-              className='mx-auto'
-            />
-            {/* <video autoPlay loop muted playsInline>
+      <div className='mt-[-18%] mb-[-18%] md:mt-[-14%] md:mb-[-16%]'>
+        <div className='flex justify-center items-center mx-auto'>
+          <video className='object-cover' autoPlay loop muted playsInline>
             <source
-              src={'/assets/home/laptop-admin-dashboard.mp4'}
+              src='/assets/home/laptop-admin-dashboard.mp4'
               type='video/mp4'
             />
             Your browser does not support the video tag.
-          </video> */}
-          </div>
-        </ScrollMotionEffect>
+          </video>
+        </div>
       </div>
     </SectionLayout>
   );

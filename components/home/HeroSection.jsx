@@ -19,17 +19,17 @@ const HeroSection = () => {
           initial='hidden'
           animate='visible'
           exit={{ opacity: 0, transition: { duration: 1 } }}
-          variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
+          variants={{ visible: { transition: { staggerChildren: 0 } } }} // No delay
         >
           <h1
-            className={`text-[30px] md:text-[56px] font-[750] text-black text-center leading-tight tracking-normal `}
+            className={`text-[30px] md:text-[56px] font-[750] text-black text-center leading-tight tracking-normal`}
           >
             {text.map((word, index) => (
               <motion.span
+                key={index}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.25, delay: index / 10 }}
-                key={index}
+                transition={{ duration: 0.25 }} // Removed delay
               >
                 {word}{' '}
               </motion.span>

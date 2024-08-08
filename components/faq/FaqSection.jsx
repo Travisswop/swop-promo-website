@@ -161,9 +161,9 @@ const FaqSection = () => {
       </ScrollMotionEffect>
 
       <ScrollMotionEffect effect='fade-up' duration='2000'>
-        <div className='mx-6 md:mx-32 mt-8 md:mt-16 bg-white'>
+        <div className='mx-6 md:mx-32 mt-8 md:mt-16 bg-white overflow-x-hidden'>
           <Accordion
-            className='border-2 shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5'
+            className='border-2 shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5 overflow-x-hidden'
             // style={{ border: '1px solid red' }}
           >
             <AccordionItem

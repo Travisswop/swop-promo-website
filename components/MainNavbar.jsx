@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   Navbar,
   NavbarBrand,
@@ -23,18 +23,22 @@ const debounce = (func, wait) => {
   };
 };
 
-export default function MainNavbar() {
+const MainNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const [navbarColor, setNavbarColor] = useState(false);
 
-  const handleScroll = debounce(() => {
-    if (window.scrollY >= 100) {
-      setNavbarColor(true);
-    } else {
-      setNavbarColor(false);
-    }
-  }, 100);
+  // Use useCallback to memoize the debounce function
+  const handleScroll = useCallback(
+    debounce(() => {
+      if (window.scrollY >= 100) {
+        setNavbarColor(true);
+      } else {
+        setNavbarColor(false);
+      }
+    }, 100),
+    [],
+  );
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -58,9 +62,9 @@ export default function MainNavbar() {
     >
       <NavbarContent>
         <NavbarBrand>
-          <Link href={'/'}>
+          <Link href='/'>
             <Image
-              src={'/assets/site-logo/swop-logo.png'}
+              src='/assets/site-logo/swop-logo.png'
               alt='Swop Logo'
               width={150}
               height={100}
@@ -75,32 +79,31 @@ export default function MainNavbar() {
         justify='center'
       >
         <NavbarItem>
-          <Link href={'/'}>
+          <Link href='/'>
             <Image
-              src={'/assets/site-logo/navicon.png'}
+              src='/assets/site-logo/navicon.png'
               alt='Swop Logo'
-              width={40}
-              height={40}
+              width={50}
+              height={50}
             />
           </Link>
         </NavbarItem>
-        {menuItems?.map((el, index) => (
-          <>
-            <NavbarItem>
-              <Link
-                href={el.slug}
-                className={`text-md md:text-lg ${pathname === el.slug ? 'text-[#AF97D4]' : ''}`}
-              >
-                {el?.title}
-              </Link>
-            </NavbarItem>
-          </>
+        {menuItems.map((el) => (
+          <NavbarItem key={el.slug}>
+            <Link
+              href={el.slug}
+              className={`text-md md:text-lg ${pathname === el.slug ? 'text-[#AF97D4]' : ''}`}
+            >
+              {el.title}
+            </Link>
+          </NavbarItem>
         ))}
       </NavbarContent>
+
       <NavbarContent justify='end' className='flex items-center'>
-        <NavbarItem className=''>
+        <NavbarItem>
           <Link
-            href={'/get-demo'}
+            href='/get-demo'
             className='flex items-center gap-x-2 bg-[#F6F6F6] p-1.5 md:p-2 rounded-full text-sm md:text-lg font-semibold'
           >
             <p>Get Demo</p>
@@ -120,19 +123,21 @@ export default function MainNavbar() {
         />
       </NavbarContent>
 
-      <NavbarMenu className='pt-5'>
-        {menuItems?.map((el, index) => (
-          <NavbarMenuItem key={index} className='flex flex-row '>
+      <NavbarMenu className='overflow-hidden'>
+        {menuItems.map((el) => (
+          <NavbarMenuItem key={el.slug} className='flex flex-row '>
             <Link
               className='w-full text-black text-center !text-xl font-medium py-1'
-              href={el?.slug}
+              href={el.slug}
               onClick={() => setIsMenuOpen(false)}
             >
-              {el?.title}
+              {el.title}
             </Link>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
     </Navbar>
   );
-}
+};
+
+export default React.memo(MainNavbar);
