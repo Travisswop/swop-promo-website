@@ -56,11 +56,15 @@ const HeroSection = () => {
         </motion.div>
         <div className='flex justify-center flex-1'>
           <div className='w-[70%]'>
-            <video autoPlay loop muted playsInline>
-              <source
-                src={'/assets/home/hero-bg-jvideo.mp4'}
-                type='video/mp4'
-              />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload='auto'
+              style={{ display: 'block' }}
+            >
+              <source src='/assets/home/hero-bg-jvideo.mp4' type='video/mp4' />
               Your browser does not support the video tag.
             </video>
           </div>

@@ -1,8 +1,10 @@
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+
 import { SITECONFIG } from '@/config/site';
 import SectionLayout from './shared/SectionLayout';
+
 import { FaFacebookF } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa6';

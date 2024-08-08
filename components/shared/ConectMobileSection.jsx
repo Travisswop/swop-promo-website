@@ -190,8 +190,10 @@ const ConectMobileSection = () => {
             {hoveredItem === 5 ? (
               <video
                 autoPlay
-                src={'/assets/video/customizable-video.mp4'}
+                loop
                 muted
+                playsInline
+                src={'/assets/video/customizable-video.mp4'}
                 className='mx-auto'
                 width={160}
                 height={80}
@@ -325,6 +327,7 @@ const ConectMobileSection = () => {
               height={50}
               preload='auto'
               loading='lazy'
+              playsInline
             />
           </motion.div>
         </div>

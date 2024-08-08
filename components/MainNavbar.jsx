@@ -13,10 +13,7 @@ import { LuUser2 } from 'react-icons/lu';
 import { IoCall } from 'react-icons/io5';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
-import { CgMenuLeft } from 'react-icons/cg';
-import { IoCloseOutline } from 'react-icons/io5';
+import { usePathname } from 'next/navigation';
 
 const debounce = (func, wait) => {
   let timeout;
