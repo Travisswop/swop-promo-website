@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import Image from 'next/image';
-import RevealUpMotion from '../motion/RevealUpMotion';
+import ScrollMotionEffect from '../motion/ScrollMotionEffect';
 
 const linkInfo = [
   {
@@ -51,7 +51,7 @@ const linkInfo = [
 const LinkSection = () => {
   return (
     <SectionLayout>
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <h2
           className={`text-stone-950 font-medium text-2xl md:text-4xl text-center !leading-normal`}
         >
@@ -62,11 +62,11 @@ const LinkSection = () => {
           For All <br />
           Of Your Interactions
         </h2>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
       <div className='grid grid-cols-1 md:grid-cols-3 items-start justify-between gap-14 mt-10 md:mt-24'>
         {linkInfo?.map((el, index) => (
-          <RevealUpMotion key={index}>
+          <ScrollMotionEffect effect='fade-up' duration='2000' key={index}>
             <div>
               <div
                 className={`${el.iconColor} rounded-md p-4 w-20 h-20 flex justify-center mx-auto`}
@@ -84,7 +84,7 @@ const LinkSection = () => {
                 {el.text}
               </p>
             </div>
-          </RevealUpMotion>
+          </ScrollMotionEffect>
         ))}
       </div>
     </SectionLayout>

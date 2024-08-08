@@ -1,10 +1,10 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import parse from 'html-react-parser';
-import { Accordion, AccordionItem, TableHeader } from '@nextui-org/react';
+import { Accordion, AccordionItem } from '@nextui-org/react';
 import SectionLayout from '../shared/SectionLayout';
 import FaqSilder from './FaqSilder';
-import RevealUpMotion from '../motion/RevealUpMotion';
+import ScrollMotionEffect from '../motion/ScrollMotionEffect';
 
 const generalInfo = [
   {
@@ -123,7 +123,7 @@ const FaqSection = () => {
   );
   return (
     <SectionLayout>
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <div className='bg-[#F3F3F3] flex flex-col md:flex-row items-center justify-center gap-4 p-4 rounded-md mx-auto md:w-[750px] text-md md:text-lg font-semibold '>
           <p>{`Sign up for text and support`}</p>
           <span className='hidden md:block'>|</span>
@@ -131,25 +131,25 @@ const FaqSection = () => {
           <span className='hidden md:block'>|</span>
           <p>{`Email us: support@swopme.co`}</p>
         </div>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <h2
           className={`text-stone-950 font-normal text-xl md:text-4xl text-center !leading-none mt-6`}
         >
           <strong>How Can We Help?</strong>
         </h2>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <p className='text-lg text-stone-950 text-center mt-4 max-w-[620px] mx-auto px-6 md:px-0'>
           Discover rewarding career paths, innovative work environments, and the
           chance to grow with us. Find your perfect job and start making an
           impact today.
         </p>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <h2
           className={`text-stone-950 font-normal text-xl md:text-4xl text-center !leading-none mt-10`}
         >
@@ -158,9 +158,9 @@ const FaqSection = () => {
         <div className='mx-6 md:mx-32 mt-8 md:mt-12'>
           <FaqSilder />
         </div>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <div className='mx-6 md:mx-32 mt-8 md:mt-16 bg-white'>
           <Accordion
             className='border-2 shadow-lg !p-5 !md:p-10 rounded-lg text-2xl py-5'
@@ -184,9 +184,9 @@ const FaqSection = () => {
             </AccordionItem>
           </Accordion>
         </div>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <div className='mx-6 md:mx-32 mt-8 md:mt-16 border-2 shadow-lg rounded-lg bg-white'>
           <h1 className='text-2xl font-bold ml-1 !px-5 !md:px-10 mt-6'>
             General <span>💎</span>
@@ -213,9 +213,9 @@ const FaqSection = () => {
             ))}
           </Accordion>
         </div>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <div className='mx-6 md:mx-32 mt-8 md:mt-16 border-2 shadow-lg rounded-lg bg-white'>
           <h1 className='text-2xl font-bold ml-1 !px-5 !md:px-10 mt-6'>
             Compatibility <span>🤝</span>
@@ -242,9 +242,9 @@ const FaqSection = () => {
             ))}
           </Accordion>
         </div>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <div className='mx-6 md:mx-32 mt-8 md:mt-16 border-2 shadow-lg rounded-lg bg-white'>
           <h1 className='text-2xl font-bold ml-1 !px-5 !md:px-10 mt-6'>
             Shipping <span>🚚</span>
@@ -271,7 +271,7 @@ const FaqSection = () => {
             ))}
           </Accordion>
         </div>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
     </SectionLayout>
   );
 };

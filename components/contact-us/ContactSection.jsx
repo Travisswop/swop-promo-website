@@ -6,7 +6,7 @@ import { send } from 'emailjs-com';
 import Swal from 'sweetalert2';
 
 import Image from 'next/image';
-import RevealUpMotion from '../motion/RevealUpMotion';
+import ScrollMotionEffect from '../motion/ScrollMotionEffect';
 
 const ContactSection = () => {
   const [emailForm, setEmailForm] = useState({
@@ -92,24 +92,24 @@ const ContactSection = () => {
 
   return (
     <SectionLayout>
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <h2
           className={`text-stone-950 font-normal text-2xl md:text-4xl text-center !leading-none`}
         >
           <strong>Have Some Questions?</strong>
         </h2>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <p className='text-lg text-stone-950 text-center mt-4 max-w-[620px] mx-auto'>
           {`The NFC hype isn’t what it once was, but it’s still a handy feature you
         should take advantage of, or at least get to know. The NFC hype isn’t`}
         </p>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
       <div className='grid grid-cols-1 lg:grid-cols-2 md:gap-x-10 gap-x-0 items-center mt-12 md:mt-20'>
         <div className='flex space-y-4 justify-center'>
-          <RevealUpMotion>
+          <ScrollMotionEffect effect='fade-right' duration='2000'>
             <div className='w-[300px] md:w-[400px] h-auto'>
               <Image
                 width={400}
@@ -118,11 +118,11 @@ const ContactSection = () => {
                 alt='Mail'
               />
             </div>{' '}
-          </RevealUpMotion>
+          </ScrollMotionEffect>
         </div>
 
         <div className='flex flex-col mt-6 md:mt-0 p-8'>
-          <RevealUpMotion>
+          <ScrollMotionEffect effect='fade-left' duration='2000'>
             {' '}
             <form className='w-full' onSubmit={handleSubmit}>
               <div class='mb-6 w-full'>
@@ -219,7 +219,7 @@ const ContactSection = () => {
                 </Button>
               )}
             </form>
-          </RevealUpMotion>
+          </ScrollMotionEffect>
         </div>
       </div>
     </SectionLayout>

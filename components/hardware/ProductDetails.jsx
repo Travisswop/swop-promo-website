@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import Image from 'next/image';
-import RevealUpMotion from '../motion/RevealUpMotion';
+import ScrollMotionEffect from '../motion/ScrollMotionEffect';
 
 const clientComments = [
   {
@@ -45,7 +45,7 @@ const clientComments = [
 const ProductDetails = () => {
   return (
     <SectionLayout>
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <div class='grid grid-col-1 md:grid-rows-2 grid-flow-col gap-4 items-stretch justify-center'>
           <div class='row-span-1 bg-gradient-to-br from-[#FAFAFA] to-[#F5F5F5] p-5 rounded-xl w-[500px] h-auto'>
             <div>
@@ -150,18 +150,18 @@ const ProductDetails = () => {
             </p>
           </div>
         </div>
-      </RevealUpMotion>
-      <RevealUpMotion>
+      </ScrollMotionEffect>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <h2
           className={`text-stone-950 font-normal text-xl md:text-5xl text-center !leading-none mt-16`}
         >
           What people say
         </h2>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
       <div className='grid grid-cols-1 md:grid-cols-3 items-center gap-4 mt-10'>
         {clientComments?.map((el, index) => (
-          <RevealUpMotion key={index}>
+          <ScrollMotionEffect effect='fade-up' duration='2000' key={index}>
             <div className='bg-[#FFFFFF] rounded-xl p-6 shadow-lg'>
               <div className='flex items-start justify-start gap-3'>
                 <Image
@@ -180,7 +180,7 @@ const ProductDetails = () => {
               </div>
               <p className='text-xl text-stone-950 mt-1'>{el?.desc}</p>
             </div>
-          </RevealUpMotion>
+          </ScrollMotionEffect>
         ))}
       </div>
     </SectionLayout>

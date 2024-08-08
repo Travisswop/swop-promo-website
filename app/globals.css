@@ -37,6 +37,13 @@ h1 {
   display: none;
 } */
 
+video::-internal-media-controls-overlay-cast-button,
+video::-webkit-media-controls-enclosure,
+video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+
 .map-iframe {
   filter: grayscale(100%) invert(92%) contrast(83%);
 }

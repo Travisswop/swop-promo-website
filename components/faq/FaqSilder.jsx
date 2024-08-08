@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -12,7 +12,31 @@ import './styles.css';
 import { Pagination } from 'swiper/modules';
 import Image from 'next/image';
 
-const FaqSilder = () => {
+const slidesData = [
+  {
+    src: '/assets/faq/faq-video.jpg',
+    alt: 'Swop QR Code',
+    title: 'How to Activate SWOP',
+  },
+  {
+    src: '/assets/faq/faq-video.jpg',
+    alt: 'Swop QR Code',
+    title: 'How to SWOP connect an Android',
+  },
+  { src: '/assets/faq/faq-video.jpg', alt: 'Swop QR Code', title: 'SWOP Pro' },
+  {
+    src: '/assets/faq/faq-video.jpg',
+    alt: 'Swop QR Code',
+    title: 'How to Activate SWOP',
+  },
+  {
+    src: '/assets/faq/faq-video.jpg',
+    alt: 'Swop QR Code',
+    title: 'How to SWOP connect an Android',
+  },
+];
+
+const FaqSlider = () => {
   return (
     <>
       <Swiper
@@ -38,89 +62,27 @@ const FaqSilder = () => {
         modules={[Pagination]}
         className='mySwiper'
       >
-        <SwiperSlide>
-          <div>
-            <Image
-              width={400}
-              height={200}
-              src={'/assets/faq/faq-video.jpg'}
-              alt='Swop QR COde'
-              className=''
-            />
-            <h2
-              className={`text-stone-950 font-normal text-lg md:text-2xl text-left !leading-none mt-4`}
-            >
-              How to Active SWOP
-            </h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <Image
-              width={400}
-              height={200}
-              src={'/assets/faq/faq-video.jpg'}
-              alt='Swop QR COde'
-              className=''
-            />
-            <h2
-              className={`text-stone-950 font-normal text-lg md:text-2xl text-left !leading-none mt-4`}
-            >
-              How to SWOP connect an Android
-            </h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <Image
-              width={400}
-              height={200}
-              src={'/assets/faq/faq-video.jpg'}
-              alt='Swop QR COde'
-              className=''
-            />
-            <h2
-              className={`text-stone-950 font-normal text-lg md:text-2xl text-left !leading-none mt-4`}
-            >
-              SWOP pro
-            </h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <Image
-              width={400}
-              height={200}
-              src={'/assets/faq/faq-video.jpg'}
-              alt='Swop QR COde'
-              className=''
-            />
-            <h2
-              className={`text-stone-950 font-normal text-lg md:text-2xl text-left !leading-none mt-4`}
-            >
-              How to Active SWOP
-            </h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <Image
-              width={400}
-              height={200}
-              src={'/assets/faq/faq-video.jpg'}
-              alt='Swop QR COde'
-              className=''
-            />
-            <h2
-              className={`text-stone-950 font-normal text-lg md:text-2xl text-left !leading-none mt-4 mb-16`}
-            >
-              How to SWOP connect an Android
-            </h2>
-          </div>
-        </SwiperSlide>
+        {slidesData.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div>
+              <Image
+                width={400}
+                height={200}
+                src={slide.src}
+                alt={slide.alt}
+                className=''
+              />
+              <h2
+                className={`text-stone-950 font-normal text-lg md:text-2xl text-left !leading-none mt-4 ${index === slidesData.length - 1 ? 'mb-16' : ''}`}
+              >
+                {slide.title}
+              </h2>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
 };
 
-export default FaqSilder;
+export default FaqSlider;

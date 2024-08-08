@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import parse from 'html-react-parser';
 import { Accordion, AccordionItem } from '@nextui-org/react';
-import RevealUpMotion from '../motion/RevealUpMotion';
+import ScrollMotionEffect from '../motion/ScrollMotionEffect';
 
 const jobsPostInfo = [
   {
@@ -177,7 +177,7 @@ const JobSection = () => {
 
   return (
     <SectionLayout>
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <h2
           className={`text-stone-950 font-normal text-2xl md:text-4xl text-center !leading-none`}
         >
@@ -188,10 +188,10 @@ const JobSection = () => {
           chance to grow with us. Find your perfect job and start making an
           impact today.
         </p>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
       <div className='mx-6 md:mx-32 mt-16 '>
-        <RevealUpMotion>
+        <ScrollMotionEffect effect='fade-up' duration='2000'>
           <Accordion
             selectedKeys={selectedKeys}
             onSelectionChange={setSelectedKeys}
@@ -213,7 +213,7 @@ const JobSection = () => {
               </AccordionItem>
             ))}
           </Accordion>
-        </RevealUpMotion>
+        </ScrollMotionEffect>
       </div>
     </SectionLayout>
   );

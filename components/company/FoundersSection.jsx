@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import Image from 'next/image';
-import RevealUpMotion from '../motion/RevealUpMotion';
+import ScrollMotionEffect from '../motion/ScrollMotionEffect';
 
 const linkInfo = [
   {
@@ -39,23 +39,23 @@ const linkInfo = [
 const FoundersSection = () => {
   return (
     <SectionLayout>
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <h2
           className={`text-stone-950 font-semibold text-xl md:text-5xl text-center !leading-normal`}
         >
           Founders
         </h2>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <p className='text-lg text-stone-950 text-center'>
           Core Values and Ethics in Leadership
         </p>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
       <div className='grid grid-cols-1 md:grid-cols-3 items-start justify-center gap-14 mt-24'>
         {linkInfo?.map((el, index) => (
-          <RevealUpMotion key={index}>
+          <ScrollMotionEffect effect='fade-up' duration='2000' key={index}>
             <div className=''>
               <div className={``}>
                 <Image
@@ -71,7 +71,7 @@ const FoundersSection = () => {
               </h2>
               <p className='text-lg text-stone-950 text-center'>{el.title}</p>
             </div>
-          </RevealUpMotion>
+          </ScrollMotionEffect>
         ))}
       </div>
     </SectionLayout>

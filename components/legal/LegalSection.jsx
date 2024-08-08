@@ -5,32 +5,31 @@ import { Tabs, Tab, Card, CardBody, CardHeader } from '@nextui-org/react';
 import Returns from './Returns';
 import TermsAndConditions from './TermsAndConditions';
 import PrivacyAndPolicy from './PrivacyAndPolicy';
-import RevealUpMotion from '../motion/RevealUpMotion';
+import ScrollMotionEffect from '../motion/ScrollMotionEffect';
 
 const LegalSection = () => {
   const [selected, setSelected] = React.useState('photos');
 
   return (
     <SectionLayout>
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <h2
           className={`text-stone-950 font-normal text-2xl md:text-4xl text-center !leading-none`}
         >
           <strong>Legal</strong>
         </h2>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <p className='text-lg text-stone-950 text-center mt-4 max-w-[620px] mx-auto'>
           Discover rewarding career paths, innovative work environments, and the
           chance to grow with us. Find your perfect job and start making an
           impact today.
         </p>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
       <div className='md:mx-32 mt-10 mx-auto'>
-        <RevealUpMotion>
-          {' '}
+        <ScrollMotionEffect effect='fade-up' duration='2000'>
           <div className='flex flex-wrap gap-4 justify-center'>
             <Tabs
               aria-label='Options'
@@ -70,7 +69,7 @@ const LegalSection = () => {
               </Tab>
             </Tabs>
           </div>
-        </RevealUpMotion>
+        </ScrollMotionEffect>
       </div>
     </SectionLayout>
   );

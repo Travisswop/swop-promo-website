@@ -14,7 +14,7 @@ import { IoIosWatch } from 'react-icons/io';
 import { GrTransaction } from 'react-icons/gr';
 import { IoRestaurantOutline, IoCodeSharp } from 'react-icons/io5';
 import { RiChatSettingsLine } from 'react-icons/ri';
-import RevealUpMotion from '../motion/RevealUpMotion';
+import ScrollMotionEffect from '../motion/ScrollMotionEffect';
 
 const ConectMobileSection = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -149,20 +149,20 @@ const ConectMobileSection = () => {
 
   return (
     <SectionLayout>
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <h2 className='text-stone-950 font-normal text-xl md:text-4xl text-center leading-none'>
           <strong>Hardware</strong> built to connect
           <br /> you with your <strong>customers</strong>.
         </h2>
-      </RevealUpMotion>
-      <RevealUpMotion>
+      </ScrollMotionEffect>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <p className='text-lg text-stone-950 text-center mt-4 max-w-[700px] mx-auto'>
           Attach your Everything Link to devices to route customers where they
           need to go, keeping everything organized and making it easier to
           generate leads, gather reviews, take payments, offer promotions, and
           more.
         </p>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
 
       <div className='hidden md:block w-[400px] h-[520px] mx-auto mt-8'>
         {hoverImgUrl ? (

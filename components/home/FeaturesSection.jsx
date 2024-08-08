@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import Image from 'next/image';
 import { motion, useAnimation, useInView } from 'framer-motion';
-import RevealUpMotion from '../motion/RevealUpMotion';
+import ScrollMotionEffect from '../motion/ScrollMotionEffect';
 
 const mobileImageVariants = {
   hidden: { opacity: 0, y: 0 },
@@ -187,13 +187,13 @@ const FeaturesSection = () => {
 
   return (
     <SectionLayout>
-      <RevealUpMotion>
+      <ScrollMotionEffect effect='fade-up' duration='2000'>
         <h2
           className={`text-stone-950 font-medium text-2xl md:text-4xl text-center !leading-normal mb-6 md:mb-0`}
         >
           <strong>Features</strong>
         </h2>
-      </RevealUpMotion>
+      </ScrollMotionEffect>
       <motion.div className='grid grid-cols-3 items-center justify-between gap-0 md:gap-14'>
         {/* Features Left Part */}
         <motion.div
@@ -314,7 +314,7 @@ const FeaturesSection = () => {
 
       <div className='mt-8 lg:hidden'>
         {featuresInfoAll?.map((el, index) => (
-          <RevealUpMotion key={index}>
+          <ScrollMotionEffect effect='fade-up' duration='2000' key={index}>
             <div className='flex flex-col items-center bg-[#EFEFEF] p-4 rounded-md my-4'>
               <div className='w-[100%]'>
                 <h2 className='mb-1 text-lg text-stone-950 ttext-left font-bold'>
@@ -325,7 +325,7 @@ const FeaturesSection = () => {
                 </p>
               </div>
             </div>
-          </RevealUpMotion>
+          </ScrollMotionEffect>
         ))}
       </div>
     </SectionLayout>

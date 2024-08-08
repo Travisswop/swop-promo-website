@@ -2,13 +2,13 @@
 import React from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import { InlineWidget } from 'react-calendly';
-import RevealUpMotion from '../motion/RevealUpMotion';
+import ScrollMotionEffect from '../motion/ScrollMotionEffect';
 
 const EventsSections = () => {
   return (
     <SectionLayout>
       <div className=''>
-        <RevealUpMotion>
+        <ScrollMotionEffect effect='fade-up' duration='2000'>
           <div className=''>
             <InlineWidget
               url='https://calendly.com/arsahak-bayshore/30min'
@@ -24,7 +24,7 @@ const EventsSections = () => {
               }}
             />
           </div>
-        </RevealUpMotion>
+        </ScrollMotionEffect>
       </div>
     </SectionLayout>
   );
