@@ -14,13 +14,13 @@ const HeroSection = () => {
 
   return (
     <SectionLayout bg={'bg-transparent'}>
-      <div className='flex flex-col-reverse md:flex-row items-center z-50 gap-6'>
+      <div className='z-50 flex flex-col-reverse items-center w-full gap-6 md:flex-row'>
         <motion.div
           className='flex-1'
           initial='hidden'
           animate='visible'
           exit={{ opacity: 0, transition: { duration: 1 } }}
-          variants={{ visible: { transition: { staggerChildren: 0.1 } } }} // Minor delay
+          variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
         >
           <motion.h1
             className='text-[30px] md:text-[56px] font-[750] text-black text-center leading-tight tracking-normal'
@@ -41,11 +41,11 @@ const HeroSection = () => {
 
           <motion.div
             variants={variants}
-            className='mt-5 md:mt-6 flex justify-center'
+            className='flex justify-center mt-5 md:mt-6'
           >
             <Link
               href={'tel:(863)-599-6735'}
-              className='text-black bg-none hover:bg-black hover:text-white font-medium text-md md:text-lg px-6 md:px-10 py-2 me-0 md:me-6 mb-2 border-2 border-black items-center justify-center flex rounded-xl'
+              className='flex items-center justify-center px-6 py-2 mb-2 font-medium text-black border-2 border-black bg-none hover:bg-black hover:text-white text-md md:text-lg md:px-10 me-0 md:me-6 rounded-xl'
             >
               Get Started
             </Link>

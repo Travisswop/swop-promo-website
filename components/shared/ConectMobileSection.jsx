@@ -1,4 +1,5 @@
 'use client';
+
 import React, {
   useState,
   useEffect,
@@ -6,15 +7,17 @@ import React, {
   useCallback,
   useMemo,
 } from 'react';
-import SectionLayout from '../shared/SectionLayout';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+
+import SectionLayout from '../shared/SectionLayout';
+import ScrollMotionEffect from '../motion/ScrollMotionEffect';
+
 import { TiBusinessCard } from 'react-icons/ti';
 import { IoIosWatch } from 'react-icons/io';
 import { GrTransaction } from 'react-icons/gr';
 import { IoRestaurantOutline, IoCodeSharp } from 'react-icons/io5';
 import { RiChatSettingsLine } from 'react-icons/ri';
-import ScrollMotionEffect from '../motion/ScrollMotionEffect';
 
 const ConectMobileSection = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -93,6 +96,19 @@ const ConectMobileSection = () => {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
     }
+
+    // Prefetch video URL
+    if (value?.videoUrl) {
+      fetch(value.videoUrl, { method: 'HEAD' })
+        .then((response) => {
+          if (response.ok) {
+            console.log(`Prefetched video: ${value.videoUrl}`);
+          }
+        })
+        .catch((error) =>
+          console.error(`Failed to prefetch video: ${value.videoUrl}`, error),
+        );
+    }
   }, []);
 
   useEffect(() => {
@@ -100,18 +116,16 @@ const ConectMobileSection = () => {
     let delayTimer;
 
     if (hoveredItem) {
-      // Set delay based on hoveredItem value
       if (hoveredItem === 5) {
         delayTimer = setTimeout(() => {
           setIsDelayed(true);
-          // Set the video play after delay
           playTimer = setTimeout(() => {
             setPlayVideo(true);
             if (videoRef.current) {
               videoRef.current.play();
             }
           }, 2000);
-        }, 3000); // 3 seconds delay
+        }, 3000);
       } else {
         setIsDelayed(false);
         playTimer = setTimeout(() => {
@@ -119,14 +133,13 @@ const ConectMobileSection = () => {
           if (videoRef.current) {
             videoRef.current.play();
           }
-        }, 2000); // 2 seconds delay
+        }, 2000);
       }
     } else {
       setPlayVideo(false);
       setIsDelayed(false);
     }
 
-    // Clean up timers on unmount or change in dependencies
     return () => {
       clearTimeout(playTimer);
       clearTimeout(delayTimer);
@@ -147,10 +160,16 @@ const ConectMobileSection = () => {
     }
   }, [hoveredItem, isDelayed]);
 
+  const [key, setKey] = useState(Date.now());
+
+  useEffect(() => {
+    setKey(Date.now()); // Update key when hoverVideoUrl changes
+  }, [hoverVideoUrl]);
+
   return (
     <SectionLayout>
       <ScrollMotionEffect effect='fade-up' duration='2000'>
-        <h2 className='text-stone-950 font-normal text-xl md:text-4xl text-center leading-none'>
+        <h2 className='text-xl font-normal leading-none text-center text-stone-950 md:text-4xl'>
           <strong>Hardware</strong> built to connect
           <br /> you with your <strong>customers</strong>.
         </h2>
@@ -316,8 +335,14 @@ const ConectMobileSection = () => {
           ))}
         </div>
 
-        <div className='flex justify-center mx-auto relative z-50'>
-          <motion.div className='h-auto md:h-[600px] flex justify-center mx-auto relative z-50'>
+        <div className='relative z-50 flex justify-center mx-auto'>
+          <motion.div
+            key={key} // This key will change whenever hoverVideoUrl changes
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }} // Adjust duration as needed
+            className='h-auto md:h-[600px] flex justify-center mx-auto relative z-50'
+          >
             <video
               ref={videoRef}
               src={hoverVideoUrl || '/assets/video/cstomizable-crad-tapp.mp4'}
@@ -347,7 +372,7 @@ const ConectMobileSection = () => {
           ))}
         </div>
 
-        <div className='md:hidden grid grid-cols-3 gap-6 bg-white justify-center mx-auto mt-8'>
+        <div className='grid justify-center grid-cols-3 gap-6 mx-auto mt-8 bg-white md:hidden'>
           {featuresInfoAll.map((el) => (
             <div
               key={el.id}
