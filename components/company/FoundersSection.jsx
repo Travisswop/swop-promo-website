@@ -41,7 +41,7 @@ const FoundersSection = () => {
     <SectionLayout>
       <ScrollMotionEffect effect='fade-up' duration='2000'>
         <h2
-          className={`text-stone-950 font-semibold text-xl md:text-5xl text-center !leading-normal`}
+          className={`text-stone-950 font-semibold text-3xl md:text-5xl text-center !leading-normal`}
         >
           Founders
         </h2>
@@ -66,10 +66,10 @@ const FoundersSection = () => {
                   className='mx-auto'
                 />
               </div>
-              <h2 className='mt-4 text-xl text-stone-950 text-center font-bold'>
+              <h2 className='mt-4 text:md md:text-xl text-stone-950 text-center font-bold'>
                 {el.name}
               </h2>
-              <p className='text-lg text-stone-950 text-center'>{el.title}</p>
+              <p className='text-md text-stone-950 text-center'>{el.title}</p>
             </div>
           </ScrollMotionEffect>
         ))}

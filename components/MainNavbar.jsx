@@ -57,7 +57,7 @@ const MainNavbar = () => {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       maxWidth='2xl'
-      className={`py-0 md:py-2 fixed top-0 transition-colors duration-300 ${navbarColor ? '!bg-white shadow-small' : 'bg-transparent'}`}
+      className={`pb-0 pt-2 md:pb-2 md:pt-5 fixed top-0 transition-colors duration-300 ${navbarColor ? '!bg-white shadow-small duration-1000' : 'bg-transparent'}`}
     >
       <NavbarContent>
         <NavbarBrand>
@@ -125,10 +125,10 @@ const MainNavbar = () => {
       </NavbarContent>
 
       <NavbarMenu className='overflow-hidden'>
-        {menuItems.map((el) => (
-          <NavbarMenuItem key={el.slug} className='flex flex-row '>
+        {menuItems.map((el, index) => (
+          <NavbarMenuItem key={el.slug} className='flex flex-row'>
             <Link
-              className={`w-full text-black text-center !text-xl font-medium py-1 ${pathname === el.slug ? '!text-[#AF97D4]' : ''}`}
+              className={`w-full text-black text-center !text-xl font-medium py-1 ${pathname === el.slug ? '!text-[#AF97D4]' : ''} ${index === 0 ? 'mt-6' : ''}`}
               href={el.slug}
               onClick={() => setIsMenuOpen(false)}
             >
