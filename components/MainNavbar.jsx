@@ -57,7 +57,7 @@ const MainNavbar = () => {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       maxWidth='2xl'
-      className={`pb-0 pt-2 md:pb-2 md:pt-5 fixed top-0 transition-colors duration-300 ${navbarColor ? '!bg-white shadow-small duration-1000' : 'bg-transparent'}`}
+      className={`pb-0 pt-2 md:pb-3 md:pt-4 fixed top-0 transition-colors duration-300 ${navbarColor ? '!bg-white shadow-small duration-1000' : 'bg-transparent'}`}
     >
       <NavbarContent>
         <NavbarBrand>
@@ -109,7 +109,7 @@ const MainNavbar = () => {
           >
             <p>Get Demo</p>
             <div className='bg-[#282828] p-1 md:p-2 rounded-full'>
-              <IoCall className='w-3 h-3 md:w-5 md:h-5 text-white' />
+              <IoCall className='w-3 h-3 text-white md:w-5 md:h-5' />
             </div>
           </Link>
         </NavbarItem>

@@ -57,10 +57,10 @@ const ProductDetails = () => {
                 className='mx-auto'
               />
             </div>
-            <h2 className='mt-3 text-2xl text-stone-950 text-center font-bold'>
+            <h2 className='mt-3 text-2xl font-bold text-center text-stone-950'>
               Security meets agility.
             </h2>
-            <p className='text-lg text-stone-950 text-center mt-1'>
+            <p className='mt-1 text-lg text-center text-stone-950'>
               Tag¹ provides a secure gateway to deep experiences. Adapt your
               message while safeguarding brand integrity.
             </p>
@@ -76,10 +76,10 @@ const ProductDetails = () => {
                 className='mx-auto'
               />
             </div>
-            <h2 className='mt-3 text-2xl text-stone-950 text-center font-bold'>
+            <h2 className='mt-3 text-2xl font-bold text-center text-stone-950'>
               Trigger interactivity on contact.
             </h2>
-            <p className='text-lg text-stone-950 text-center mt-1'>
+            <p className='mt-1 text-lg text-center text-stone-950'>
               Tag¹ facilitates an instant and reliable connection. Activate
               immersive brand experiences with just a tap.
             </p>
@@ -87,7 +87,7 @@ const ProductDetails = () => {
 
           <div class='row-span-1 md:row-span-2 bg-gradient-to-br from-[#FAFAFA] to-[#F5F5F5] p-5 rounded-xl w-[500px]'>
             <div className=''>
-              <h2 className='mt-3 text-2xl text-stone-950 text-center font-bold  '>
+              <h2 className='mt-3 text-2xl font-bold text-center text-stone-950 '>
                 Proximity is all it takes.
               </h2>
               <div>
@@ -100,12 +100,12 @@ const ProductDetails = () => {
                 />
               </div>
 
-              <p className='text-lg text-stone-950 text-center mt-1 bottom-0'>
+              <p className='bottom-0 mt-1 text-lg text-center text-stone-950'>
                 Your audience never has to install an app, or update anything,
                 to access your digital experiences. They simply tap on a Tag to
                 experience your latest campaign.
               </p>
-              <p className='text-lg text-stone-950 text-center mt-1'>
+              <p className='mt-1 text-lg text-center text-stone-950'>
                 Seamless. Simple. Smart.
               </p>
             </div>
@@ -121,10 +121,10 @@ const ProductDetails = () => {
                 className='mx-auto'
               />
             </div>
-            <h2 className='mt-3 text-2xl text-stone-950 text-center font-bold'>
+            <h2 className='mt-3 text-2xl font-bold text-center text-stone-950'>
               Datapoints for each tap.
             </h2>
-            <p className='text-lg text-stone-950 text-center mt-1'>
+            <p className='mt-1 text-lg text-center text-stone-950'>
               Tag¹ is built for data on tap. Gain access to data points upon tap
               and optimize engagement with actionable data.
             </p>
@@ -140,10 +140,10 @@ const ProductDetails = () => {
                 className='mx-auto'
               />
             </div>
-            <h2 className='mt-3 text-2xl text-stone-950 text-center font-bold'>
+            <h2 className='mt-3 text-2xl font-bold text-center text-stone-950'>
               Created for the world of tangible products.
             </h2>
-            <p className='text-lg text-stone-950 text-center mt-1'>
+            <p className='mt-1 text-lg text-center text-stone-950'>
               Tag¹ is designed to add a digital layer to your physical products.
               As such, explore a variety of form factors and styles for various
               products.
@@ -159,7 +159,7 @@ const ProductDetails = () => {
         </h2>
       </ScrollMotionEffect>
 
-      <div className='grid grid-cols-1 md:grid-cols-3 items-center gap-4 mt-10'>
+      <div className='grid items-center grid-cols-1 gap-4 mt-10 md:grid-cols-3'>
         {clientComments?.map((el, index) => (
           <ScrollMotionEffect effect='fade-up' duration='2000' key={index}>
             <div className='bg-[#FFFFFF] rounded-xl p-6 shadow-lg'>
@@ -172,13 +172,13 @@ const ProductDetails = () => {
                   className=''
                 />
                 <div>
-                  <h2 className='text-2xl text-stone-950 font-normal'>
+                  <h2 className='text-2xl font-normal text-stone-950'>
                     {el?.name}
                   </h2>
                   <p className='text-sm text-stone-950'> {el?.title}</p>
                 </div>
               </div>
-              <p className='text-xl text-stone-950 mt-1'>{el?.desc}</p>
+              <p className='mt-1 text-xl text-stone-950'>{el?.desc}</p>
             </div>
           </ScrollMotionEffect>
         ))}
