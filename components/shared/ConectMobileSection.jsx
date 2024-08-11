@@ -18,6 +18,7 @@ import { IoIosWatch } from 'react-icons/io';
 import { GrTransaction } from 'react-icons/gr';
 import { IoRestaurantOutline, IoCodeSharp } from 'react-icons/io5';
 import { RiChatSettingsLine } from 'react-icons/ri';
+import MobileVIdeo from './MobileVIdeo';
 
 const ConectMobileSection = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -343,7 +344,8 @@ const ConectMobileSection = () => {
             transition={{ duration: 2 }} // Adjust duration as needed
             className='h-auto md:h-[600px] flex justify-center mx-auto relative z-50'
           >
-            <video
+            <MobileVIdeo hoverVideoUrl={hoverVideoUrl} />
+            {/* <video
               ref={videoRef}
               src={hoverVideoUrl || '/assets/video/cstomizable-crad-tapp.mp4'}
               muted
@@ -353,7 +355,7 @@ const ConectMobileSection = () => {
               preload='auto'
               loading='lazy'
               playsInline
-            />
+            /> */}
           </motion.div>
         </div>
 
