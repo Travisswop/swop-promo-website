@@ -1,4 +1,5 @@
 'use client';
+import React, { useMemo } from 'react';
 import SectionLayout from '../shared/SectionLayout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -9,7 +10,7 @@ const HeroSection = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  const text = 'Build a SmartSite Today'.split(' ');
+  const text = useMemo(() => 'Build a Smart Site Today'.split('  '), []);
 
   return (
     <SectionLayout bg={'bg-transparent'}>
@@ -19,22 +20,18 @@ const HeroSection = () => {
           initial='hidden'
           animate='visible'
           exit={{ opacity: 0, transition: { duration: 1 } }}
-          variants={{ visible: { transition: { staggerChildren: 0 } } }} // No delay
+          variants={{ visible: { transition: { staggerChildren: 0.1 } } }} // Minor delay
         >
-          <h1
-            className={`text-[30px] md:text-[56px] font-[750] text-black text-center leading-tight tracking-normal`}
+          <motion.h1
+            className='text-[30px] md:text-[56px] font-[750] text-black text-center leading-tight tracking-normal'
+            variants={variants}
           >
             {text.map((word, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.25 }} // Removed delay
-              >
+              <span key={index} className='inline-block'>
                 {word}{' '}
-              </motion.span>
+              </span>
             ))}
-          </h1>
+          </motion.h1>
           <motion.p
             variants={variants}
             className='text-black text-2xl md:text-[36px] mt-2 md:mt-2 text-center'
@@ -74,4 +71,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default React.memo(HeroSection);

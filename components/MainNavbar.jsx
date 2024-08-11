@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import {
   Navbar,
   NavbarBrand,
@@ -15,6 +15,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+// Debounce function moved outside to avoid recreation on every render
 const debounce = (func, wait) => {
   let timeout;
   return (...args) => {
@@ -28,14 +29,18 @@ const MainNavbar = () => {
   const pathname = usePathname();
   const [navbarColor, setNavbarColor] = useState(false);
 
-  // Use useCallback to memoize the debounce function
+  const menuItems = useMemo(
+    () => [
+      { title: 'Software', slug: '/software' },
+      { title: 'Hardware', slug: '/hardware' },
+      { title: 'Company', slug: '/company' },
+    ],
+    [],
+  );
+
   const handleScroll = useCallback(
     debounce(() => {
-      if (window.scrollY >= 100) {
-        setNavbarColor(true);
-      } else {
-        setNavbarColor(false);
-      }
+      setNavbarColor(window.scrollY >= 100);
     }, 100),
     [],
   );
@@ -46,12 +51,6 @@ const MainNavbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [handleScroll]);
-
-  const menuItems = [
-    { title: 'Software', slug: '/software' },
-    { title: 'Hardware', slug: '/hardware' },
-    { title: 'Company', slug: '/company' },
-  ];
 
   return (
     <Navbar
@@ -69,6 +68,7 @@ const MainNavbar = () => {
               width={150}
               height={100}
               className='w-[90px] md:w-[150px] h-auto'
+              priority
             />
           </Link>
         </NavbarBrand>
@@ -85,6 +85,7 @@ const MainNavbar = () => {
               alt='Swop Logo'
               width={50}
               height={50}
+              priority
             />
           </Link>
         </NavbarItem>
@@ -92,7 +93,7 @@ const MainNavbar = () => {
           <NavbarItem key={el.slug}>
             <Link
               href={el.slug}
-              className={`text-md md:text-lg ${pathname === el.slug ? 'text-[#AF97D4]' : ''}`}
+              className={`text-md md:text-lg hover:text-[#AF97D4] ${pathname === el.slug ? 'text-[#AF97D4]' : ''}`}
             >
               {el.title}
             </Link>
@@ -127,7 +128,7 @@ const MainNavbar = () => {
         {menuItems.map((el) => (
           <NavbarMenuItem key={el.slug} className='flex flex-row '>
             <Link
-              className='w-full text-black text-center !text-xl font-medium py-1'
+              className={`w-full text-black text-center !text-xl font-medium py-1 ${pathname === el.slug ? '!text-[#AF97D4]' : ''}`}
               href={el.slug}
               onClick={() => setIsMenuOpen(false)}
             >

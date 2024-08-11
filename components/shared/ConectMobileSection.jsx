@@ -317,7 +317,7 @@ const ConectMobileSection = () => {
         </div>
 
         <div className='flex justify-center mx-auto relative z-50'>
-          <motion.div className='w-[400px] h-auto md:h-[600px] flex justify-center mx-auto relative z-50'>
+          <motion.div className='h-auto md:h-[600px] flex justify-center mx-auto relative z-50'>
             <video
               ref={videoRef}
               src={hoverVideoUrl || '/assets/video/cstomizable-crad-tapp.mp4'}
