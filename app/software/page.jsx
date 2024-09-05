@@ -1,4 +1,4 @@
-import ConectMobileSection from '@/components/shared/ConectMobileSection';
+import ConectMobileSection from '@/components/software/ConectMobileSection';
 
 const page = () => {
   return (
