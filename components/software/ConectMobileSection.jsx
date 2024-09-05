@@ -321,7 +321,7 @@ const ConectMobileSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }} // Adjust duration as needed
-            className='h-[300px] md:h-[600px] flex justify-center mx-auto relative z-50'
+            className='h-[280px] md:h-[600px] flex justify-center mx-auto relative z-50'
           >
             <video
               ref={videoRef}
@@ -352,11 +352,11 @@ const ConectMobileSection = () => {
           ))}
         </div>
 
-        <div className='grid justify-center grid-cols-3 gap-5 mx-auto mt-4 bg-white md:hidden'>
+        <div className='grid justify-center grid-cols-3 mx-auto mt-3 bg-white gap-x-5 gap-y-3 md:hidden'>
           {featuresInfoAll.map((el) => (
             <div
               key={el.id}
-              className={`p-1 bg-white rounded-full size-24 flex flex-col items-center justify-center border border-[#737373] ${hoveredItem === el.id ? 'shadow-xl' : ''}`}
+              className={`p-2 bg-white rounded-full size-20 flex flex-col items-center justify-center border border-[#737373] ${hoveredItem === el.id ? 'shadow-xl' : ''}`}
               onMouseEnter={() => hoverItemSelect(el)}
             >
               <el.icon className='size-4 text-[#737373]' />
