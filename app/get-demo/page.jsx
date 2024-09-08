@@ -1,5 +1,5 @@
+import ConectMobileSection from '@/components/software/ConectMobileSection';
 import React from 'react';
-import ConectMobileSection from '@/components/shared/ConectMobileSection';
 
 const page = () => {
   return (

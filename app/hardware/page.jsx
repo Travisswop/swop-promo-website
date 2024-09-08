@@ -1,5 +1,5 @@
+import ConectMobileSection from '@/components/hardware/ConectMobileSection';
 import DevicesInteraction from '@/components/hardware/DevicesInteraction';
-import ConectMobileSection from '@/components/shared/ConectMobileSection';
 
 const page = () => {
   return (
