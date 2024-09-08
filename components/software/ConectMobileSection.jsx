@@ -232,8 +232,8 @@ const ConectMobileSection = () => {
                 className='mx-auto'
                 width={160}
                 height={80}
-                preload='auto'
-                loading='lazy'
+                preload='metadata'
+                // loading='lazy'
               />
             ) : (
               <Image
@@ -281,8 +281,8 @@ const ConectMobileSection = () => {
                 className='mx-auto'
                 width={100}
                 height={60}
-                preload='auto'
-                loading='lazy'
+                preload='metadata'
+                // loading='lazy'
               />
             ) : (
               <Image
@@ -331,7 +331,7 @@ const ConectMobileSection = () => {
               className='mx-auto'
               width={200}
               height={50}
-              loading='lazy'
+              // loading='lazy'
               playsInline
             />
           </motion.div>
