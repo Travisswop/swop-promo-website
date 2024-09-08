@@ -317,20 +317,20 @@ const ConectMobileSection = () => {
 
         <div className='relative z-50 flex justify-center mx-auto'>
           <motion.div
-            key={key} // This key will change whenever hoverVideoUrl changes
+            key={key}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 2 }} // Adjust duration as needed
+            transition={{ duration: 2 }}
             className='h-[280px] md:h-[600px] flex justify-center mx-auto relative z-50'
           >
             <video
               ref={videoRef}
               src={hoverVideoUrl || '/assets/video/cstomizable-crad-tapp.mp4'}
               muted
+              preload='metadata'
               className='mx-auto'
               width={200}
               height={50}
-              preload='auto'
               loading='lazy'
               playsInline
             />
