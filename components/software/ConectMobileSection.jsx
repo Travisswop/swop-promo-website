@@ -331,8 +331,9 @@ const ConectMobileSection = () => {
               className='mx-auto'
               width={200}
               height={50}
-              // loading='lazy'
+              loading='lazy'
               playsInline
+              poster='/assets/home/features-mobile.png'
             />
           </motion.div>
         </div>
