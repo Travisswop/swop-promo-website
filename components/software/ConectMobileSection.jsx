@@ -318,9 +318,9 @@ const ConectMobileSection = () => {
         <div className='relative z-50 flex justify-center mx-auto'>
           <motion.div
             key={key}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2 }}
+            // initial={{ opacity: 0 }}
+            // animate={{ opacity: 1 }}
+            // transition={{ duration: 2 }}
             className='h-[280px] md:h-[600px] flex justify-center mx-auto relative z-50'
           >
             <video
@@ -333,7 +333,7 @@ const ConectMobileSection = () => {
               height={50}
               loading='lazy'
               playsInline
-              poster='/assets/home/features-mobile.png'
+              poster='/assets/video/mobile.png'
             />
           </motion.div>
         </div>

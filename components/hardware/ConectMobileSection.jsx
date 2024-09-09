@@ -333,7 +333,7 @@ const ConectMobileSection = () => {
               height={50}
               loading='lazy'
               playsInline
-              poster='/assets/home/features-mobile.png'
+              poster='/assets/video/mobile.png'
             />
           </motion.div>
         </div>
