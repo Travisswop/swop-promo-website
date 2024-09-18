@@ -194,7 +194,7 @@ const FeaturesSection = () => {
           <strong>Features</strong>
         </h2>
       </ScrollMotionEffect>
-      <motion.div className='grid grid-cols-3 items-center justify-between gap-0 md:gap-14'>
+      <motion.div className='grid items-center justify-between grid-cols-3 gap-0 md:gap-14'>
         {/* Features Left Part */}
         <motion.div
           ref={featuresLeftRef}
@@ -210,10 +210,10 @@ const FeaturesSection = () => {
               variants={itemLeft}
             >
               <div className='w-[15%] lg:w-[75%] hidden lg:block'>
-                <h2 className='mb-2 md:text-sm lg:text-md xl:text-lg 2xl:text-xl  text-stone-950 text-center md:text-right font-bold mt-6 md:mt-0'>
+                <h2 className='mt-6 mb-2 font-bold text-center md:text-sm lg:text-md xl:text-lg 2xl:text-xl text-stone-950 md:text-right md:mt-0'>
                   {el.title}
                 </h2>
-                <p className='md:text-xs lg:text-xs xl:text-md 2xl:text-lg  text-stone-950 text-center md:text-right mt-1'>
+                <p className='mt-1 text-center md:text-xs lg:text-xs xl:text-md 2xl:text-lg text-stone-950 md:text-right'>
                   {el.text}
                 </p>
               </div>
@@ -245,7 +245,7 @@ const FeaturesSection = () => {
           >
             <Image
               width={400}
-              height={50}
+              height={400}
               src={'/assets/home/features-mobile.png'}
               alt='Link icon'
               className='mx-auto'
@@ -254,7 +254,7 @@ const FeaturesSection = () => {
 
           {/* Arrow Sign Image */}
           <motion.div
-            className='absolute top-8 sm:top-16 md:top-16 lg:top-16 xl:top-16 2xl:top-16 left-0 right-0 z-10 '
+            className='absolute left-0 right-0 z-10 top-8 sm:top-16 md:top-16 lg:top-16 xl:top-16 2xl:top-16 '
             variants={arrowSignVariants}
             initial='hidden'
             animate={centerImageControls}
@@ -298,10 +298,10 @@ const FeaturesSection = () => {
                 </div>
               </div>
               <div className='w-[15%] lg:w-[75%] hidden lg:block'>
-                <h2 className='mb-2 md:text-sm lg:text-md xl:text-lg 2xl:text-xl  text-stone-950 text-center md:text-left font-bold mt-6 md:mt-0'>
+                <h2 className='mt-6 mb-2 font-bold text-center md:text-sm lg:text-md xl:text-lg 2xl:text-xl text-stone-950 md:text-left md:mt-0'>
                   {el.title}
                 </h2>
-                <p className='md:text-xs lg:text-xs xl:text-md 2xl:text-lg  text-stone-950 text-center md:text-left mt-1'>
+                <p className='mt-1 text-center md:text-xs lg:text-xs xl:text-md 2xl:text-lg text-stone-950 md:text-left'>
                   {el.text}
                 </p>
               </div>
@@ -317,10 +317,10 @@ const FeaturesSection = () => {
           <ScrollMotionEffect effect='fade-up' duration='2000' key={index}>
             <div className='flex flex-col items-center bg-[#EFEFEF] p-4 rounded-md my-4'>
               <div className='w-[100%]'>
-                <h2 className='mb-1 text-lg text-stone-950 ttext-left font-bold'>
+                <h2 className='mb-1 text-lg font-bold text-stone-950 ttext-left'>
                   {el.title}
                 </h2>
-                <p className='text-md text-stone-950 text-left mt-0'>
+                <p className='mt-0 text-left text-md text-stone-950'>
                   {el.text}
                 </p>
               </div>

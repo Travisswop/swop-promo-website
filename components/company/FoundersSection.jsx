@@ -5,41 +5,41 @@ import ScrollMotionEffect from '../motion/ScrollMotionEffect';
 
 const linkInfo = [
   {
-    img: '/assets/company/Mask group-0.png',
+    img: '/assets/company/travis.png',
     name: 'Travis Herron',
     title: 'Founder & CEO at SWOP',
   },
   {
-    img: '/assets/company/Mask group-1.png',
-    name: 'Travis Herron',
-    title: 'Founder & CEO at SWOP',
+    img: '/assets/company/neel.png',
+    name: 'Arjo Neel',
+    title: 'Chief Operating Officer (COO)',
   },
   {
-    img: '/assets/company/Mask group-2.png',
-    name: 'Travis Herron',
-    title: 'Founder & CEO at SWOP',
+    img: '/assets/company/salman.png',
+    name: 'Salman H Saikote',
+    title: 'Chief Technology Officer (CTO)',
   },
   {
-    img: '/assets/company/Mask group-3.png',
-    name: 'Travis Herron',
-    title: 'Founder & CEO at SWOP',
+    img: '/assets/company/avatar.png',
+    name: 'Myron',
+    title: '',
   },
   {
-    img: '/assets/company/Mask group-4.png',
-    name: 'Travis Herron',
-    title: 'Founder & CEO at SWOP',
+    img: '/assets/company/avatar2.png',
+    name: 'Rashad',
+    title: '',
   },
   {
-    img: '/assets/company/Mask group-5.png',
-    name: 'Travis Herron',
-    title: 'Founder & CEO at SWOP',
+    img: '/assets/company/avatar3.png',
+    name: 'Sabbir Nasir',
+    title: '',
   },
 ];
 
 const FoundersSection = () => {
   return (
     <SectionLayout>
-      <ScrollMotionEffect effect='fade-up' duration='2000'>
+      <ScrollMotionEffect effect='fade-right' duration='2000'>
         <h2
           className={`text-stone-950 font-semibold text-3xl md:text-5xl text-center !leading-normal`}
         >
@@ -47,13 +47,13 @@ const FoundersSection = () => {
         </h2>
       </ScrollMotionEffect>
 
-      <ScrollMotionEffect effect='fade-up' duration='2000'>
-        <p className='text-lg text-stone-950 text-center'>
+      <ScrollMotionEffect effect='fade-left' duration='2000'>
+        <p className='text-lg text-center text-stone-950'>
           Core Values and Ethics in Leadership
         </p>
       </ScrollMotionEffect>
 
-      <div className='grid grid-cols-1 md:grid-cols-3 items-start justify-center gap-14 mt-24'>
+      <div className='grid items-start justify-center grid-cols-1 mt-24 md:grid-cols-3 gap-14'>
         {linkInfo?.map((el, index) => (
           <ScrollMotionEffect effect='fade-up' duration='2000' key={index}>
             <div className=''>
@@ -66,10 +66,10 @@ const FoundersSection = () => {
                   className='mx-auto'
                 />
               </div>
-              <h2 className='mt-4 text:md md:text-xl text-stone-950 text-center font-bold'>
+              <h2 className='mt-4 font-bold text-center text:md md:text-xl text-stone-950'>
                 {el.name}
               </h2>
-              <p className='text-md text-stone-950 text-center'>{el.title}</p>
+              <p className='text-center text-md text-stone-950'>{el.title}</p>
             </div>
           </ScrollMotionEffect>
         ))}

@@ -183,13 +183,13 @@ const ConectMobileSection = () => {
   return (
     <SectionLayout>
       <div className='hidden md:block'>
-        <ScrollMotionEffect effect='fade-up' duration='2000'>
+        <ScrollMotionEffect effect='fade-right' duration='2000'>
           <h2 className='text-xl font-normal leading-none text-center text-stone-950 md:text-4xl'>
             <strong>Hardware</strong> built to connect
             <br /> you with your <strong>customers</strong>.
           </h2>
         </ScrollMotionEffect>
-        <ScrollMotionEffect effect='fade-up' duration='2000'>
+        <ScrollMotionEffect effect='fade-left' duration='2000'>
           <p className='text-lg text-stone-950 text-center mt-4 max-w-[700px] mx-auto '>
             Attach your Everything Link to devices to route customers where they
             need to go, keeping everything organized and making it easier to
@@ -246,7 +246,24 @@ const ConectMobileSection = () => {
             )}
           </motion.div>
         ) : (
-          ''
+          <motion.div
+            animate={animationProps}
+            transition={{
+              duration: 2,
+              ease: 'easeInOut',
+              times: [0, 0.2, 0.5, 0.8, 1],
+              repeat: false,
+              repeatDelay: 1,
+            }}
+          >
+            <Image
+              width={180}
+              height={120}
+              src={'/assets/video/transactions.png'}
+              alt='Link icon'
+              className='mx-auto'
+            />
+          </motion.div>
         )}
       </div>
 

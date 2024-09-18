@@ -6,7 +6,7 @@ import ScrollMotionEffect from '../motion/ScrollMotionEffect';
 const AvailableForAllDevices = () => {
   return (
     <SectionLayout bg={'bg-[#F8F8F8]'}>
-      <div className='flex flex-col-reverse md:flex-row justify-center items-center bg-white md:mx-20 md:my-6 p-5 md:p-16'>
+      <div className='flex flex-col-reverse items-center justify-center p-5 bg-white md:flex-row md:mx-20 md:my-6 md:p-16'>
         <div className={`flex-1`}>
           <ScrollMotionEffect effect='fade-right' duration='2000'>
             <h2
@@ -18,7 +18,7 @@ const AvailableForAllDevices = () => {
           </ScrollMotionEffect>
 
           <ScrollMotionEffect effect='fade-right' duration='2000'>
-            <h6 className='text-md md:text-xl text-stone-950 text-center md:text-left font-semibold'>
+            <h6 className='font-semibold text-center text-md md:text-xl text-stone-950 md:text-left'>
               Add web3 compatibility to your business to engage and grow with
               the blockchain economy with over 100 million wallets globally.
               Truly borderless interactions.
@@ -27,20 +27,20 @@ const AvailableForAllDevices = () => {
 
           <ScrollMotionEffect effect='fade-right' duration='2000'>
             <div className='mt-8'>
-              <h6 className='text-xl text-stone-950 text-center md:text-left font-bold'>
+              <h6 className='text-xl font-bold text-center text-stone-950 md:text-left'>
                 DOWNLOAD NOW ON:
               </h6>
-              <div className='flex gap-2 mt-2 justify-center md:justify-start mb-10'>
+              <div className='flex justify-center gap-2 mt-2 mb-10 md:justify-start'>
                 <Image
                   width={200}
-                  height={50}
+                  height={200}
                   src='/assets/home/google-play.png'
                   alt='Available For All Devices'
                   className='w-[120px] h-auto'
                 />
                 <Image
                   width={200}
-                  height={50}
+                  height={200}
                   src='/assets/home/app-store.png'
                   alt='Available For All Devices'
                   className='w-[120px] h-auto'
@@ -53,7 +53,7 @@ const AvailableForAllDevices = () => {
           <div className={`flex-1`}>
             <Image
               width={500}
-              height={450}
+              height={500}
               src={'/assets/home/all-devices.png'}
               alt='Available For All Devices'
               className='mx-auto'
