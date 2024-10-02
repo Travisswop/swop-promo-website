@@ -247,7 +247,10 @@ const ConectMobileSection = () => {
           </motion.div>
         ) : (
           <motion.div
-            animate={animationProps}
+            animate={{
+              y: [0, 0, 190],
+              scale: [1, 1.5, 1, 1],
+            }}
             transition={{
               duration: 2,
               ease: "easeInOut",
@@ -257,8 +260,8 @@ const ConectMobileSection = () => {
             }}
           >
             <Image
-              width={160}
-              height={120}
+              width={140}
+              height={90}
               src={"/assets/site-logo/chipicon.png"}
               alt="Link icon"
               className="mx-auto"
@@ -312,7 +315,27 @@ const ConectMobileSection = () => {
             )}
           </motion.div>
         ) : (
-          ""
+          <motion.div
+            animate={{
+              y: [0, 0, 105],
+              scale: [1, 1.5, 1, 1],
+            }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+              times: [0, 0.2, 0.5, 0.8, 1],
+              repeat: false,
+              repeatDelay: 1,
+            }}
+          >
+            <Image
+              width={90}
+              height={90}
+              src={"/assets/site-logo/chipicon.png"}
+              alt="Link icon"
+              className="mx-auto"
+            />
+          </motion.div>
         )}
       </div>
 

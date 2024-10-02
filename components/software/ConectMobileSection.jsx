@@ -492,7 +492,7 @@ const ConectMobileSection = () => {
         icon: GrAnalytics,
         title: "Analytics",
         imageUrl: "/assets/video/embeddables.png",
-        videoUrl: "/assets/video/hardware-embeddables.mp4",
+        videoUrl: "/assets/video/analytics.mp4",
       },
     ],
     []
@@ -757,7 +757,7 @@ const ConectMobileSection = () => {
         <motion.div
           animate={{
             y: [0, 0, 105],
-            scale: [1, 1.5, 1, 1, 1],
+            scale: [1, 1.5, 1, 1],
             opacity: [1, 1, 1, 1, 0], // Fade out at the end
           }}
           transition={{
