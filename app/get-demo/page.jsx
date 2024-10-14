@@ -1,10 +1,11 @@
-import React from 'react';
-import ConectMobileSection from '@/components/software/ConectMobileSection';
+import React from "react";
+
+import EventsSections from "@/components/events/EventsSections";
 
 const page = () => {
   return (
     <div>
-      <ConectMobileSection />
+      <EventsSections />
     </div>
   );
 };

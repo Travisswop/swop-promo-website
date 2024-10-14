@@ -1,4 +1,4 @@
-import EventsSections from '@/components/events/EventsSections';
+import EventsSections from "@/components/events/EventsSections";
 
 const page = () => {
   return (
