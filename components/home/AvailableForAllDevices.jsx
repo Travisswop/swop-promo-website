@@ -33,14 +33,14 @@ const AvailableForAllDevices = () => {
               <div className="flex justify-center gap-2 mt-2 mb-10 md:justify-start">
                 <Image
                   width={200}
-                  height={200}
+                  height={150}
                   src="/assets/home/google-play.png"
                   alt="Available For All Devices"
                   className="w-[120px]"
                 />
                 <Image
                   width={200}
-                  height={200}
+                  height={150}
                   src="/assets/home/app-store.png"
                   alt="Available For All Devices"
                   className="w-[120px]"
