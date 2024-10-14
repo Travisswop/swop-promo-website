@@ -27,26 +27,26 @@ const AvailableForAllDevices = () => {
 
           <ScrollMotionEffect effect="fade-right" duration="2000">
             <div className="mt-8">
-              <h6 className="text-xl font-bold text-center text-stone-950 md:text-left">
+              <h6 className="text-lg font-bold text-center text-stone-950 md:text-xl md:text-left">
                 DOWNLOAD NOW ON:
               </h6>
-              <div className="flex justify-center gap-2 mt-2 mb-10 md:justify-start">
+              <div className="flex justify-center gap-4 mt-4 mb-8 md:justify-start">
                 <Image
                   width={200}
                   height={150}
                   src="/assets/home/google-play.png"
                   alt="Available For All Devices"
-                  className="w-[120px]"
+                  className="w-[100px] md:w-[120px] lg:w-[140px]"
                 />
                 <Image
                   width={200}
                   height={150}
                   src="/assets/home/app-store.png"
                   alt="Available For All Devices"
-                  className="w-[120px]"
+                  className="w-[100px] md:w-[120px] lg:w-[140px]"
                 />
               </div>
-            </div>{" "}
+            </div>
           </ScrollMotionEffect>
         </div>
         <ScrollMotionEffect effect="fade-left" duration="2000">
