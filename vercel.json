@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "https://(.*).swop.id",
+      "destination": "https://swopme.app/sp/:subdomain",
+      "has": [{ "type": "host", "value": "(.*).swop.id" }],
+      "permanent": true
+    }
+  ]
+}
