@@ -13,7 +13,7 @@ import Leads from "./smartSite/Leads";
 const Smartsite = () => {
   return (
     <SectionLayout>
-      <div className="grid grid-cols-1 auto-rows-fr  lg:grid-cols-2 2xl:grid-cols-3 gap-2 h-full items-stretch self-stretch lg:px-36 xl:px-52">
+      <div className="grid grid-cols-1 auto-rows-fr  lg:grid-cols-2 2xl:grid-cols-3 gap-2 h-full items-stretch self-stretch xl:px-20">
         <Messaging />
         <SmartSite />
         <Analytics />

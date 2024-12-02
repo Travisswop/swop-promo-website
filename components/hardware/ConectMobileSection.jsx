@@ -60,7 +60,7 @@ const ConectMobileSection = () => {
       {
         id: 4,
         icon: IoRestaurantOutline,
-        title: "Restaurant/ Hospital",
+        title: "Restaurant/Hospital",
         imageUrl: "/assets/video/restaurants.png",
         videoUrl: "/assets/video/restaurants.mp4",
       },
@@ -344,10 +344,15 @@ const ConectMobileSection = () => {
           {featuresInfoLeft.map((el) => (
             <div
               key={el.id}
-              className={`p-2 bg-white rounded-full w-28 h-28 flex flex-col items-center justify-center border border-[#737373] ${hoveredItem === el.id ? "shadow-xl" : ""}`}
+              className={`p-2 bg-white  w-28 h-28 flex flex-col items-center justify-center  ${hoveredItem === el.id ? "shadow-xl" : ""}`}
               onMouseEnter={() => hoverItemSelect(el)}
             >
-              <el.icon className="w-6 h-6 text-[#737373]" />
+              <Image
+                width={50}
+                height={50}
+                src="/assets/video/businesscards.png"
+                alt="Link icon"
+              />
               <h2 className="mt-2 text-base text-[#737373] text-center font-normal leading-5">
                 {el.title}
               </h2>
@@ -382,10 +387,15 @@ const ConectMobileSection = () => {
           {featuresInfoRight.map((el) => (
             <div
               key={el.id}
-              className={`p-2 bg-white rounded-full w-28 h-28 flex flex-col items-center justify-center border border-[#737373] ${hoveredItem === el.id ? "shadow-xl" : ""}`}
+              className={`p-2 bg-white  w-28 h-28 flex flex-col items-center justify-center  ${hoveredItem === el.id ? "shadow-xl" : ""}`}
               onMouseEnter={() => hoverItemSelect(el)}
             >
-              <el.icon className="w-6 h-6 text-[#737373]" />
+              <Image
+                width={50}
+                height={50}
+                src="/assets/video/businesscards.png"
+                alt="Link icon"
+              />
               <h2 className="mt-1 text-sm leading-5 text-[#737373] text-center font-normal">
                 {el.title}
               </h2>
@@ -397,10 +407,15 @@ const ConectMobileSection = () => {
           {featuresInfoAll.map((el) => (
             <div
               key={el.id}
-              className={`p-2 bg-white rounded-full size-20 flex flex-col items-center justify-center border border-[#737373] ${hoveredItem === el.id ? "shadow-xl" : ""}`}
+              className={`p-2 bg-white  size-20 flex flex-col items-center justify-center  ${hoveredItem === el.id ? "shadow-xl" : ""}`}
               onMouseEnter={() => hoverItemSelect(el)}
             >
-              <el.icon className="size-4 text-[#737373]" />
+              <Image
+                width={50}
+                height={50}
+                src="/assets/video/businesscards.png"
+                alt="Link icon"
+              />
               <h2 className="mt-1 text-xs leading-2 text-[#737373] text-center font-normal">
                 {el.title}
               </h2>

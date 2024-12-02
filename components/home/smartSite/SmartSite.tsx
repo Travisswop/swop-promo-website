@@ -10,10 +10,10 @@ const SmartSite = () => {
       effect="fade-up"
       duration="2000"
       className={
-        "w-[330px] h-full m-auto row-span-2 bg-[#F5F5F5] rounded-xl md:col-start-2 md:row-start-1 2xl:row-start-1 2xl:col-start-2"
+        "min-w-[330px] h-full m-auto row-span-2 bg-[#F5F5F5] rounded-xl md:col-start-2 md:row-start-1 2xl:row-start-1 2xl:col-start-2"
       }
     >
-      <div className="bg-[#F5F5F5] rounded-2xl p-4 w-full h-full">
+      <div className="bg-[#F5F5F5] rounded-2xl p-4 w-full h-full flex flex-col justify-between">
         <div>
           <h3 className="font-semibold text-lg text-center p-5">
             Get Your Entire Team A{" "}

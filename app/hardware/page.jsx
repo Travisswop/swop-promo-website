@@ -4,7 +4,7 @@ import DevicesInteraction from "@/components/hardware/DevicesInteraction";
 const page = () => {
   return (
     <div>
-      {/* <ConectMobileSection /> */}
+      <ConectMobileSection />
       <DevicesInteraction />
     </div>
   );

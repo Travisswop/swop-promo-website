@@ -10,7 +10,7 @@ const Analytics = () => {
       effect="fade-up"
       duration="2000"
       className={
-        "w-[330px] m-auto bg-[#F5F5F5] rounded-2xl p-4 row-start-2 lg:col-start-2 lg:row-start-3 2xl:row-start-1 2xl:col-start-3"
+        "min-w-[330px] h-full m-auto bg-[#F5F5F5] rounded-2xl p-4 row-start-2 lg:col-start-2 lg:row-start-3 2xl:row-start-1 2xl:col-start-3 flex flex-col justify-between"
       }
     >
       <div className="relative h-[173px] w-full"></div>

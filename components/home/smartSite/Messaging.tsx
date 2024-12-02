@@ -9,10 +9,10 @@ const Messaging = () => {
     <ScrollMotionEffect
       effect="fade-up"
       duration="2000"
-      className={"w-[330px] m-auto bg-[#F5F5F5] rounded-2xl p-4"}
+      className={"min-w-[330px] h-full m-auto bg-[#F5F5F5] rounded-2xl p-4"}
     >
-      <div className="w-full h-full bg-[#F5F5F5]">
-        <div>
+      <div className="w-full h-full m-auto bg-[#F5F5F5] flex flex-col justify-between">
+        <div className="flex justify-center ">
           <Image
             src="/assets/home/smart-site/messages.png"
             alt="messages"
