@@ -5,7 +5,8 @@ import React from "react";
 const InteractiveSection = () => {
   return (
     <SectionLayout>
-      <div className="container pt-16">
+      <div className="relative">
+        <div className="absolute left-[-155%] md:left-[-80%] lg:left-[-70%] xl:left-[-55%] top-[-100px] md:top-[-200px] bottom-0 w-full gradient-circle-top h-[500px] md:h-[1000px] -z-10 " />
         <h2
           className={cn(
             "text-3xl md:text-5xl font-bold text-black text-center leading-tight tracking-normal [text-shadow:_0px_4px_4px_rgb(80_80_80_/_0.5)]"

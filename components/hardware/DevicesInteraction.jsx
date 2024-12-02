@@ -10,55 +10,47 @@ const productInfo = [
     img: "/assets/hardware/products/business-cards.png",
     title: "Business Cards",
     slug: "business-cards",
-    decs: `Crafted for durability on textiles. These Tags have
-            a re-enforced flange for sewing into garments,
-            textiles, and fabrics. They are also waterproof.`,
+    decs: `Upgrade from traditional paper cards with Swop’s reusable digital cards that collect data for your company`,
   },
   {
     size: "30mm",
     img: "/assets/hardware/products/wearables.png",
     title: "Wearables",
     slug: "wearables",
-    decs: `Ideal for curved surfaces. Bonds firmly to metal,
-          plastic, paper, and glass, offering a sleek profile
-          for subtle integration.`,
+    decs: `Tag¹ facilitates an instant and reliable
+connection. Activate ap.`,
   },
 
   {
     size: "30mm",
     img: "/assets/hardware/products/restaurants.png",
-    title: "Restaurants",
-    slug: "restaurants",
-    decs: `Offers a prominent branding space for flat
-          surfaces, ideal for use on books, packaging, and
-          stationary items.`,
+    title: "Hospitality",
+    slug: "hospitality",
+    decs: `Tag¹ facilitates an instant and reliablemmersive brand
+experiences with just a tap.`,
   },
   {
     size: "20mm",
     img: "/assets/hardware/products/customize.png",
     title: "Customize",
     slug: "customize",
-    decs: `Crafted for durability on textiles. These Tags have
-          a re-enforced flange for sewing into garments,
-          textiles, and fabrics. They are also waterproof.`,
+    decs: `Upgrade from traditional paper cards with Swop’s reusable digital cards that collect data for your company`,
   },
   {
     size: "20mm",
-    img: "/assets/hardware/products/embeddables.png",
-    title: "Transactions",
-    slug: "transactions",
-    decs: `Crafted for durability on textiles. These Tags have
-          a re-enforced flange for sewing into garments,
-          textiles, and fabrics. They are also waterproof.`,
+    img: "/assets/hardware/products/stickers.png",
+    title: "Stickers",
+    slug: "stickers",
+    decs: `Tag¹ facilitates an instant and reliable
+connection. Activate ap.`,
   },
   {
     size: "20mm",
     img: "/assets/hardware/products/embeddables.png",
     title: "Embeddables",
     slug: "embeddables",
-    decs: `Crafted for durability on textiles. These Tags have
-            a re-enforced flange for sewing into garments,
-            textiles, and fabrics. They are also waterproof.`,
+    decs: `Tag¹ facilitates an instant and reliablemmersive brand
+experiences with just a tap.`,
   },
 ];
 
@@ -91,7 +83,7 @@ const DevicesInteraction = () => {
         </div>
       </ScrollMotionEffect>
 
-      <div className="mt-8">
+      <div className="mt-8 2xl:px-20">
         <ProductCards productList={productInfo} />
       </div>
 

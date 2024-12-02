@@ -10,7 +10,7 @@ const SmartSite = () => {
       effect="fade-up"
       duration="2000"
       className={
-        "w-[330px] h-full m-auto row-span-2 bg-[#F5F5F5] rounded-xl lg:col-start-2 lg:row-start-1 2xl:row-start-1 2xl:col-start-2"
+        "w-[330px] h-full m-auto row-span-2 bg-[#F5F5F5] rounded-xl md:col-start-2 md:row-start-1 2xl:row-start-1 2xl:col-start-2"
       }
     >
       <div className="bg-[#F5F5F5] rounded-2xl p-4 w-full h-full">
