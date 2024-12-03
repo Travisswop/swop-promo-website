@@ -408,11 +408,11 @@ const ConectMobileSection = () => {
           ))}
         </div>
 
-        <div className="grid justify-center items-end auto-rows-max grid-cols-3 mx-auto mt-3 bg-white gap-x-7 gap-y-5 md:hidden">
+        <div className="grid justify-center w-3/4 items-center auto-rows-max grid-cols-3 mx-auto mt-3 bg-white gap-x-2 gap-y-5 md:hidden">
           {featuresInfoAll.map((el) => (
             <div
               key={el.id}
-              className={`p-2  rounded-full w-20 h-20 flex flex-col items-center justify-center  ${hoveredItem === el.id ? "" : ""}`}
+              className={`p-2 m-auto  rounded-full w-20 h-20 flex flex-col items-center justify-evenly  ${hoveredItem === el.id ? "" : ""}`}
               onMouseEnter={() => hoverItemSelect(el)}
             >
               <Icons icon={el.icon} title={el.title} scale={el.scale} />
