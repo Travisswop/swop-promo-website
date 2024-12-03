@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const ScrollMotionEffect = ({ children, effect, duration }) => {
+const ScrollMotionEffect = ({ children, effect, duration,className }) => {
   useEffect(() => {
     console.log('Initializing AOS');
     AOS.init();
@@ -20,6 +20,7 @@ const ScrollMotionEffect = ({ children, effect, duration }) => {
       data-aos-duration={duration}
       data-aos-delay={0}
       data-aos-once={true}
+      className={className}
     >
       {children}
     </div>

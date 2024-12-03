@@ -19,6 +19,18 @@ import { GrTransaction } from "react-icons/gr";
 import { IoRestaurantOutline, IoCodeSharp } from "react-icons/io5";
 import { RiChatSettingsLine } from "react-icons/ri";
 
+const Icons = ({ icon, title }) => {
+  return (
+    <Image
+      src={icon}
+      alt={title}
+      className="w-32 h-32"
+      width={80}
+      height={80}
+    />
+  );
+};
+
 const ConectMobileSection = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [playVideo, setPlayVideo] = useState(false);
@@ -32,21 +44,21 @@ const ConectMobileSection = () => {
     () => [
       {
         id: 1,
-        icon: TiBusinessCard,
+        icon: "/assets/hardware/BusinessCards.png",
         title: "Business Cards",
         imageUrl: "/assets/video/businesscards.png",
         videoUrl: "/assets/video/business-card.mp4",
       },
       {
         id: 2,
-        icon: IoIosWatch,
+        icon: "/assets/hardware/Wearables.png",
         title: "Wearables",
         imageUrl: "/assets/video/wearables.png",
         videoUrl: "/assets/video/wearables.mp4",
       },
       {
         id: 3,
-        icon: GrTransaction,
+        icon: "/assets/hardware/Transactions.png",
         title: "Transactions",
         imageUrl: "/assets/video/transactions.png",
         videoUrl: "/assets/video/transactions.mp4",
@@ -59,21 +71,22 @@ const ConectMobileSection = () => {
     () => [
       {
         id: 4,
-        icon: IoRestaurantOutline,
-        title: "Restaurant/ Hospital",
+        icon: "/assets/hardware/HospitalityRestaurants.png",
+        title: `Hospitality/
+        Restaurants`,
         imageUrl: "/assets/video/restaurants.png",
         videoUrl: "/assets/video/restaurants.mp4",
       },
       {
         id: 5,
-        icon: RiChatSettingsLine,
+        icon: "/assets/hardware/Customize.png",
         title: "Customize",
         imageUrl: "/assets/video/customize.png",
         videoUrl: "/assets/video/cstomizable-crad-tapp.mp4",
       },
       {
         id: 6,
-        icon: IoCodeSharp,
+        icon: "/assets/hardware/Embeddables.png",
         title: "Embeddables",
         imageUrl: "/assets/video/embeddables.png",
         videoUrl: "/assets/video/hardware-embeddables.mp4",
@@ -344,11 +357,11 @@ const ConectMobileSection = () => {
           {featuresInfoLeft.map((el) => (
             <div
               key={el.id}
-              className={`p-2 bg-white rounded-full w-28 h-28 flex flex-col items-center justify-center border border-[#737373] ${hoveredItem === el.id ? "shadow-xl" : ""}`}
+              className={`p-2 bg-white rounded-full w-28 h-28 flex flex-col items-center justify-center ${hoveredItem === el.id ? "" : ""}`}
               onMouseEnter={() => hoverItemSelect(el)}
             >
-              <el.icon className="w-6 h-6 text-[#737373]" />
-              <h2 className="mt-2 text-base text-[#737373] text-center font-normal leading-5">
+              <Icons icon={el.icon} title={el.title} />
+              <h2 className="mt-2 text-sm text-[#737373] text-center font-normal leading-5">
                 {el.title}
               </h2>
             </div>
@@ -382,10 +395,10 @@ const ConectMobileSection = () => {
           {featuresInfoRight.map((el) => (
             <div
               key={el.id}
-              className={`p-2 bg-white rounded-full w-28 h-28 flex flex-col items-center justify-center border border-[#737373] ${hoveredItem === el.id ? "shadow-xl" : ""}`}
+              className={`p-2 bg-white rounded-full w-28 h-28 flex flex-col items-center justify-center  ${hoveredItem === el.id ? "" : ""}`}
               onMouseEnter={() => hoverItemSelect(el)}
             >
-              <el.icon className="w-6 h-6 text-[#737373]" />
+              <Icons icon={el.icon} title={el.title} />
               <h2 className="mt-1 text-sm leading-5 text-[#737373] text-center font-normal">
                 {el.title}
               </h2>
@@ -393,15 +406,15 @@ const ConectMobileSection = () => {
           ))}
         </div>
 
-        <div className="grid justify-center grid-cols-3 mx-auto mt-3 bg-white gap-x-5 gap-y-3 md:hidden">
+        <div className="grid justify-center items-end auto-rows-max grid-cols-3 mx-auto mt-3 bg-white gap-x-7 gap-y-5 md:hidden">
           {featuresInfoAll.map((el) => (
             <div
               key={el.id}
-              className={`p-2 bg-white rounded-full size-20 flex flex-col items-center justify-center border border-[#737373] ${hoveredItem === el.id ? "shadow-xl" : ""}`}
+              className={`p-2 bg-white rounded-full w-20 h-20 flex flex-col items-center justify-center  ${hoveredItem === el.id ? "" : ""}`}
               onMouseEnter={() => hoverItemSelect(el)}
             >
-              <el.icon className="size-4 text-[#737373]" />
-              <h2 className="mt-1 text-xs leading-2 text-[#737373] text-center font-normal">
+              <Icons icon={el.icon} title={el.title} />
+              <h2 className=" text-xs leading-2 text-[#737373] text-center font-normal">
                 {el.title}
               </h2>
             </div>
