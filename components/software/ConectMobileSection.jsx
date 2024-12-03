@@ -617,22 +617,22 @@ const ConectMobileSection = () => {
       </div>
 
       <div className="hidden md:block max-w-[400px] h-[520px] mx-auto mt-8">
-        {/* {hoverImgUrl ? (
+        {hoverImgUrl ? (
           <motion.div
             key={hoverImgUrl}
-            className='mx-auto'
+            className="mx-auto"
             animate={animationProps}
             transition={
               hoveredItem === 5 && !isDelayed
                 ? {
                     duration: 1,
-                    ease: 'easeInOut',
+                    ease: "easeInOut",
                     times: [0, 0.1, 0.5, 1],
                     repeat: false,
                   }
                 : {
                     duration: 2,
-                    ease: 'easeInOut',
+                    ease: "easeInOut",
                     times: [0, 0.2, 0.5, 0.8, 1],
                     repeat: false,
                     repeatDelay: 1,
@@ -645,11 +645,11 @@ const ConectMobileSection = () => {
                 loop
                 muted
                 playsInline
-                src={'/assets/video/customizable-video.mp4'}
-                className='mx-auto'
+                src={"/assets/video/customizable-video.mp4"}
+                className="mx-auto"
                 width={160}
                 height={80}
-                preload='metadata'
+                preload="metadata"
                 // loading='lazy'
               />
             ) : (
@@ -657,31 +657,14 @@ const ConectMobileSection = () => {
                 width={180}
                 height={120}
                 src={hoverImgUrl}
-                alt='Link icon'
-                className='mx-auto'
+                alt="Link icon"
+                className="mx-auto"
               />
             )}
           </motion.div>
         ) : (
-          <motion.div
-            animate={animationProps}
-            transition={{
-              duration: 2,
-              ease: 'easeInOut',
-              times: [0, 0.2, 0.5, 0.8, 1],
-              repeat: false,
-              repeatDelay: 1,
-            }}
-          >
-            <Image
-              width={180}
-              height={120}
-              src={'/assets/video/transactions.png'}
-              alt='Link icon'
-              className='mx-auto'
-            />
-          </motion.div>
-        )} */}
+          <div></div>
+        )}
         <motion.div
           animate={{
             y: [0, 0, 190],
@@ -707,22 +690,22 @@ const ConectMobileSection = () => {
       </div>
 
       <div className="md:hidden max-w-[400px] h-[230px] mx-auto mt-[-60px]">
-        {/* {hoverImgUrl ? (
+        {hoverImgUrl ? (
           <motion.div
             key={hoverImgUrl}
-            className='mx-auto'
+            className="mx-auto"
             animate={animationMobileProps}
             transition={
               hoveredItem === 5 && !isDelayed
                 ? {
                     duration: 1,
-                    ease: 'easeInOut',
+                    ease: "easeInOut",
                     times: [0, 0.1, 0.5, 1],
                     repeat: false,
                   }
                 : {
                     duration: 2,
-                    ease: 'easeInOut',
+                    ease: "easeInOut",
                     times: [0, 0.2, 0.5, 0.8, 1],
                     repeat: false,
                     repeatDelay: 1,
@@ -732,12 +715,12 @@ const ConectMobileSection = () => {
             {hoveredItem === 5 ? (
               <video
                 autoPlay
-                src={'/assets/video/customizable-video.mp4'}
+                src={"/assets/video/customizable-video.mp4"}
                 muted
-                className='mx-auto'
+                className="mx-auto"
                 width={100}
                 height={60}
-                preload='metadata'
+                preload="metadata"
                 // loading='lazy'
               />
             ) : (
@@ -745,14 +728,14 @@ const ConectMobileSection = () => {
                 width={120}
                 height={100}
                 src={hoverImgUrl}
-                alt='Link icon'
-                className='mx-auto'
+                alt="Link icon"
+                className="mx-auto"
               />
             )}
           </motion.div>
         ) : (
-          ''
-        )} */}
+          ""
+        )}
 
         <motion.div
           animate={{
