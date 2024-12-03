@@ -23,7 +23,7 @@ const HeroSection = () => {
 
   return (
     <SectionLayout bg={"bg-transparent"}>
-      <div className="z-50 flex flex-col items-center justify-center w-full gap-6 md:flex-row">
+      <div className="z-50 flex flex-col items-center justify-center w-full gap-6 md:flex-row pb-5">
         <motion.div
           className="flex-1"
           initial="hidden"
@@ -33,33 +33,33 @@ const HeroSection = () => {
         >
           <h1
             className={cn(
-              "text-3xl md:text-5xl font-bold text-black text-center leading-tight tracking-normal [text-shadow:_0px_4px_4px_rgb(80_80_80_/_0.5)]",
+              "text-2xl md:text-5xl font-bold text-black text-center leading-tight tracking-normal [text-shadow:_0px_4px_4px_rgb(80_80_80_/_0.5)]",
               fira.className
             )}
           >
             The <span className="text-[#B396FF]"> Digital </span>Business Card
-            <span className="block text-3xl py-6">
+            <span className="block text-2xl md:text-3xl py-6">
               That Pays You to<span className="text-[#B396FF]"> Network </span>
             </span>
           </h1>
-          <div className="flex justify-center pt-10">
+          <div className="flex justify-center pt-12">
             <ScrollMotionEffect effect="zoom-in" duration="2000">
               <Image
-                src="/assets/home/heroImage.png"
+                src="/assets/home/heroImage.svg"
                 alt="heroImage"
-                width={300}
-                height={300}
+                width={500}
+                height={500}
               />
             </ScrollMotionEffect>
           </div>
-          <div className="flex justify-center gap-4 pt-10">
+          <div className="flex justify-center gap-4 pt-14">
             <Link href="href">
               <ScrollMotionEffect effect="zoom-in" duration="1000">
                 <Image
                   src="/assets/home/app-store.png"
                   alt="appStore"
-                  width={100}
-                  height={100}
+                  width={120}
+                  height={120}
                 />
               </ScrollMotionEffect>
             </Link>
@@ -68,8 +68,8 @@ const HeroSection = () => {
                 <Image
                   src="/assets/home/google-play.png"
                   alt="googlePlay"
-                  width={100}
-                  height={100}
+                  width={120}
+                  height={120}
                 />
               </ScrollMotionEffect>
             </Link>

@@ -16,14 +16,20 @@ const SmartSite = () => {
       <div className="bg-[#F5F5F5] rounded-2xl p-4 w-full h-full flex flex-col justify-between">
         <div>
           <h3 className="font-semibold text-lg text-center p-5">
-            Get Your Entire Team A{" "}
+            Get Your Entire Team A
             <span className="text-[#B396FF]"> Smartsite </span>
           </h3>
         </div>
-        <div className="relative h-[400px] w-full"></div>
+        <Image
+          src="/assets/home/smart-site/SmartSite.svg"
+          alt="SmartSite"
+          width={350}
+          height={380}
+          className="m-auto relative left-3"
+        />
         <div>
           <h4 className="text-base text-center text-gray-400">
-            Use your smartsite as your companies townsquare and share it with
+            Use your smartsite as your companies town square and share it with
             NFC, QR or Apple Wallet.
           </h4>
         </div>
