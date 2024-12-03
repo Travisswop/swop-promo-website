@@ -3,6 +3,7 @@ import SectionLayout from "../shared/SectionLayout";
 import Link from "next/link";
 import ProductCards from "./ProductCards";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
+import Image from "next/image";
 
 const productInfo = [
   {
@@ -56,13 +57,58 @@ experiences with just a tap.`,
 
 const DevicesInteraction = () => {
   return (
-    <SectionLayout>
+    <SectionLayout className="relative">
       <ScrollMotionEffect effect="fade-up" duration="2000">
         <h2
           className={`text-stone-950 font-normal text-5xl md:text-4xl text-center !leading-none py-5`}
         >
           Devices for Any <span className="block">Interaction</span>
         </h2>
+        <div>
+          <Image
+            src="/assets/star.svg"
+            alt="star"
+            width={50}
+            height={50}
+            className="absolute top-0 left-96 animate-bounce"
+          />
+        </div>
+        <div>
+          <Image
+            src="/assets/star.svg"
+            alt="star"
+            width={40}
+            height={40}
+            className="absolute top-40 left-72 animate-bounce"
+          />
+        </div>
+        <div>
+          <Image
+            src="/assets/star.svg"
+            alt="star"
+            width={30}
+            height={30}
+            className="absolute top-0 right-72 animate-bounce"
+          />
+        </div>
+        <div>
+          <Image
+            src="/assets/star.svg"
+            alt="star"
+            width={30}
+            height={30}
+            className="absolute top-20 right-[600px] animate-bounce"
+          />
+        </div>
+        <div>
+          <Image
+            src="/assets/star.svg"
+            alt="star"
+            width={45}
+            height={45}
+            className="absolute top-44 right-[400px] animate-bounce"
+          />
+        </div>
       </ScrollMotionEffect>
 
       <ScrollMotionEffect effect="fade-up" duration="2000">

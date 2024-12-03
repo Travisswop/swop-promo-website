@@ -42,7 +42,7 @@ const Footer = () => {
               <ul className="w-full text-black font-normal list-none ml-0 flex flex-row flex-wrap items-center justify-center text-center divide-x divide-gray-600">
                 {quickLinks.map((el, index) => (
                   <li
-                    className="mb-4 px-4 md:px-1 lg:px-6 flex items-center text-md xl:text-[20px]"
+                    className="mb-4 px-5 md:px-1 lg:px-6 flex items-center text-md xl:text-[20px]"
                     key={index}
                   >
                     <Link href={el.slug} className="hover:underline">
@@ -62,7 +62,7 @@ const Footer = () => {
                   className=""
                   priority
                 />
-                <p className="text-black font-normal text-md md:text-lg text-center w-28 !leading-5 mt-2">
+                <p className="text-black font-normal text-sm md:text-base text-center w-28 !leading-5 mt-2">
                   Scan To Get The App
                 </p>
               </div>

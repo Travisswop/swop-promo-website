@@ -787,7 +787,7 @@ const ConectMobileSection = () => {
               onMouseEnter={() => hoverItemSelect(el)}
             >
               <el.icon className="w-6 h-6 text-[#737373]" />
-              <h2 className="mt-2 text-base text-[#737373] text-center font-normal leading-5">
+              <h2 className="mt-2 text-sm text-[#737373] text-center font-normal leading-5">
                 {el.title}
               </h2>
             </div>
@@ -840,7 +840,7 @@ const ConectMobileSection = () => {
               onMouseEnter={() => hoverItemSelect(el)}
             >
               <el.icon className="size-4 text-[#737373]" />
-              <h2 className="mt-1 text-xs leading-2 text-[#737373] text-center font-normal">
+              <h2 className="mt-1 text-[10px] leading-2 text-[#737373] text-center font-normal">
                 {el.title}
               </h2>
             </div>

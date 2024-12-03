@@ -1,5 +1,6 @@
 import SectionLayout from "@/components/shared/SectionLayout";
 import { cn } from "@nextui-org/react";
+import Image from "next/image";
 import React from "react";
 
 const InteractiveSection = () => {
@@ -17,6 +18,24 @@ const InteractiveSection = () => {
             <span className="text-[#B396FF]"> Interactive </span>Layer
           </span>
         </h2>
+        <div>
+          <Image
+            src="/assets/star.svg"
+            alt="star"
+            width={50}
+            height={50}
+            className="absolute top-[500px] left-96 animate-bounce"
+          />
+        </div>
+        <div>
+          <Image
+            src="/assets/star.svg"
+            alt="star"
+            width={30}
+            height={30}
+            className="absolute top-[300px] right-96 animate-bounce"
+          />
+        </div>
         <div className="flex justify-center flex-1 relative -translate-x-10 xl:w-2/4 text-center m-auto">
           <div className="w-[70%] m-auto">
             <video
