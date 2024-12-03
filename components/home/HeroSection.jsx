@@ -23,7 +23,7 @@ const HeroSection = () => {
 
   return (
     <SectionLayout bg={"bg-transparent"}>
-      <div className="z-50 flex flex-col items-center justify-center w-full gap-6 md:flex-row pb-5">
+      <div className="z-50 flex flex-col items-center justify-center w-full gap-6 md:flex-row pt-10 pb-56 md:pb-10">
         <motion.div
           className="flex-1"
           initial="hidden"
