@@ -15,9 +15,9 @@ const productInfo = [
   },
   {
     size: "30mm",
-    img: "/assets/hardware/products/wearables.png",
-    title: "Wearables",
-    slug: "wearables",
+    img: "/assets/hardware/products/attachments.png",
+    title: "Phone Attachments",
+    slug: "phone-attachments",
     decs: `Tag¹ facilitates an instant and reliable
 connection. Activate ap.`,
   },
@@ -32,7 +32,7 @@ experiences with just a tap.`,
   },
   {
     size: "20mm",
-    img: "/assets/hardware/products/customize.png",
+    img: "/assets/hardware/products/customize2.png",
     title: "Customize",
     slug: "customize",
     decs: `Upgrade from traditional paper cards with Swop’s reusable digital cards that collect data for your company`,
@@ -64,7 +64,7 @@ const DevicesInteraction = () => {
         >
           Devices for Any <span className="block">Interaction</span>
         </h2>
-        <div>
+        <div className="2xl:block hidden">
           <Image
             src="/assets/star.svg"
             alt="star"
@@ -73,7 +73,7 @@ const DevicesInteraction = () => {
             className="absolute top-0 left-96 animate-bounce"
           />
         </div>
-        <div>
+        <div className="2xl:block hidden">
           <Image
             src="/assets/star.svg"
             alt="star"
@@ -82,7 +82,7 @@ const DevicesInteraction = () => {
             className="absolute top-40 left-72 animate-bounce"
           />
         </div>
-        <div>
+        <div className="2xl:block hidden">
           <Image
             src="/assets/star.svg"
             alt="star"
@@ -91,7 +91,7 @@ const DevicesInteraction = () => {
             className="absolute top-0 right-72 animate-bounce"
           />
         </div>
-        <div>
+        <div className="2xl:block hidden">
           <Image
             src="/assets/star.svg"
             alt="star"
@@ -100,7 +100,7 @@ const DevicesInteraction = () => {
             className="absolute top-20 right-[600px] animate-bounce"
           />
         </div>
-        <div>
+        <div className="2xl:block hidden">
           <Image
             src="/assets/star.svg"
             alt="star"
