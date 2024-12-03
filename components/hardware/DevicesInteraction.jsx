@@ -8,7 +8,7 @@ import Image from "next/image";
 const productInfo = [
   {
     size: "20mm",
-    img: "/assets/hardware/products/business-cards.png",
+    img: "/assets/hardware/products/business-cards.svg",
     title: "Business Cards",
     slug: "business-cards",
     decs: `Upgrade from traditional paper cards with Swop’s reusable digital cards that collect data for your company`,
@@ -32,14 +32,14 @@ experiences with just a tap.`,
   },
   {
     size: "20mm",
-    img: "/assets/hardware/products/customize2.png",
+    img: "/assets/hardware/products/customize2.svg",
     title: "Customize",
     slug: "customize",
     decs: `Upgrade from traditional paper cards with Swop’s reusable digital cards that collect data for your company`,
   },
   {
     size: "20mm",
-    img: "/assets/hardware/products/stickers.png",
+    img: "/assets/hardware/products/stickers.svg",
     title: "Stickers",
     slug: "stickers",
     decs: `Tag¹ facilitates an instant and reliable
@@ -60,7 +60,7 @@ const DevicesInteraction = () => {
     <SectionLayout className="relative">
       <ScrollMotionEffect effect="fade-up" duration="2000">
         <h2
-          className={`text-stone-950 font-normal text-5xl md:text-4xl text-center !leading-none py-5`}
+          className={`text-stone-950 font-medium text-5xl md:text-4xl text-center !leading-none py-5`}
         >
           Devices for Any <span className="block">Interaction</span>
         </h2>

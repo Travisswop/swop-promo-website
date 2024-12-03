@@ -19,7 +19,7 @@ const Messaging = () => {
           alt="bank"
           width={300}
           height={150}
-          className="m-auto absolute top-0 left-0 right-0 bottom-0"
+          className="m-auto absolute top-10 left-0 right-0 bottom-0"
         />
       </div>
       <div className="m-auto py-4">

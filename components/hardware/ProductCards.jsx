@@ -27,10 +27,10 @@ const ProductCards = ({ productList }) => {
                   className="w-full object-cover h-auto lg:h-[420px] "
                   src={el.img}
                 />
-                <h2 className="mt-3 text-xl md:text-3xl text-stone-950 text-center font-bold pb-2">
+                <h2 className="mt-3 text-lg  text-stone-950 text-center font-bold pb-2">
                   {el.title}
                 </h2>
-                <p className="text-md md:text-lg text-stone-950 text-center mt-1">
+                <p className="text-sm text-gray-400 text-center mt-1">
                   {el.decs}
                 </p>
               </CardBody>

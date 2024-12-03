@@ -13,14 +13,14 @@ const Analytics = () => {
         "min-w-[330px] h-full m-auto bg-[#F5F5F5] rounded-2xl pb-4 flex flex-col justify-between lg:col-start-2 lg:row-start-3 2xl:row-start-1 2xl:col-start-3 "
       }
     >
-      <div className=" h-[185px] w-full">
+      <div className="relative h-[185px] w-full overflow-hidden rounded-2xl ">
         <Image
           src="/assets/home/smart-site/analytics.svg"
           alt="bank"
-          width={400}
+          width={500}
           height={185}
           content="cover"
-          className="m-auto  rounded-2xl"
+          className="m-auto absolute top-0 left-0 right-0 bottom-0 overflow-hidden rounded-2xl"
         />
       </div>
       <div className="m-auto  z-10">

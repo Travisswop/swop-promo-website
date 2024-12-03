@@ -36,7 +36,7 @@ const InteractiveSection = () => {
             className="absolute top-[300px] right-96 animate-bounce"
           />
         </div>
-        <div className="flex justify-center flex-1 relative -translate-x-7 md:-translate-x-10 xl:w-2/4 text-center m-auto">
+        <div className="flex justify-center flex-1 relative -translate-x-6 md:-translate-x-10 xl:w-2/4 text-center m-auto">
           <div className="w-[70%] m-auto">
             <video
               autoPlay

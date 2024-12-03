@@ -18,13 +18,14 @@ import { IoIosWatch } from "react-icons/io";
 import { GrTransaction } from "react-icons/gr";
 import { IoRestaurantOutline, IoCodeSharp } from "react-icons/io5";
 import { RiChatSettingsLine } from "react-icons/ri";
+import { cn } from "@nextui-org/react";
 
-const Icons = ({ icon, title }) => {
+const Icons = ({ icon, title, scale }) => {
   return (
     <Image
       src={icon}
       alt={title}
-      className="w-32 h-32"
+      className={cn("", scale && "scale-90 ")}
       width={80}
       height={80}
     />
@@ -48,6 +49,7 @@ const ConectMobileSection = () => {
         title: "Business Cards",
         imageUrl: "/assets/video/businesscards.png",
         videoUrl: "/assets/video/business-card.mp4",
+        scale: true,
       },
       {
         id: 2,
@@ -195,7 +197,7 @@ const ConectMobileSection = () => {
 
   return (
     <SectionLayout>
-      <div className="hidden md:block">
+      {/* <div className="hidden md:block">
         <ScrollMotionEffect effect="fade-right" duration="2000">
           <h2 className="text-xl font-normal leading-none text-center text-stone-950 md:text-4xl">
             <strong>Hardware</strong> built to connect
@@ -210,7 +212,7 @@ const ConectMobileSection = () => {
             more.
           </p>
         </ScrollMotionEffect>
-      </div>
+      </div> */}
 
       <div className="hidden md:block max-w-[400px] h-[520px] mx-auto mt-8">
         {hoverImgUrl ? (
@@ -357,7 +359,7 @@ const ConectMobileSection = () => {
           {featuresInfoLeft.map((el) => (
             <div
               key={el.id}
-              className={`p-2 bg-white rounded-full w-28 h-28 flex flex-col items-center justify-center ${hoveredItem === el.id ? "" : ""}`}
+              className={`p-2 rounded-full w-28 h-28 flex flex-col items-center justify-center ${hoveredItem === el.id ? "" : ""}`}
               onMouseEnter={() => hoverItemSelect(el)}
             >
               <Icons icon={el.icon} title={el.title} />
@@ -395,7 +397,7 @@ const ConectMobileSection = () => {
           {featuresInfoRight.map((el) => (
             <div
               key={el.id}
-              className={`p-2 bg-white rounded-full w-28 h-28 flex flex-col items-center justify-center  ${hoveredItem === el.id ? "" : ""}`}
+              className={`p-2  rounded-full w-28 h-28 flex flex-col items-center justify-center  ${hoveredItem === el.id ? "" : ""}`}
               onMouseEnter={() => hoverItemSelect(el)}
             >
               <Icons icon={el.icon} title={el.title} />
@@ -410,10 +412,11 @@ const ConectMobileSection = () => {
           {featuresInfoAll.map((el) => (
             <div
               key={el.id}
-              className={`p-2 bg-white rounded-full w-20 h-20 flex flex-col items-center justify-center  ${hoveredItem === el.id ? "" : ""}`}
+              className={`p-2  rounded-full w-20 h-20 flex flex-col items-center justify-center  ${hoveredItem === el.id ? "" : ""}`}
               onMouseEnter={() => hoverItemSelect(el)}
             >
-              <Icons icon={el.icon} title={el.title} />
+              <Icons icon={el.icon} title={el.title} scale={el.scale} />
+
               <h2 className=" text-xs leading-2 text-[#737373] text-center font-normal">
                 {el.title}
               </h2>
@@ -421,7 +424,7 @@ const ConectMobileSection = () => {
           ))}
         </div>
       </div>
-      <div className="mt-10 md:hidden">
+      {/* <div className="mt-10 md:hidden">
         <ScrollMotionEffect effect="fade-up" duration="2000">
           <h2 className="text-xl font-normal leading-none text-center text-stone-950 md:text-4xl">
             <strong>Hardware</strong> built to connect
@@ -436,7 +439,7 @@ const ConectMobileSection = () => {
             more.
           </p>
         </ScrollMotionEffect>
-      </div>
+      </div> */}
     </SectionLayout>
   );
 };
