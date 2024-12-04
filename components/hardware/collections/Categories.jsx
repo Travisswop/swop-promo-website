@@ -11,7 +11,7 @@ const Categories = ({ title, titleImage, products }) => {
       <section className=" xl:px-20 grid grid-cols-1 gap-10 ">
         <div className="h-[600px] flex flex-col lg:flex-row gap-5 lg:gap-36 xl:gap-60 justify-start py-5 xl:py-0 lg:justify-center items-center relative rounded-lg">
           <Image
-            src="/assets/hardware/collection/BlackBg.svg"
+            src="/assets/hardware/collection/blackBg.svg"
             alt={title}
             height={100}
             width={100}
