@@ -192,12 +192,12 @@ video::-webkit-media-controls-panel {
 
 @keyframes bounce {
   0% {
-    transform: translateY(-10%);
+    transform: translateY(-15%);
   }
   50% {
-    transform: translateY(10%);
+    transform: translateY(15%);
   }
   100% {
-    transform: translateY(-10%);
+    transform: translateY(-15%);
   }
 }

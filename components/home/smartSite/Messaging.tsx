@@ -46,7 +46,7 @@ const Messaging = () => {
           effect="zoom-in"
           duration="2000"
           delay={"500"}
-          className="m-auto z-50 absolute bottom-[50%] left-[1%] xl:left-[2%]  w-[30%] shadow-xl rounded-lg"
+          className="m-auto z-50 absolute bottom-[50%] left-[1%] xl:left-[2%]  w-[35%] shadow-xl rounded-lg"
         >
           <Image
             src="/assets/home/smart-site/messageSalman.svg"
@@ -60,7 +60,7 @@ const Messaging = () => {
           effect="zoom-in"
           duration="2000"
           delay={"800"}
-          className="m-auto z-50 absolute bottom-[13%] right-[0%]  w-[30%] md:right-[-5%] lg:right-[0%] shadow-xl rounded-lg"
+          className="m-auto z-50 absolute bottom-[18%] right-[0%]  w-[35%] md:right-[-5%] lg:right-[0%] shadow-xl rounded-lg"
         >
           <Image
             src="/assets/home/smart-site/messageArjo.svg"
