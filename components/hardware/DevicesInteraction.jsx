@@ -64,49 +64,49 @@ const DevicesInteraction = () => {
         >
           Devices for Any <span className="block">Interaction</span>
         </h2>
-        <div className="2xl:block hidden">
+        <div className="">
           <Image
             src="/assets/star.svg"
             alt="star"
             width={50}
             height={50}
-            className="absolute top-0 left-96 animate-bounce"
+            className="absolute top-[-8%] left-[-2%]  md:top-0 md:left-[15%]  lg:left-[25%] animate-bounce"
           />
         </div>
-        <div className="2xl:block hidden">
+        <div className="">
           <Image
             src="/assets/star.svg"
             alt="star"
             width={40}
             height={40}
-            className="absolute top-40 left-72 animate-bounce"
+            className="absolute bottom-[-90%] left-[-3%] md:bottom-[-100%] md:left-[5%] lg:left-[12%]  xl:left-[17%] animate-bounce"
           />
         </div>
-        <div className="2xl:block hidden">
+        <div className="">
           <Image
             src="/assets/star.svg"
             alt="star"
             width={30}
             height={30}
-            className="absolute top-0 right-72 animate-bounce"
+            className="absolute top-20 right-[0%] md:top-0 md:right-[20%]  animate-bounce"
           />
         </div>
-        <div className="2xl:block hidden">
+        <div className="">
           <Image
             src="/assets/star.svg"
             alt="star"
             width={30}
             height={30}
-            className="absolute top-20 right-[600px] animate-bounce"
+            className="absolute top-[90%] right-[20%] md:top-[80%] md:right-[28%] lg:top-[70%] lg:right-[30%] xl:right-[38%] animate-bounce"
           />
         </div>
-        <div className="2xl:block hidden">
+        <div className="">
           <Image
             src="/assets/star.svg"
             alt="star"
             width={45}
             height={45}
-            className="absolute top-44 right-[400px] animate-bounce"
+            className="absolute bottom-[-100%] right-[10%] md:bottom-[-120%]  md:right-[25%] animate-bounce"
           />
         </div>
       </ScrollMotionEffect>

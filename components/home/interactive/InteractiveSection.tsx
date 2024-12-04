@@ -18,22 +18,22 @@ const InteractiveSection = () => {
             <span className="text-[#B396FF]"> Interactive </span>Layer
           </span>
         </h2>
-        <div className="2xl:block hidden">
+        <div className="">
           <Image
             src="/assets/star.svg"
             alt="star"
             width={50}
             height={50}
-            className="absolute top-[500px] left-96 animate-bounce"
+            className="absolute z-50 top-36 right-20 md:top-44 md:right-40 2xl:top-[30%] 2xl:right-[30%] animate-bounce"
           />
         </div>
-        <div className="2xl:block hidden">
+        <div className="">
           <Image
             src="/assets/star.svg"
             alt="star"
             width={30}
             height={30}
-            className="absolute top-[300px] right-96 animate-bounce"
+            className="absolute z-50 top-96 left-20 md:top-[80%] md:left-40 2xl:top-[80%] 2xl:left-[30%] animate-bounce"
           />
         </div>
         <div className="flex justify-center flex-1 relative -translate-x-6 md:-translate-x-10 xl:w-2/4 text-center m-auto">
