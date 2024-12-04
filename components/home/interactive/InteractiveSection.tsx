@@ -1,3 +1,4 @@
+import ScrollMotionEffect from "@/components/motion/ScrollMotionEffect";
 import SectionLayout from "@/components/shared/SectionLayout";
 import { cn } from "@nextui-org/react";
 import Image from "next/image";
@@ -18,24 +19,34 @@ const InteractiveSection = () => {
             <span className="text-[#B396FF]"> Interactive </span>Layer
           </span>
         </h2>
-        <div className="">
+        <ScrollMotionEffect
+          effect="zoom-in"
+          duration="2000"
+          delay={"1000"}
+          className="absolute z-50 top-[35%] right-[15%] md:top-[25%] md:right-[22%] xl:top-[30%] xl:right-[30%] animate-bounce"
+        >
           <Image
             src="/assets/star.svg"
             alt="star"
             width={50}
             height={50}
-            className="absolute z-50 top-36 right-20 md:top-44 md:right-40 2xl:top-[30%] 2xl:right-[30%] animate-bounce"
+            className=""
           />
-        </div>
-        <div className="">
+        </ScrollMotionEffect>
+        <ScrollMotionEffect
+          effect="zoom-in"
+          duration="2000"
+          delay={"500"}
+          className="absolute z-50 top-[80%] left-[10%] md:top-[80%] md:left-[20%] xl:top-[80%] xl:left-[30%] animate-bounce"
+        >
           <Image
             src="/assets/star.svg"
             alt="star"
             width={30}
             height={30}
-            className="absolute z-50 top-96 left-20 md:top-[80%] md:left-40 2xl:top-[80%] 2xl:left-[30%] animate-bounce"
+            className=""
           />
-        </div>
+        </ScrollMotionEffect>
         <div className="flex justify-center flex-1 relative -translate-x-6 md:-translate-x-10 xl:w-2/4 text-center m-auto">
           <div className="w-[70%] m-auto">
             <video
