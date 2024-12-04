@@ -11,7 +11,7 @@ const HardwareCollections = () => {
       />
       <Categories
         title={"Phone Attachments"}
-        titleImage={"/assets/hardware/collection/phoneAttachments/iphones.svg"}
+        titleImage={"/assets/hardware/collection/PhoneAttachments/iphones.svg"}
         products={hardwareCollections.PhoneAttachments}
       />
       <Categories
