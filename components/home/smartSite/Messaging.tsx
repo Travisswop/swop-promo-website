@@ -14,12 +14,12 @@ const Messaging = () => {
         "min-w-[330px] h-full m-auto bg-[#F5F5F5] rounded-2xl p-4 flex flex-col justify-between"
       }
     >
-      <div className="relative h-[185px] w-full">
+      <div className="relative h-[185px] w-[422px] md:w-[300px] lg:w-[430px] 2xl:w-full m-auto">
         <ScrollMotionEffect
           effect="fade-up"
           duration="2000"
           delay={"0"}
-          className="m-auto absolute top-[15%] left-4 right-0 bottom-0 w-[50%] -z-10"
+          className="m-auto absolute top-[15%] left-4 right-0 bottom-0 w-[46%] md:w-[65%] lg:w-[45%] -z-10"
         >
           <Image
             src="/assets/home/smart-site/messagesBack.svg"
@@ -32,7 +32,7 @@ const Messaging = () => {
           effect="zoom-in"
           duration="2000"
           delay={"300"}
-          className="m-auto z-50 absolute top-[0%] left-[40%] w-[50%] shadow-xl rounded-lg"
+          className="m-auto z-50 absolute top-[0%] left-[40%] lg:left-[45%] w-[45%]  shadow-xl rounded-lg"
         >
           <Image
             src="/assets/home/smart-site/messageTravis.svg"
@@ -46,7 +46,7 @@ const Messaging = () => {
           effect="zoom-in"
           duration="2000"
           delay={"500"}
-          className="m-auto z-50 absolute bottom-[50%] left-[0%]  w-[30%] shadow-xl rounded-lg"
+          className="m-auto z-50 absolute bottom-[50%] left-[1%] xl:left-[2%]  w-[30%] shadow-xl rounded-lg"
         >
           <Image
             src="/assets/home/smart-site/messageSalman.svg"
@@ -60,7 +60,7 @@ const Messaging = () => {
           effect="zoom-in"
           duration="2000"
           delay={"800"}
-          className="m-auto z-50 absolute bottom-[13%] right-[0%]  w-[30%] shadow-xl rounded-lg"
+          className="m-auto z-50 absolute bottom-[13%] right-[0%]  w-[30%] md:right-[-5%] lg:right-[0%] shadow-xl rounded-lg"
         >
           <Image
             src="/assets/home/smart-site/messageArjo.svg"
