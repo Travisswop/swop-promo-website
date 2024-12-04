@@ -214,7 +214,7 @@ const ConectMobileSection = () => {
         </ScrollMotionEffect>
       </div> */}
 
-      <div className="hidden md:block max-w-[400px] h-[520px] mx-auto mt-8">
+      <div className="hidden md:block max-w-[400px] h-[520px] mx-auto">
         {hoverImgUrl ? (
           <motion.div
             key={hoverImgUrl}

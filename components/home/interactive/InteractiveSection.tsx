@@ -22,7 +22,7 @@ const InteractiveSection = () => {
         <ScrollMotionEffect
           effect="zoom-in"
           duration="2000"
-          delay={"1000"}
+          delay={"500"}
           className="absolute z-50 top-[35%] right-[15%] md:top-[25%] md:right-[22%] xl:top-[30%] xl:right-[30%] animate-bounce"
         >
           <Image
@@ -36,7 +36,7 @@ const InteractiveSection = () => {
         <ScrollMotionEffect
           effect="zoom-in"
           duration="2000"
-          delay={"500"}
+          delay={"100"}
           className="absolute z-50 top-[80%] left-[10%] md:top-[80%] md:left-[20%] xl:top-[80%] xl:left-[30%] animate-bounce"
         >
           <Image

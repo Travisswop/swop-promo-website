@@ -598,7 +598,7 @@ const ConectMobileSection = () => {
 
   return (
     <SectionLayout>
-      <div className="hidden md:block">
+      {/* <div className="hidden md:block">
         <ScrollMotionEffect effect="fade-right" duration="2000">
           <h2 className="text-xl font-normal leading-none text-center text-stone-950 md:text-4xl">
             <strong>Software</strong> built to connect
@@ -614,7 +614,7 @@ const ConectMobileSection = () => {
             more.
           </p>
         </ScrollMotionEffect>
-      </div>
+      </div> */}
 
       <div className="hidden md:block max-w-[400px] h-[520px] mx-auto mt-8">
         {hoverImgUrl ? (
@@ -830,7 +830,7 @@ const ConectMobileSection = () => {
           ))}
         </div>
       </div>
-      <div className="mt-10 md:hidden">
+      {/* <div className="mt-10 md:hidden">
         <ScrollMotionEffect effect="fade-up" duration="2000">
           <h2 className="text-xl font-normal leading-none text-center text-stone-950 md:text-4xl">
             <strong>Hardware</strong> built to connect
@@ -845,7 +845,7 @@ const ConectMobileSection = () => {
             more.
           </p>
         </ScrollMotionEffect>
-      </div>
+      </div> */}
     </SectionLayout>
   );
 };
