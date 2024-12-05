@@ -2,6 +2,18 @@ import Image from "next/image";
 import React from "react";
 
 const FormCards = ({ cardCost, businessCardCost, yearlySavings, increase }) => {
+  if (cardCost === undefined || cardCost === null) {
+    cardCost = 0;
+  }
+  if (businessCardCost === undefined || businessCardCost === null) {
+    businessCardCost = 0;
+  }
+  if (yearlySavings === undefined || yearlySavings === null) {
+    yearlySavings = 0;
+  }
+  if (increase === undefined || increase === null) {
+    increase = 0;
+  }
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 auto-rows-max items-stretch self-stretch justify-center gap-8">
       <div className="w-full flex flex-col justify-around items-center p-4 bg-white rounded-2xl border border-gray-200">
