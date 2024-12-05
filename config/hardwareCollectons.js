@@ -31,7 +31,7 @@ export const hardwareCollections = {
       id: 1,
       name: "Phone Attachment",
       image:
-        "/assets/hardware/collection/phoneAttachments/FlatBlackstickerwithphone.svg",
+        "/assets/hardware/collection/PhoneAttachments/FlatBlackstickerwithphone.svg",
       variant: "Black",
       price: 19.99,
     },
@@ -39,7 +39,7 @@ export const hardwareCollections = {
       id: 2,
       name: "Phone Attachment",
       image:
-        "/assets/hardware/collection/phoneAttachments/Flatwhitewithphone.svg",
+        "/assets/hardware/collection/PhoneAttachments/Flatwhitewithphone.svg",
       variant: "white",
       price: 19.99,
     },
@@ -47,7 +47,7 @@ export const hardwareCollections = {
       id: 3,
       name: "Phone Attachment",
       image:
-        "/assets/hardware/collection/phoneAttachments/FlatBlackstickerwithphone2.svg",
+        "/assets/hardware/collection/PhoneAttachments/FlatBlackstickerwithphone2.svg",
       variant: "Black",
       price: 19.99,
     },

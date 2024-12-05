@@ -28,7 +28,7 @@ const HardwareCollections = () => {
       />
       <Categories
         title={"Wearables"}
-        titleImage={"/assets/hardware/collection/Wearables/Wearables.svg"}
+        titleImage={"/assets/hardware/collection/wearables/wearables.svg"}
         products={hardwareCollections.Wearables}
       />
       <Categories
