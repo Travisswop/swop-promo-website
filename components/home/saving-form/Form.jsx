@@ -6,9 +6,9 @@ import FormCards from "./FormCards";
 import ScrollMotionEffect from "@/components/motion/ScrollMotionEffect";
 
 const Form = () => {
-  const [employees, setEmployees] = useState("");
-  const [cards, setCards] = useState("");
-  const [avgCost, setAvgCost] = useState("");
+  const [employees, setEmployees] = useState("0");
+  const [cards, setCards] = useState("0");
+  const [avgCost, setAvgCost] = useState("0");
   const [open, setOpen] = useState(false);
   return (
     <SectionLayout>
@@ -76,7 +76,7 @@ const Form = () => {
               className="text-white bg-black m-auto font-medium  text-base w-44 rounded  cursor-pointer px-5 py-2 xl:py-3 text-center mb-5"
               onClick={(e) => {
                 e.preventDefault();
-                console.log(employees, cards, avgCost);
+                //console.log(employees, cards, avgCost);
                 setOpen(true);
               }}
             >
@@ -87,7 +87,7 @@ const Form = () => {
                 cardCost={employees}
                 businessCardCost={cards}
                 yearlySavings={avgCost}
-                increase={employees}
+                increase={0}
               />
             )}
           </form>
