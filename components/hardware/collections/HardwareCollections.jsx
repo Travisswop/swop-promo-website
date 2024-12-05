@@ -28,12 +28,12 @@ const HardwareCollections = () => {
       />
       <Categories
         title={"Wearables"}
-        titleImage={"/assets/hardware/collection/wearables/wearables.svg"}
+        titleImage={"/assets/hardware/collection/wearables/wearable.svg"}
         products={hardwareCollections.Wearables}
       />
       <Categories
         title={"Stickers"}
-        titleImage={"/assets/hardware/collection/stickers/stickers.svg"}
+        titleImage={"/assets/hardware/collection/stickers/sticker.svg"}
         products={hardwareCollections.Stickers}
       />
     </div>
