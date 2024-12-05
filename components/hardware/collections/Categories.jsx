@@ -56,7 +56,7 @@ const Categories = ({ title, titleImage, products }) => {
             </h2>
           </div>
         </div>
-        <div className=" p-5 flex flex-row flex-wrap gap-5 justify-around items-center">
+        <div className=" p-5 flex flex-row flex-wrap gap-10 lg:gap-16  justify-center items-center">
           {products.map((el) => {
             return (
               <div
