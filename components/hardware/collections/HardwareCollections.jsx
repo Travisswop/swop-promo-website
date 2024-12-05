@@ -16,23 +16,25 @@ const HardwareCollections = () => {
       />
       <Categories
         title={"Hospitality"}
-        titleImage={"/assets/hardware/collection/card/MetalGoldcards.svg"}
-        products={hardwareCollections.BusinessCards}
+        titleImage={
+          "/assets/hardware/collection/hospitality/HospitalityCards.svg"
+        }
+        products={hardwareCollections.Hospitality}
       />
       <Categories
         title={"Pets"}
-        titleImage={"/assets/hardware/collection/card/MetalGoldcards.svg"}
-        products={hardwareCollections.BusinessCards}
+        titleImage={"/assets/hardware/collection/pets/pets.svg"}
+        products={hardwareCollections.Pets}
       />
       <Categories
         title={"Wearables"}
-        titleImage={"/assets/hardware/collection/card/MetalGoldcards.svg"}
-        products={hardwareCollections.BusinessCards}
+        titleImage={"/assets/hardware/collection/Wearables/Wearables.svg"}
+        products={hardwareCollections.Wearables}
       />
       <Categories
         title={"Stickers"}
-        titleImage={"/assets/hardware/collection/card/MetalGoldcards.svg"}
-        products={hardwareCollections.BusinessCards}
+        titleImage={"/assets/hardware/collection/stickers/stickers.svg"}
+        products={hardwareCollections.Stickers}
       />
     </div>
   );

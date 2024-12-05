@@ -72,7 +72,64 @@ export const hardwareCollections = {
       price: 19.99,
     },
   ],
-  Pets: [{}],
-  Wearables: [{}],
-  Stickers: [{}],
+  Pets: [
+    {
+      id: 1,
+      name: "Pets",
+      image: "/assets/hardware/collection/pets/Pet1.svg",
+      price: 19.99,
+    },
+    {
+      id: 2,
+      name: "Pets",
+      image: "/assets/hardware/collection/pets/Pet2.svg",
+      price: 19.99,
+    },
+    {
+      id: 3,
+      name: "Pets",
+      image: "/assets/hardware/collection/pets/Pet3.svg",
+      price: 19.99,
+    },
+  ],
+  Wearables: [
+    {
+      id: 1,
+      name: "Wearables",
+      image: "/assets/hardware/collection/wearables/Wearablesrainbow.svg",
+      price: 19.99,
+    },
+    {
+      id: 2,
+      name: "Wearables",
+      image: "/assets/hardware/collection/wearables/Wearableswhite.svg",
+      price: 19.99,
+    },
+    {
+      id: 3,
+      name: "Wearables",
+      image: "/assets/hardware/collection/wearables/Wearablesblack.svg",
+      price: 19.99,
+    },
+  ],
+  Stickers: [
+    {
+      id: 1,
+      name: "Stickers",
+      image: "/assets/hardware/collection/stickers/planegoldensticker.svg",
+      price: 19.99,
+    },
+    {
+      id: 2,
+      name: "Stickers",
+      image: "/assets/hardware/collection/stickers/blackSticker.svg",
+      price: 19.99,
+    },
+    {
+      id: 3,
+      name: "Stickers",
+      image: "/assets/hardware/collection/stickers/PlanewhiteSticker.svg",
+      price: 19.99,
+    },
+  ],
 };

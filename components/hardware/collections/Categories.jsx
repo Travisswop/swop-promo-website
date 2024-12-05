@@ -26,7 +26,14 @@ const Categories = ({ title, titleImage, products }) => {
           />
           <div
             className={cn(
-              "relative translate-y-10 lg:translate-y-0 lg:translate-x-24 xl:translate-x-24 2xl:translate-x-24 max-w-60 lg:w-[250px] place-items-start"
+              "relative   lg:translate-x-24 xl:translate-x-24 2xl:translate-x-24 max-w-60 lg:w-[250px] place-items-start h-[70%] flex flex-col justify-center items-center",
+              title === "Hospitality" &&
+                "scale-125 translate-y-10 lg:translate-y-0 xl:scale-150",
+              title === "Pets" &&
+                "scale-90 translate-y-5 xl:scale-100 2xl:scale-110 lg:-translate-y-5 ",
+              title === "Wearables" && "xl:scale-125",
+              title === "Stickers" &&
+                "scale-125 xl:scale-150 translate-y-10 lg:translate-y-0"
             )}
           >
             <Image
@@ -34,13 +41,13 @@ const Categories = ({ title, titleImage, products }) => {
               alt={title}
               height={400}
               width={400}
-              className="w-full lg:scale-125"
+              className="w-full lg:scale-110"
             />
           </div>
-          <div className="text-center text-white text-2xl pt-20 lg:text-3xl w-[468px] font-light">
+          <div className="text-center text-white text-2xl flex flex-col justify-center items-center  lg:text-3xl h-[30%] w-[468px] font-light relative -translate-y-10 lg:-translate-y-0">
             <h2 className="">
               <span
-                className="block text-5xl lg:text-6xl font-semibold
+                className="block text-3xl lg:text-5xl font-semibold
           "
               >
                 {title}
@@ -75,7 +82,7 @@ const Categories = ({ title, titleImage, products }) => {
                       </button>
                     </Link>
                   </div>
-                  <div>{el.price}</div>
+                  <div className="text-gray-500">${el.price}</div>
                 </div>
               </div>
             );
