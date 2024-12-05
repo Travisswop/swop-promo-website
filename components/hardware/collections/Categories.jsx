@@ -7,7 +7,7 @@ import { FiShoppingCart } from "react-icons/fi";
 
 const Categories = ({ title, titleImage, products }) => {
   return (
-    <SectionLayout className="">
+    <SectionLayout className="gradient-circle-top -z-50">
       <section className=" xl:px-20 grid grid-cols-1 gap-10 ">
         <div className="h-[600px] flex flex-col lg:flex-row gap-5 lg:gap-36 xl:gap-60 justify-start py-5 xl:py-0 lg:justify-center items-center relative rounded-lg">
           <Image
@@ -56,7 +56,7 @@ const Categories = ({ title, titleImage, products }) => {
             </h2>
           </div>
         </div>
-        <div className=" p-5 flex flex-row flex-wrap gap-10 lg:gap-16  justify-center items-center">
+        <div className=" p-5 flex flex-row flex-wrap gap-10 lg:gap-16  justify-center items-center gradient-circle-top -z-50">
           {products.map((el) => {
             return (
               <div
