@@ -157,7 +157,7 @@ const linkInfo = [
     img: "/assets/company/Fuad Hasan.png",
     name: "Fuad Hasan",
     title: "Developer Support",
-    profieLink: "https://www.swopme.app/sp/fuadr0l9",
+    profieLink: "https://swopme.app/sp/fuadr0l9",
   },
 ];
 
