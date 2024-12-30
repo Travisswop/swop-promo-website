@@ -76,7 +76,7 @@ const linkInfo = [
     img: "/assets/company/travis.png",
     name: "Travis Herron",
     title: "Co founder & Chairman",
-    profieLink: "",
+    profieLink: "https://swopme.app/sp/travis",
   },
   {
     img: "/assets/company/neel.png",
@@ -96,7 +96,7 @@ const linkInfo = [
     name: "Rashed Sheikh",
 
     title: "Blockchain Advisor",
-    profieLink: "",
+    profieLink: "https://swopme.app/sp/mducae",
   },
   {
     img: "/assets/company/Sadit Ahsan.png",
@@ -114,7 +114,7 @@ const linkInfo = [
     img: "/assets/company/Rakibul Islam.png",
     name: "Rakibul Islam",
     title: "Lead Backend",
-    profieLink: "https://www.swopme.app/sp/rakib",
+    profieLink: "https://swopme.app/sp/rakib",
   },
   {
     img: "/assets/company/Shouvik Chowdhury.png",
@@ -138,7 +138,7 @@ const linkInfo = [
     img: "/assets/company/Raihan Ali.png",
     name: "Raihan Ali",
     title: "Project Research and Management",
-    profieLink: "https://www.swopme.app/sp/raihandbw8",
+    profieLink: "https://swopme.app/sp/raihandbw8",
   },
   {
     img: "/assets/company/AR Sahak.png",
@@ -150,14 +150,14 @@ const linkInfo = [
     img: "/assets/company/Nurul Islam.png",
     name: "Nurul Islam ",
     title: "Frontend Developer",
-    profieLink: "https://www.swopme.app/sp/raihanqyf1",
+    profieLink: "https://swopme.app/sp/raihanqyf1",
   },
 
   {
     img: "/assets/company/Fuad Hasan.png",
     name: "Fuad Hasan",
     title: "Developer Support",
-    profieLink: "",
+    profieLink: "https://www.swopme.app/sp/fuadr0l9",
   },
 ];
 
@@ -200,7 +200,7 @@ const FoundersSection = () => {
                 href={el.profieLink}
                 className="flex justify-center text-md  text-stone-950"
               >
-                {el.profieLink.slice(8, -1)}
+                {el.profieLink.slice(8)}
               </Link>
             </div>
           </ScrollMotionEffect>
