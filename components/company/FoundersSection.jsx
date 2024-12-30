@@ -198,6 +198,7 @@ const FoundersSection = () => {
               <p className="text-center text-md text-stone-950">{el.title}</p>
               <Link
                 href={el.profieLink}
+                target="_blank"
                 className="flex justify-center text-md  text-stone-950"
               >
                 {el.profieLink.slice(8)}
