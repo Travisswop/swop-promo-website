@@ -2,6 +2,7 @@ import React from "react";
 import SectionLayout from "../shared/SectionLayout";
 import Image from "next/image";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
+import Link from "next/link";
 
 const linkInfo = [
   // {
@@ -75,75 +76,88 @@ const linkInfo = [
     img: "/assets/company/travis.png",
     name: "Travis Herron",
     title: "Co founder & Chairman",
+    profieLink: "",
   },
   {
     img: "/assets/company/neel.png",
     name: "Arjo Neel",
     title: "Co Founder & COO",
+    profieLink: "",
   },
 
   {
     img: "/assets/company/salman.png",
     name: "Salman H Saikote",
-
     title: "Co Founder & CTO",
+    profieLink: "https://swopme.app/sp/salmanhmou",
   },
   {
     img: "/assets/company/Rashed Sheikh.png",
     name: "Rashed Sheikh",
 
     title: "Blockchain Advisor",
+    profieLink: "",
   },
   {
     img: "/assets/company/Sadit Ahsan.png",
     name: "Sadit Ahsan",
     title: "Head of Design",
+    profieLink: "https://swopme.app/sp/sadithzj6",
   },
   {
     img: "/assets/company/matt.png",
     name: "Matt Mulligan",
     title: "Sales and Customer Relations",
+    profieLink: "",
   },
   {
     img: "/assets/company/Rakibul Islam.png",
     name: "Rakibul Islam",
     title: "Lead Backend",
+    profieLink: "https://www.swopme.app/sp/rakib",
   },
   {
     img: "/assets/company/Shouvik Chowdhury.png",
     name: "Shouvik Chowdhury",
     title: "Lead Frontend",
+    profieLink: "https://swopme.app/sp/shouvikxaal",
   },
   {
     img: "/assets/company/Gazi Monir-uz-zaman.png",
     name: "Gazi Monir-uz-zaman",
     title: "Lead Backend",
+    profieLink: "https://swopme.app/sp/gazigqeh",
   },
   {
     img: "/assets/company/Nuruzaman Milon.png",
     name: "Md. Nuruzaman Milon",
     title: "Web Developer",
+    profieLink: "https://swopme.app/sp/testh63s",
   },
   {
     img: "/assets/company/Raihan Ali.png",
     name: "Raihan Ali",
     title: "Project Research and Management",
+    profieLink: "https://www.swopme.app/sp/raihandbw8",
   },
   {
     img: "/assets/company/AR Sahak.png",
     name: "AR Sahak",
     title: "Frontend Developer",
+    profieLink: "https://swopme.app/sp/ar",
   },
   {
     img: "/assets/company/Nurul Islam.png",
     name: "Nurul Islam ",
     title: "Frontend Developer",
+    profieLink: "https://www.swopme.app/sp/raihanqyf1",
   },
 
   {
     img: "/assets/company/Fuad Hasan.png",
     name: "Fuad Hasan",
     title: "Developer Support",
+    profieLink: "",
   },
 ];
 
@@ -182,6 +196,12 @@ const FoundersSection = () => {
                 {el.name}
               </h2>
               <p className="text-center text-md text-stone-950">{el.title}</p>
+              <Link
+                href={el.profieLink}
+                className="flex justify-center text-md  text-stone-950"
+              >
+                {el.profieLink.slice(8, -1)}
+              </Link>
             </div>
           </ScrollMotionEffect>
         ))}
