@@ -1,19 +1,26 @@
-import AvailableForAllDevices from '@/components/home/AvailableForAllDevices';
-import DashboardFlow from '@/components/home/DashboardFlow';
-import FeaturesSection from '@/components/home/FeaturesSection';
-import HeroSection from '@/components/home/HeroSection';
-import LinkSection from '@/components/home/LinkSection';
-import SwoppleSection from '@/components/home/SwoppleSection';
+import DevicesInteraction from "@/components/hardware/DevicesInteraction";
+
+import HeroSection from "@/components/home/HeroSection";
+import InteractiveSection from "@/components/home/interactive/InteractiveSection";
+import ManageTeam from "@/components/home/manage/ManageTeam";
+import Form from "@/components/home/saving-form/Form";
+import Smartsite from "@/components/home/Smartsite";
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col gap-20 pb-16">
       <HeroSection />
-      <LinkSection />
-      <DashboardFlow />
-      <SwoppleSection />
-      <FeaturesSection />
-      <AvailableForAllDevices />
+      <Smartsite />
+      <InteractiveSection />
+      <ManageTeam />
+      <Form />
+      <DevicesInteraction />
+
+      {/* <LinkSection /> */}
+      {/* <DashboardFlow /> */}
+      {/* <SwoppleSection /> */}
+      {/* <FeaturesSection /> */}
+      {/* <AvailableForAllDevices /> */}
     </div>
   );
 }

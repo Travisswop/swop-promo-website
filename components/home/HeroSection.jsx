@@ -1,74 +1,134 @@
 "use client";
 import React, { useMemo } from "react";
 import SectionLayout from "../shared/SectionLayout";
-import { motion } from "framer-motion";
 import Link from "next/link";
+import { Fira_Code } from "next/font/google";
+import { cn } from "@nextui-org/react";
+import Image from "next/image";
+import ScrollMotionEffect from "../motion/ScrollMotionEffect";
+import { delay, motion, px, spring } from "framer-motion";
+
+const fira = Fira_Code({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 const HeroSection = () => {
   const variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, y: 30, blur: 10 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      blur: 0,
+      transition: { duration: 0.5, delay: i * 0.04 },
+    }),
   };
 
-  const text = useMemo(() => "Build a Smart Site Today".split("  "), []);
+  const text1 = "Get Paid to Network".split("");
 
   return (
-    <SectionLayout bg={"bg-transparent"}>
-      <div className="z-50 flex flex-col-reverse items-center w-full gap-6 md:flex-row">
+    <div className="container z-50 flex flex-col items-center justify-center w-full gap-6 md:flex-row 2xl:pt-8 ">
+      <div>
+        <div className="flex justify-center xs:pt-4 ms:pt-6 lg:pt-16  ">
+          <ScrollMotionEffect effect="zoom-in" duration="2000">
+            <Image
+              src="/assets/home/heroImage.png"
+              alt="heroImage"
+              width={500}
+              height={500}
+              quality={100}
+              className="w-[500px] xs:h-[215px] ms:h-[254px] sm:h-[300px] md:h-[354px] xl:h-[371px] "
+            />
+            {/* h-[215px] md:h-[354px] */}
+          </ScrollMotionEffect>
+        </div>
         <motion.div
-          className="flex-1"
           initial="hidden"
           animate="visible"
-          exit={{ opacity: 0, transition: { duration: 1 } }}
-          variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+          // variants={variants}
+          className={cn(
+            "xs:text-3xl ms:text-4xl md:text-5xl lg:text-[80px] font-bold text-[#333131] text-center leading-tight tracking-normal pt-5 xl:pt-8   relative"
+          )}
         >
-          <motion.h1
-            className="text-[30px] md:text-[56px] font-[750] text-black text-center leading-tight tracking-normal"
-            variants={variants}
-          >
-            {text.map((word, index) => (
-              <span key={index} className="inline-block">
-                {word}{" "}
-              </span>
-            ))}
-          </motion.h1>
-          <motion.p
-            variants={variants}
-            className="text-black text-2xl md:text-[36px] mt-2 md:mt-2 text-center"
-          >
-            And Get Paid to Network
-          </motion.p>
-
-          <motion.div
-            variants={variants}
-            className="flex justify-center mt-5 md:mt-6"
-          >
-            <Link
-              href={"https://swop-desktop.vercel.app"}
-              target="_blank"
-              className="flex items-center justify-center px-6 py-2 mb-2 font-medium text-black border-2 border-black bg-none hover:bg-black hover:text-white text-md md:text-lg md:px-10 me-0 md:me-6 rounded-xl"
+          {text1.map((word, index) => (
+            <motion.div
+              variants={variants}
+              custom={index}
+              key={index}
+              className="text-[#333131] inline-block"
             >
-              Get Started
-            </Link>
-          </motion.div>
+              {word}
+            </motion.div>
+          ))}
         </motion.div>
-        <div className="flex justify-center flex-1">
-          <div className="w-[70%]">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="auto"
-              style={{ display: "block" }}
+        {/* <div
+          className={cn(
+            "xs:text-3xl ms:text-4xl md:text-5xl lg:text-[80px] font-bold text-[#333131] text-center leading-tight tracking-normal pt-5 xl:pt-6   relative -z-50"
+          )}
+        >
+          {text1.map((word, index) => (
+            <ScrollMotionEffect
+              effect="fade-up"
+              duration={(200 + index * 50).toString()}
+              key={index}
+              className={cn(
+                "inline-block text-3xl md:text-6xl text-center font-black "
+              )}
             >
-              <source src="/assets/home/hero-bg-jvideo.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { duration: 3 },
+                }}
+                className="text-[#333131] inline-block"
+              >
+                {word}
+              </motion.div>
+            </ScrollMotionEffect>
+          ))}
+
+          
+        </div> */}
+        <h4 className="text-gray-400 text-center xs:text-sm ms:text-xl py-4 lg:py-6 max-w-[780px]">
+          Turn your connections into earnings with Swop—leverage networking to
+          unlock rewards, generate leads, and build meaningful relationships
+          seamlessly.
+        </h4>
+
+        <div className="flex justify-center gap-4">
+          <Link
+            href="https://apps.apple.com/us/app/swop-connecting-the-world/id1593201322"
+            target="_blank"
+          >
+            <ScrollMotionEffect effect="zoom-in-up" duration="800">
+              <Image
+                src="/assets/home/app-store.png"
+                alt="appStore"
+                width={520}
+                height={520}
+                className="w-[120px] h-auto"
+              />
+            </ScrollMotionEffect>
+          </Link>
+          <Link
+            href="https://play.google.com/store/apps/details?id=com.travisheron.swopapp"
+            target="_blank"
+          >
+            <ScrollMotionEffect effect="zoom-in-up" duration="800">
+              <Image
+                src="/assets/home/google-play.png"
+                alt="googlePlay"
+                width={520}
+                height={520}
+                className="w-[120px] h-auto"
+              />
+            </ScrollMotionEffect>
+          </Link>
         </div>
       </div>
-    </SectionLayout>
+    </div>
   );
 };
 

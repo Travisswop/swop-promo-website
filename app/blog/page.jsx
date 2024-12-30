@@ -1,8 +1,8 @@
-import ConectMobileSection from '@/components/shared/ConectMobileSection';
+import ConectMobileSection from "@/components/hardware/ConectMobileSection";
 
 const page = () => {
   return (
-    <div>
+    <div className="container py-16">
       <ConectMobileSection />
     </div>
   );

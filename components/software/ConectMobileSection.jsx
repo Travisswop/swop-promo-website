@@ -435,6 +435,20 @@ import { RiServiceLine } from "react-icons/ri";
 import { MdOutlineSell } from "react-icons/md";
 import { GrAnalytics } from "react-icons/gr";
 
+import { cn } from "@nextui-org/react";
+const Icons = ({ icon, title, scale }) => {
+  return (
+    <Image
+      src={icon}
+      alt={title}
+      className={cn("", scale && "scale-90 ")}
+      width={80}
+      height={80}
+      quality={100}
+    />
+  );
+};
+
 const ConectMobileSection = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [playVideo, setPlayVideo] = useState(false);
@@ -448,23 +462,23 @@ const ConectMobileSection = () => {
     () => [
       {
         id: 1,
-        icon: RiUserFollowLine,
+        icon: "/assets/software/connection.png",
         title: "Connection/ Follow",
-        imageUrl: "/assets/video/businesscards.png",
+        //imageUrl: "/assets/video/businesscards.png",
         videoUrl: "/assets/video/software-connection-follow.mp4",
       },
       {
         id: 2,
-        icon: IoAnalyticsOutline,
+        icon: "/assets/software/lead.png",
         title: "Lead Generation",
-        imageUrl: "/assets/video/wearables.png",
+        // imageUrl: "/assets/video/wearables.png",
         videoUrl: "/assets/video/software-lead-generation.mp4",
       },
       {
         id: 3,
-        icon: RiServiceLine,
+        icon: "/assets/software/customer.png",
         title: "Customer Rentention",
-        imageUrl: "/assets/video/transactions.png",
+        //imageUrl: "/assets/video/transactions.png",
         videoUrl: "/assets/video/customer-rentention.mp4",
       },
     ],
@@ -475,23 +489,23 @@ const ConectMobileSection = () => {
     () => [
       {
         id: 4,
-        icon: GrTransaction,
+        icon: "/assets/software/tranc.png",
         title: "Transactions",
-        imageUrl: "/assets/video/restaurants.png",
+        //imageUrl: "/assets/video/restaurants.png",
         videoUrl: "/assets/video/transactions.mp4",
       },
       {
         id: 5,
-        icon: MdOutlineSell,
+        icon: "/assets/software/sell.png",
         title: "Sell Products",
-        imageUrl: "/assets/video/customize.png",
+        //imageUrl: "/assets/video/customize.png",
         videoUrl: "/assets/video/cstomizable-crad-tapp.mp4",
       },
       {
         id: 6,
-        icon: GrAnalytics,
+        icon: "/assets/software/analytics.png",
         title: "Analytics",
-        imageUrl: "/assets/video/embeddables.png",
+        //imageUrl: "/assets/video/embeddables.png",
         videoUrl: "/assets/video/analytics.mp4",
       },
     ],
@@ -597,8 +611,8 @@ const ConectMobileSection = () => {
   }, [hoverVideoUrl]);
 
   return (
-    <SectionLayout>
-      <div className="hidden md:block">
+    <div>
+      {/* <div className="hidden md:block">
         <ScrollMotionEffect effect="fade-right" duration="2000">
           <h2 className="text-xl font-normal leading-none text-center text-stone-950 md:text-4xl">
             <strong>Software</strong> built to connect
@@ -614,25 +628,25 @@ const ConectMobileSection = () => {
             more.
           </p>
         </ScrollMotionEffect>
-      </div>
+      </div> */}
 
-      <div className="hidden md:block max-w-[400px] h-[520px] mx-auto mt-8">
-        {/* {hoverImgUrl ? (
+      <div className="hidden md:block max-w-[400px] h-[520px] mx-auto">
+        {hoverImgUrl ? (
           <motion.div
             key={hoverImgUrl}
-            className='mx-auto'
+            className="mx-auto"
             animate={animationProps}
             transition={
               hoveredItem === 5 && !isDelayed
                 ? {
                     duration: 1,
-                    ease: 'easeInOut',
+                    ease: "easeInOut",
                     times: [0, 0.1, 0.5, 1],
                     repeat: false,
                   }
                 : {
                     duration: 2,
-                    ease: 'easeInOut',
+                    ease: "easeInOut",
                     times: [0, 0.2, 0.5, 0.8, 1],
                     repeat: false,
                     repeatDelay: 1,
@@ -645,11 +659,11 @@ const ConectMobileSection = () => {
                 loop
                 muted
                 playsInline
-                src={'/assets/video/customizable-video.mp4'}
-                className='mx-auto'
+                src={"/assets/video/customizable-video.mp4"}
+                className="mx-auto"
                 width={160}
                 height={80}
-                preload='metadata'
+                preload="metadata"
                 // loading='lazy'
               />
             ) : (
@@ -657,31 +671,14 @@ const ConectMobileSection = () => {
                 width={180}
                 height={120}
                 src={hoverImgUrl}
-                alt='Link icon'
-                className='mx-auto'
+                alt="Link icon"
+                className="mx-auto"
               />
             )}
           </motion.div>
         ) : (
-          <motion.div
-            animate={animationProps}
-            transition={{
-              duration: 2,
-              ease: 'easeInOut',
-              times: [0, 0.2, 0.5, 0.8, 1],
-              repeat: false,
-              repeatDelay: 1,
-            }}
-          >
-            <Image
-              width={180}
-              height={120}
-              src={'/assets/video/transactions.png'}
-              alt='Link icon'
-              className='mx-auto'
-            />
-          </motion.div>
-        )} */}
+          <div></div>
+        )}
         <motion.div
           animate={{
             y: [0, 0, 190],
@@ -696,33 +693,33 @@ const ConectMobileSection = () => {
             repeatDelay: 1,
           }}
         >
-          <Image
+          {/* <Image
             width={140}
             height={120}
             src={"/assets/site-logo/chipicon.png"}
             alt="Link icon"
             className="mx-auto"
-          />
+          /> */}
         </motion.div>
       </div>
 
       <div className="md:hidden max-w-[400px] h-[230px] mx-auto mt-[-60px]">
-        {/* {hoverImgUrl ? (
+        {hoverImgUrl ? (
           <motion.div
             key={hoverImgUrl}
-            className='mx-auto'
+            className="mx-auto"
             animate={animationMobileProps}
             transition={
               hoveredItem === 5 && !isDelayed
                 ? {
                     duration: 1,
-                    ease: 'easeInOut',
+                    ease: "easeInOut",
                     times: [0, 0.1, 0.5, 1],
                     repeat: false,
                   }
                 : {
                     duration: 2,
-                    ease: 'easeInOut',
+                    ease: "easeInOut",
                     times: [0, 0.2, 0.5, 0.8, 1],
                     repeat: false,
                     repeatDelay: 1,
@@ -732,12 +729,12 @@ const ConectMobileSection = () => {
             {hoveredItem === 5 ? (
               <video
                 autoPlay
-                src={'/assets/video/customizable-video.mp4'}
+                src={"/assets/video/customizable-video.mp4"}
                 muted
-                className='mx-auto'
+                className="mx-auto"
                 width={100}
                 height={60}
-                preload='metadata'
+                preload="metadata"
                 // loading='lazy'
               />
             ) : (
@@ -745,14 +742,14 @@ const ConectMobileSection = () => {
                 width={120}
                 height={100}
                 src={hoverImgUrl}
-                alt='Link icon'
-                className='mx-auto'
+                alt="Link icon"
+                className="mx-auto"
               />
             )}
           </motion.div>
         ) : (
-          ''
-        )} */}
+          ""
+        )}
 
         <motion.div
           animate={{
@@ -768,13 +765,13 @@ const ConectMobileSection = () => {
             repeatDelay: 1,
           }}
         >
-          <Image
+          {/* <Image
             width={90}
             height={90}
             src={"/assets/site-logo/chipicon.png"}
             alt="Link icon"
             className="mx-auto"
-          />
+          /> */}
         </motion.div>
       </div>
 
@@ -783,11 +780,11 @@ const ConectMobileSection = () => {
           {featuresInfoLeft.map((el) => (
             <div
               key={el.id}
-              className={`p-2 bg-white rounded-full w-28 h-28 flex flex-col items-center justify-center border border-[#737373] ${hoveredItem === el.id ? "shadow-xl" : ""}`}
+              className={`p-2  rounded-full w-28 h-28 flex flex-col items-center justify-center  ${hoveredItem === el.id ? "" : ""}`}
               onMouseEnter={() => hoverItemSelect(el)}
             >
-              <el.icon className="w-6 h-6 text-[#737373]" />
-              <h2 className="mt-2 text-base text-[#737373] text-center font-normal leading-5">
+              <Icons icon={el.icon} title={el.title} />
+              <h2 className="mt-2 text-sm text-[#737373] text-center font-normal leading-5">
                 {el.title}
               </h2>
             </div>
@@ -817,14 +814,14 @@ const ConectMobileSection = () => {
           </motion.div>
         </div>
 
-        <div className="hidden md:flex flex-col justify-start gap-10 md:gap-28 mx-auto bg-white ml-[-2px]">
+        <div className="hidden md:flex flex-col justify-start gap-10 md:gap-28 mx-auto  ml-[-2px]">
           {featuresInfoRight.map((el) => (
             <div
               key={el.id}
-              className={`p-2 bg-white rounded-full w-28 h-28 flex flex-col items-center justify-center border border-[#737373] ${hoveredItem === el.id ? "shadow-xl" : ""}`}
+              className={`p-2  rounded-full w-28 h-28 flex flex-col items-center justify-center  ${hoveredItem === el.id ? "" : ""}`}
               onMouseEnter={() => hoverItemSelect(el)}
             >
-              <el.icon className="w-6 h-6 text-[#737373]" />
+              <Icons icon={el.icon} title={el.title} />
               <h2 className="mt-1 text-sm leading-5 text-[#737373] text-center font-normal">
                 {el.title}
               </h2>
@@ -832,22 +829,22 @@ const ConectMobileSection = () => {
           ))}
         </div>
 
-        <div className="grid justify-center grid-cols-3 mx-auto mt-3 bg-white gap-x-5 gap-y-3 md:hidden">
+        <div className="grid justify-center grid-cols-3 mx-auto mt-3  gap-x-5 gap-y-8 md:hidden">
           {featuresInfoAll.map((el) => (
             <div
               key={el.id}
-              className={`p-2 bg-white rounded-full size-20 flex flex-col items-center justify-center border border-[#737373] ${hoveredItem === el.id ? "shadow-xl" : ""}`}
+              className={`p-2  rounded-full size-20 flex flex-col items-center justify-center  ${hoveredItem === el.id ? "" : ""}`}
               onMouseEnter={() => hoverItemSelect(el)}
             >
-              <el.icon className="size-4 text-[#737373]" />
-              <h2 className="mt-1 text-xs leading-2 text-[#737373] text-center font-normal">
+              <Icons icon={el.icon} title={el.title} scale={el.scale} />
+              <h2 className="mt-1 text-[10px] leading-2 text-[#737373] text-center font-normal">
                 {el.title}
               </h2>
             </div>
           ))}
         </div>
       </div>
-      <div className="mt-10 md:hidden">
+      {/* <div className="mt-10 md:hidden">
         <ScrollMotionEffect effect="fade-up" duration="2000">
           <h2 className="text-xl font-normal leading-none text-center text-stone-950 md:text-4xl">
             <strong>Hardware</strong> built to connect
@@ -862,8 +859,8 @@ const ConectMobileSection = () => {
             more.
           </p>
         </ScrollMotionEffect>
-      </div>
-    </SectionLayout>
+      </div> */}
+    </div>
   );
 };
 

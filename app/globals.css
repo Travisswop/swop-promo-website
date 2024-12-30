@@ -43,7 +43,6 @@ video::-webkit-media-controls-panel {
   display: none !important;
 }
 
-
 .map-iframe {
   filter: grayscale(100%) invert(92%) contrast(83%);
 }
@@ -153,7 +152,7 @@ video::-webkit-media-controls-panel {
 }
 
 .nav-item::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -178,14 +177,103 @@ video::-webkit-media-controls-panel {
 /* bg top gradient */
 
 .gradient-circle-top {
-  background-image:
-  radial-gradient(at 47% 43%, #d1a2f856 0px, transparent 50%),
-  radial-gradient(at 86% 42%, hsla(231,0%,100%,1) 0px, transparent 50%);
+  background-image: radial-gradient(at 47% 43%, #d1a2f856 0px, transparent 50%),
+    radial-gradient(at 86% 42%, hsla(231, 0%, 100%, 1) 0px, transparent 50%);
 }
 
 .gradient-circle-left {
+  background-image: radial-gradient(at 47% 43%, #d6ffd86d 0px, transparent 50%),
+    radial-gradient(at 86% 42%, hsla(231, 0%, 100%, 1) 0px, transparent 50%);
+}
 
-  background-image:
-  radial-gradient(at 47% 43%, #d6ffd86d 0px, transparent 50%),
-  radial-gradient(at 86% 42%, hsla(231,0%,100%,1) 0px, transparent 50%);
+.animate-bounce {
+  animation: bounce 2.5s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-15%);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(-15%);
+  }
+}
+
+.animate-slow-bounce {
+  animation: slow-bounce 2.5s infinite ease-in-out;
+}
+
+@keyframes slow-bounce {
+  0% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+.anim-typewriter {
+  animation:
+    typewriter 1s steps(10) 1s 1 normal both,
+    blinkTextCursor 500ms steps(10) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 5em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border: none;
+  }
+  to {
+    border: none;
+  }
+}
+.bounce-nav {
+  animation: bounce-nav 3s normal;
+}
+@keyframes bounce-nav {
+  0% {
+    transform: translateY(-200%);
+  }
+  80% {
+    transform: translateY(-200%);
+  }
+
+  85% {
+    transform: translateY(50%);
+  }
+  90% {
+    transform: translateY(-10%);
+  }
+  95% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.fade-up {
+  animation: fade-up 1s forwards;
+}
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
