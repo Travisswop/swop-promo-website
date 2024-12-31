@@ -24,7 +24,7 @@ const Analytics = () => {
           className="m-auto absolute top-0 left-0 right-0 bottom-0 overflow-hidden rounded-2xl"
         />
       </div>
-      <div className="bg-[#F5F5F5]  lg:w-2/3 m-auto ">
+      <div className="  lg:w-2/3 m-auto   mt-auto px-4 pb-4">
         <div className="">
           <h3 className="m-auto font-semibold text-lg text-center mb-[6px]">
             Analytics
