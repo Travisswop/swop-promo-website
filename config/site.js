@@ -86,10 +86,10 @@ export const SITECONFIG = {
         title: "Events",
         slug: "/events",
       },
-      {
-        title: "Hardware Collection",
-        slug: "/hardware-collection",
-      },
+      // {
+      //   title: "Hardware Collection",
+      //   slug: "/hardware-collection",
+      // },
       {
         title: "Contact Us",
         slug: "/contact-us",

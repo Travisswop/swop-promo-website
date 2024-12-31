@@ -8,6 +8,8 @@ import ScrollMotionEffect from "../motion/ScrollMotionEffect";
 import Image from "next/image";
 import { cn } from "@nextui-org/react";
 import { delay, motion, useInView } from "framer-motion";
+import HardwareCollections from "./collections/HardwareCollections";
+import CollectionsComingSoon from "./CollectionsComingSoon";
 
 const productInfo = [
   {
@@ -202,8 +204,9 @@ const DevicesInteraction = () => {
         </div>
       </ScrollMotionEffect>
 
-      <div className="mt-20 px-2  m-auto">
-        <ProductCards productList={productInfo} />
+      <div className="   m-auto">
+        {/* <ProductCards productList={productInfo} /> */}
+        <CollectionsComingSoon />
       </div>
 
       {/* <div className='grid grid-cols-1 md:grid-cols-3 items-center justify-between gap-10 md:gap-14 md:mt-10'>

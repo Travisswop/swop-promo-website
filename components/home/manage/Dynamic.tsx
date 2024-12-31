@@ -18,19 +18,16 @@ const Dynamic = () => {
         width={247}
         height={250}
         className="text-center md:scale-125 relative md:translate-y-20
-        md:pb-20 lg:scale-110 lg:translate-y-16 lg:pt-10 lg:pb-12 xl:scale-125 xl:pb-16 xl:translate-y-16"
+        md:pb-20 lg:scale-110 lg:translate-y-16 lg:pt-10 lg:pb-12 xl:scale-[1.20] 2xl:scale-150 xl:pb-16 xl:translate-y-16"
         quality={100}
       />
 
-      <div>
-        <h3 className="font-semibold text-lg text-center md:pt-16">
-          Dynamic QR
-        </h3>
-      </div>
-      <div className="w-full lg:w-4/6 m-auto">
+      <div className="w-full lg:w-5/6 2xl:w-4/6 m-auto mt-5 md:mt-24">
+        <h3 className="font-semibold text-lg text-center pb-1">Dynamic QR</h3>
+
         <h4 className="text-base text-center text-gray-400">
-          The last QR your company will need. Update on the go. No more printing
-          out a new QR every time you update a link.
+          Update your Smartsite and your QR infrastructure updates
+          automatically.
         </h4>
       </div>
     </ScrollMotionEffect>

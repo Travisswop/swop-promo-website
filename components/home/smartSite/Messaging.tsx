@@ -7,13 +7,14 @@ import ScrollMotionEffect from "@/components/motion/ScrollMotionEffect";
 const Messaging = () => {
   return (
     <ScrollMotionEffect
+      delay={"200"}
       effect="fade-up"
       duration="500"
       className={
         "max-w-[420px] md:w-full h-full m-auto bg-[#F5F5F5] rounded-3xl border border-gray-200 p-4 flex flex-col justify-between"
       }
     >
-      <div className="relative h-[185px] w-full m-auto ">
+      <div className="relative h-[185px] w-full m-auto mt-2 mb-1">
         <Image
           src="/assets/home/smart-site/encryptedMessaging.png"
           alt="bank"
@@ -75,16 +76,12 @@ const Messaging = () => {
           />
         </ScrollMotionEffect> */}
       </div>
-      <div className="m-auto mt-auto pt-6 bg-[#F5F5F5]">
-        <h3 className="m-auto font-semibold text-lg text-center ">
+      <div className="bg-[#F5F5F5]  lg:w-2/3 m-auto  mt-auto pt-[20px] ">
+        <h3 className="m-auto font-semibold text-lg text-center  mb-[6px]">
           Encrypted Messaging
         </h3>
-      </div>
-
-      <div className="bg-[#F5F5F5]  lg:w-2/3 m-auto">
         <h4 className="text-center text-base text-gray-400">
-          Message directly through your Swop Smartsite and send payments, tokens
-          and more.
+          Receive Encrypted Messaging through your Swop Smartsite.
         </h4>
       </div>
     </ScrollMotionEffect>

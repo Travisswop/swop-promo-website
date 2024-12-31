@@ -58,11 +58,19 @@ const InteractiveSection = () => {
             ))}
           </span>
         </h2>
-        <h4 className="max-w-[800px] text-gray-400 text-center mx-auto text-xl pt-6">
-          Turn your connections into earnings with Swop—leverage networking to
-          unlock rewards, generate leads, and build meaningful relationships
-          seamlessly.
-        </h4>
+        <div className="text-center">
+          <h4 className="max-w-[800px] text-gray-400 text-center mx-auto text-xl pt-6 pb-4">
+            Turn your connections into earnings with Swop—leverage networking to
+            unlock rewards, generate leads, and build meaningful relationships
+            seamlessly.
+          </h4>
+          <Link
+            href="https://swopple.gitbook.io/swopple"
+            className="max-w-[800px] text-black hover:underline duration-300   text-xl  mx-auto"
+          >
+            https://swopple.gitbook.io/swopple
+          </Link>
+        </div>
         <ScrollMotionEffect
           effect="zoom-in-up"
           duration="500"

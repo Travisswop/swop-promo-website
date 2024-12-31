@@ -12,11 +12,11 @@ const Footer = () => {
     return SITECONFIG?.footer?.quick_links || [];
   }, []);
 
-  const SocialIcon = ({ icon: Icon }) => (
-    <div className="bg-black rounded-full p-2">
-      <Icon className="text-white w-5 h-5" />
-    </div>
-  );
+  // const SocialIcon = ({ icon: Icon }) => (
+  //   <div className="bg-black rounded-full p-2">
+  //     <Icon className="text-white w-5 h-5" />
+  //   </div>
+  // );
 
   return (
     <footer className="bg-[#ffffff] container">
@@ -28,11 +28,11 @@ const Footer = () => {
               className="flex items-center justify-start cursor-pointer"
             >
               <Image
-                width={180}
-                height={100}
-                src="/assets/site-logo/swop-logo.png"
+                width={500}
+                height={500}
+                src="/assets/site-logo/swop-black-logo.png"
                 alt="Swop"
-                className="object-cover"
+                className="object-cover w-[90px] md:w-[150px]"
                 quality={100}
                 priority
               />
@@ -42,7 +42,7 @@ const Footer = () => {
             <ul className="w-full text-black font-normal list-none ml-0 flex flex-row flex-wrap items-center justify-center text-center divide-x divide-gray-600">
               {quickLinks.map((el, index) => (
                 <li
-                  className="mb-4 px-2 xl:px-4 2xl:px-6 flex items-center text-md xl:text-[18px]"
+                  className="mb-4 px-2 xl:px-4 2xl:px-6 flex items-center text-sm xl:text-[16px]"
                   key={index}
                 >
                   <Link href={el.slug} className="hover:underline">
@@ -52,14 +52,14 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="flex justify-center md:justify-end">
+          <div className="flex justify-center md:justify-center items-center">
             <div>
               <Image
-                width={110}
+                width={100}
                 height={80}
-                src="/assets/site-logo/qr-code.png"
+                src="/assets/site-logo/qr-code-1.png"
                 alt="Swop QR Code"
-                className=""
+                className=" mx-auto"
                 quality={100}
                 priority
               />
@@ -76,9 +76,24 @@ const Footer = () => {
           ©2024 Swop ®All Rights Reserved.
         </p>
         <div className="flex items-center gap-x-2">
-          <SocialIcon icon={FaFacebookF} />
-          <SocialIcon icon={FaLinkedinIn} />
-          <SocialIcon icon={FaInstagram} />
+          <Image
+            src="/assets/home/swopple-icon/facebook-icon.png"
+            alt=""
+            width={24}
+            height={24}
+          ></Image>
+          <Image
+            src="/assets/home/swopple-icon/instagram-icon.png"
+            alt=""
+            width={24}
+            height={24}
+          ></Image>
+          <Image
+            src="/assets/home/swopple-icon/linkedin-icon.png"
+            alt=""
+            width={24}
+            height={24}
+          ></Image>
         </div>
       </div>
     </footer>

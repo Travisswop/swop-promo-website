@@ -36,13 +36,11 @@ const Team = () => {
         Your browser does not support the video tag.
       </video>
 
-      <div className="w-full">
-        <h3 className="font-semibold text-lg text-center z-50">
+      <div className="w-full lg:w-4/6 m-auto flex-grow pt-5">
+        <h3 className="font-semibold text-lg text-center z-50 mb-1">
           Manage The Entire Team
         </h3>
-      </div>
 
-      <div className="w-full lg:w-4/6 m-auto flex-grow">
         <h4 className="text-lg text-center text-gray-400 max-w-full flex-grow">
           One dashboard to create,deploy, and manage your companies network.
         </h4>

@@ -32,10 +32,9 @@ const Build = () => {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div>
-        <h3 className="font-semibold text-lg text-center py-2">Build</h3>
-      </div>
-      <div className="w-full lg:w-4/6 m-auto">
+      <div className="w-full lg:w-4/6 m-auto mt-5">
+        <h3 className="font-semibold text-lg text-center pb-1">Build</h3>
+
         <h4 className="text-base text-center text-gray-400">
           Create and reward your network with web3 incentives through a
           smartsite.
