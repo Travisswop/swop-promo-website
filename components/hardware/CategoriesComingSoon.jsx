@@ -47,7 +47,7 @@ const CategoriesComingSoon = ({ title, titleImage }) => {
                     height={35}
                     quality={100}
                     priority
-                    className=" w-[100px] lg:180px"
+                    className=" w-[100px] lg:w-[180px]"
                   />
                 </div>
                 {title === "Business Card" ? (
