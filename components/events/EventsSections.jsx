@@ -10,7 +10,7 @@ const EventsSections = () => {
       <ScrollMotionEffect effect="fade-up" duration="2000">
         <div className=" md:hidden">
           <InlineWidget
-            url="https://calendly.com/swopme-support/30min"
+            url="https://calendly.com/kaitlin-age/introductory-call"
             styles={{
               height: "800px",
             }}
@@ -25,7 +25,7 @@ const EventsSections = () => {
         </div>
         <div className="hidden md:block">
           <InlineWidget
-            url="https://calendly.com/swopme-support/30min"
+            url="https://calendly.com/kaitlin-age/introductory-call"
             styles={{
               height: "930px",
             }}
