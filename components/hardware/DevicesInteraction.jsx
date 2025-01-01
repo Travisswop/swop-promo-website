@@ -211,10 +211,10 @@ const DevicesInteraction = () => {
         </div>
       </ScrollMotionEffect>
 
-      <div className="   m-auto">
+      {path==="/"&&<div className="   m-auto">
         {/* <ProductCards productList={productInfo} /> */}
-        {path==="/"&&<CollectionsComingSoon />}
-      </div>
+        <CollectionsComingSoon />
+      </div>}
 
       {/* <div className='grid grid-cols-1 md:grid-cols-3 items-center justify-between gap-10 md:gap-14 md:mt-10'>
         {productInfo?.map((el, index) => (
