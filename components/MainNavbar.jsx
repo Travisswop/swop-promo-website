@@ -302,8 +302,8 @@ const MainNavbar = () => {
                 alt="Swop Logo"
                 width={500}
                 height={500}
-                className="w-[90px] md:w-[150px]"
-                quality={90}
+                className="w-[80px] md:w-[100px]"
+                quality={100}
                 priority
               />
             </Link>
@@ -329,7 +329,7 @@ const MainNavbar = () => {
                       alt="Swop Logo"
                       width={35}
                       height={35}
-                      quality={90}
+                      quality={100}
                       priority
                       className="rounded-full animate-slow-bounce"
                     />
@@ -362,7 +362,7 @@ const MainNavbar = () => {
           <NavbarItem>
             <Link
               href="/get-demo"
-              className="flex items-center gap-x-2 bg-[#F6F6F6] p-1.5 md:p-2 rounded-full text-sm md:text-base font-semibold group hover:text-[#AF97D4]"
+              className="flex items-center gap-x-2 bg-[#F6F6F6] p-1.5  rounded-full text-sm md:text-sm font-semibold group hover:text-[#AF97D4]"
             >
               <p className="group-hover:text-[#AF97D4]">Get Demo</p>
               <div className="bg-[#282828] p-1 md:p-2 rounded-full">
@@ -372,7 +372,7 @@ const MainNavbar = () => {
           </NavbarItem>
           <NavbarItem>
             <Link href={"https://desktop-app-psi.vercel.app/"} target="_blank">
-              <div className="bg-[#F6F6F6] p-2 md:p-3 rounded-full">
+              <div className="bg-[#F6F6F6] p-2  rounded-full">
                 <LuUserRound className="w-4 h-4 md:w-7 md:h-7 text-[#282828] hover:text-[#AF97D4]" />
               </div>
             </Link>

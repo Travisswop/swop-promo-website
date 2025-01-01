@@ -10,6 +10,7 @@ import { cn } from "@nextui-org/react";
 import { delay, motion, useInView } from "framer-motion";
 import HardwareCollections from "./collections/HardwareCollections";
 import CollectionsComingSoon from "./CollectionsComingSoon";
+import { usePathname } from "next/navigation";
 
 const productInfo = [
   {
@@ -61,7 +62,13 @@ experiences with just a tap.`,
   },
 ];
 
+
+
+
+
+
 const DevicesInteraction = () => {
+  const path=usePathname()
   const variants = {
     hidden: { opacity: 0, y: 30, blur: 100 },
     visible: (i) => ({
@@ -196,7 +203,7 @@ const DevicesInteraction = () => {
       <ScrollMotionEffect effect="zoom-in-up" duration="500">
         <div className="flex justify-center mt-8 md:mt-5 mx-auto">
           <Link
-            href={""}
+            href={"/hardware"}
             className="text-black bg-none hover:bg-black hover:text-white font-medium text-md md:text-lg px-0 md:px-8 py-2 flex items-center justify-center rounded-full w-48 bg-[#F5F5F5] mb-6"
           >
             Swop Store
@@ -206,7 +213,7 @@ const DevicesInteraction = () => {
 
       <div className="   m-auto">
         {/* <ProductCards productList={productInfo} /> */}
-        <CollectionsComingSoon />
+        {path==="/"&&<CollectionsComingSoon />}
       </div>
 
       {/* <div className='grid grid-cols-1 md:grid-cols-3 items-center justify-between gap-10 md:gap-14 md:mt-10'>

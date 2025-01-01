@@ -64,19 +64,14 @@ const InteractiveSection = () => {
             unlock rewards, generate leads, and build meaningful relationships
             seamlessly.
           </h4>
-          <Link
-            href="https://swopple.gitbook.io/swopple"
-            className="max-w-[800px] text-black hover:underline duration-300   text-xl  mx-auto"
-          >
-            https://swopple.gitbook.io/swopple
-          </Link>
+          
         </div>
         <ScrollMotionEffect
           effect="zoom-in-up"
           duration="500"
           className=" text-sm text-center m-auto py-8 "
         >
-          <Link href="#">
+          <Link href="https://swopple.gitbook.io/swopple">
             <button className="bg-black text-white rounded-3xl py-3 px-6">
               View Whitepaper
             </button>
