@@ -1,4 +1,5 @@
 import HardwareCollections from "@/components/hardware/collections/HardwareCollections";
+import CollectionsComingSoon from "@/components/hardware/CollectionsComingSoon";
 import ConectMobileSection from "@/components/hardware/ConectMobileSection";
 import DevicesInteraction from "@/components/hardware/DevicesInteraction";
 
@@ -9,9 +10,11 @@ const page = () => {
       {/* <div className="container"> */}
       <DevicesInteraction />
       {/* </div> */}
-      <div className="container">
+      {/* <div className="container">
         <HardwareCollections />
-      </div>
+      </div> */}
+      <div className="container"><CollectionsComingSoon/></div>
+      
     </div>
   );
 };

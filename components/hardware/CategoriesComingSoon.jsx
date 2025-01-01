@@ -21,7 +21,7 @@ const CategoriesComingSoon = ({ title, titleImage }) => {
             effect="fade-up"
             duration="2000"
             className={cn(
-              "w-full h-[550px] lg:h-[650px] flex flex-col gap-5  justify-start  items-center relative rounded-3xl py-20 lg:py-14 bg-[url('/assets/hardware/collection/blackBg.png')] bg-cover bg-no-repeat object-cover bg-center",
+              "w-full h-[550px] lg:h-[650px] flex flex-col gap-5  justify-start  items-center relative rounded-3xl py-12 lg:py-14 bg-[url('/assets/hardware/collection/blackBg.png')] bg-cover bg-no-repeat object-cover bg-center",
               title === "Business Card" ? "lg:pb-0" : ""
             )}
           >
@@ -34,7 +34,7 @@ const CategoriesComingSoon = ({ title, titleImage }) => {
                   height={300}
                   quality={100}
                   priority
-                  className="  animate-slow-bounce w-[80px] "
+                  className="  animate-slow-bounce w-[50px] lg:w-[80px]  "
                 />
               </div>
 
@@ -68,7 +68,7 @@ const CategoriesComingSoon = ({ title, titleImage }) => {
                 )}
               </div>
 
-              <p className="text-base md:text-lg text-gray-400 pt-4 text-center">
+              <p className="text-base md:text-lg text-gray-400 pt-4 pb-5 md:pb-0 text-center">
                 Coming Soon
               </p>
             </div>
