@@ -269,7 +269,7 @@ const MainNavbar = () => {
     debounce(() => {
       setNavbarColor(window.scrollY >= 100);
     }, 100),
-    []
+    [],
   );
 
   useEffect(() => {
@@ -318,7 +318,7 @@ const MainNavbar = () => {
             <div
               className={cn(
                 "hidden md:flex justify-between items-center gap-2 text-gray-300 bg-[#F6F6F6] rounded-full p-3 h-12 w-full",
-                pathname === "/" ? "bounce-nav" : ""
+                pathname === "/" ? "bounce-nav" : "",
               )}
             >
               <div className="hidden md:flex justify-between items-center gap-2 text-gray-400 bg-[#F6F6F6] rounded-full pl-3 h-12 -translate-x-5">
@@ -346,7 +346,7 @@ const MainNavbar = () => {
                     >
                       <Link
                         href={el.slug}
-                        className={`text-sm md:text-base text-black ${firaCode.className}`}
+                        className={`text-sm md:text-base text-black `}
                       >
                         {el.title}
                       </Link>

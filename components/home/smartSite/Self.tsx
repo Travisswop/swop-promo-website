@@ -9,7 +9,7 @@ const Bank = () => {
     <ScrollMotionEffect
       effect="fade-up"
       duration="700"
-      className="max-w-[420px] md:w-full h-full m-auto bg-[#F5F5F5] rounded-3xl border border-gray-200  p-4 flex flex-col justify-between"
+      className="max-w-[420px] md:w-full h-full m-auto bg-white rounded-3xl border border-gray-200  p-4 flex flex-col justify-between"
     >
       <div className="h-[185px] ">
         <Image

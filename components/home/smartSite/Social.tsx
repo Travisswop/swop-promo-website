@@ -9,7 +9,7 @@ const Leads = () => {
     <ScrollMotionEffect
       effect="fade-up"
       duration="700"
-      className="max-w-[420px] md:w-full h-full m-auto bg-[#F5F5F5] border border-gray-200  rounded-3xl p-4 flex flex-col justify-between overflow-hidden "
+      className="max-w-[420px] md:w-full h-full m-auto bg-white border border-gray-200  rounded-3xl p-4 flex flex-col justify-between overflow-hidden "
     >
       {/* <div className="w-[25%] m-auto"> */}
       <div className=" w-1/2 m-auto scale-125 mt-3">
@@ -27,7 +27,7 @@ const Leads = () => {
         </video>
       </div>
 
-      <div className="bg-[#F5F5F5]  lg:w-2/3 m-auto  mt-auto pt-[20px] ">
+      <div className="bg-white  lg:w-2/3 m-auto  mt-auto pt-[20px] ">
         <div className="">
           <h3 className="m-auto font-semibold text-lg text-center  mb-[6px]">
             Leads

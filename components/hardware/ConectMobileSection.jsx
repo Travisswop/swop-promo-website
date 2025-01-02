@@ -34,7 +34,7 @@ const Icons = ({ icon, title, scale }) => {
 };
 
 const ConectMobileSection = () => {
-  const [hoveredItem, setHoveredItem] = useState(null);
+  const [hoveredItem, setHoveredItem] = useState(0);
   const [playVideo, setPlayVideo] = useState(false);
   const [hoverImgUrl, setHoverImgUrl] = useState(null);
   const [hoverVideoUrl, setHoverVideoUrl] = useState(null);
@@ -131,7 +131,7 @@ const ConectMobileSection = () => {
     let playTimer;
     let delayTimer;
 
-    if (hoveredItem) {
+    if (hoveredItem || hoveredItem===0) {
       if (hoveredItem === 5) {
         delayTimer = setTimeout(() => {
           setIsDelayed(true);
@@ -152,7 +152,7 @@ const ConectMobileSection = () => {
         }, 2000);
       }
     } else {
-      setPlayVideo(false);
+      setPlayVideo(true);
       setIsDelayed(false);
     }
 
@@ -385,7 +385,7 @@ const ConectMobileSection = () => {
           >
             <video
               ref={videoRef}
-              src={hoverVideoUrl || "/assets/video/cstomizable-crad-tapp.mp4"}
+              src={hoverVideoUrl || "/assets/video/tap.mp4"}
               muted
               preload="metadata"
               className="mx-auto"

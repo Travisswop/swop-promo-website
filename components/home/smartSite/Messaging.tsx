@@ -11,7 +11,7 @@ const Messaging = () => {
       effect="fade-up"
       duration="500"
       className={
-        "max-w-[420px] md:w-full h-full m-auto bg-[#F5F5F5] rounded-3xl border border-gray-200 p-4 flex flex-col justify-between"
+        "max-w-[420px] md:w-full h-full m-auto bg-white rounded-3xl border border-gray-200 p-4 flex flex-col justify-between"
       }
     >
       <div className="relative h-[185px] w-full m-auto mt-2 mb-1">
@@ -76,7 +76,7 @@ const Messaging = () => {
           />
         </ScrollMotionEffect> */}
       </div>
-      <div className="bg-[#F5F5F5]  lg:w-2/3 m-auto  mt-auto pt-[20px] ">
+      <div className="  lg:w-2/3 m-auto  mt-auto pt-[20px] ">
         <h3 className="m-auto font-semibold text-lg text-center  mb-[6px]">
           Encrypted Messaging
         </h3>
