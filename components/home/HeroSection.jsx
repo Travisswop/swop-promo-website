@@ -2,16 +2,13 @@
 import React, { useMemo } from "react";
 import SectionLayout from "../shared/SectionLayout";
 import Link from "next/link";
-import { Fira_Code } from "next/font/google";
+
 import { cn } from "@nextui-org/react";
 import Image from "next/image";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
 import { delay, motion, px, spring } from "framer-motion";
 
-const fira = Fira_Code({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+
 
 const HeroSection = () => {
   const variants = {

@@ -224,7 +224,7 @@
 
 "use client";
 import React, { useState, useEffect, useCallback } from "react";
-import { Fira_Code } from "next/font/google";
+
 import {
   Navbar,
   NavbarBrand,
@@ -241,10 +241,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const firaCode = Fira_Code({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // Specify font weights
-});
+
 
 const debounce = (func, wait) => {
   let timeout;
