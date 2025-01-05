@@ -102,8 +102,7 @@ const ContactSection = () => {
 
       <ScrollMotionEffect effect="fade-up" duration="2000">
         <p className="text-base text-stone-950 text-center mt-4 max-w-[620px] mx-auto">
-          {`The NFC hype isn’t what it once was, but it’s still a handy feature you
-        should take advantage of, or at least get to know. The NFC hype isn’t`}
+          {`Fill out the form below and and we will get back to you as soon as possible.`}
         </p>
       </ScrollMotionEffect>
 

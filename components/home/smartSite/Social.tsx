@@ -30,7 +30,7 @@ const Leads = () => {
       <div className="bg-white  lg:w-2/3 m-auto  mt-auto pt-[20px] ">
         <div className="">
           <h3 className="m-auto font-semibold text-lg text-center  mb-[6px]">
-            Leads
+            Generate Leads
           </h3>
         </div>
         <div className="">
