@@ -241,8 +241,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-
-
 const debounce = (func, wait) => {
   let timeout;
   return (...args) => {
@@ -319,7 +317,7 @@ const MainNavbar = () => {
               )}
             >
               <div className="hidden md:flex justify-between items-center gap-2 text-gray-400 bg-[#F6F6F6] rounded-full pl-3 h-12 -translate-x-5">
-                <div className="bg-white rounded-full hover:bg-[#AF97D4] transition-all duration-300 ease-in-out -translate-x-1 mr-auto">
+                <div className=" rounded-full hover:bg-[#AF97D4] transition-all duration-300 ease-in-out -translate-x-1 mr-auto ">
                   <Link href="/">
                     <Image
                       src="/assets/site-logo/saturn.png"
@@ -328,7 +326,7 @@ const MainNavbar = () => {
                       height={35}
                       quality={100}
                       priority
-                      className="rounded-full animate-slow-bounce"
+                      className="rounded-full animate-slow-bounce z-50 -translate-y-1.5"
                     />
                   </Link>
                 </div>
