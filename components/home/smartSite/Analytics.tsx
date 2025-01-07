@@ -27,7 +27,7 @@ const Analytics = () => {
       <div className="  lg:w-2/3 m-auto   mt-auto px-4 pb-4">
         <div className="">
           <h3 className="m-auto font-semibold text-lg text-center mb-[6px]">
-            Analytics
+            Analytics That Earn
           </h3>
         </div>
         <div className="">
