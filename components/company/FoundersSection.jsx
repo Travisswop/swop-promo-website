@@ -91,25 +91,25 @@ const linkInfo = [
     title: "Co Founder & CTO",
     profieLink: "https://swopme.app/sp/salmanhmou",
   },
-  {
-    img: "/assets/company/Rashed Sheikh.png",
-    name: "Rashed Sheikh",
-
-    title: "Blockchain Advisor",
-    profieLink: "https://swopme.app/sp/mducae",
-  },
+  // {
+  //   img: "/assets/company/Rashed Sheikh.png",
+  //   name: "Rashed Sheikh",
+  //
+  //   title: "Blockchain Advisor",
+  //   profieLink: "https://swopme.app/sp/mducae",
+  // },
   {
     img: "/assets/company/Sadit Ahsan.png",
     name: "Sadit Ahsan",
     title: "Head of Design",
     profieLink: "https://swopme.app/sp/sadithzj6",
   },
-  {
-    img: "/assets/company/matt.png",
-    name: "Matt Mulligan",
-    title: "Sales and Customer Relations",
-    profieLink: "",
-  },
+  // {
+  //   img: "/assets/company/matt.png",
+  //   name: "Matt Mulligan",
+  //   title: "Sales and Customer Relations",
+  //   profieLink: "",
+  // },
   {
     img: "/assets/company/Rakibul Islam.png",
     name: "Rakibul Islam",

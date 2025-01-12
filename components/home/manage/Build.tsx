@@ -33,7 +33,9 @@ const Build = () => {
         </video>
       </div>
       <div className="w-full lg:w-4/6 m-auto mt-5">
-        <h3 className="font-semibold text-lg text-center pb-1">Build</h3>
+        <h3 className="font-semibold text-lg text-center pb-1">
+          Design Your Page
+        </h3>
 
         <h4 className="text-base text-center text-gray-400">
           Create and reward your network with web3 incentives through a

@@ -36,7 +36,9 @@ const Earn = () => {
       </div>
       <div className="w-full lg:w-4/6 m-auto bg-white">
         <div className="bg-white w-full translate-y-1 lg:translate-y-0 pt-5">
-          <h3 className="font-semibold text-lg text-center pb-1 z-40">Earn</h3>
+          <h3 className="font-semibold text-lg text-center pb-1 z-40">
+            Interact To Earn
+          </h3>
         </div>
 
         <h4 className="text-base text-center text-gray-400 z-40">

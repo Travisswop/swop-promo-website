@@ -8,8 +8,6 @@ import Image from "next/image";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
 import { delay, motion, px, spring } from "framer-motion";
 
-
-
 const HeroSection = () => {
   const variants = {
     hidden: { opacity: 0, y: 30, blur: 10 },
@@ -44,7 +42,7 @@ const HeroSection = () => {
           animate="visible"
           // variants={variants}
           className={cn(
-            "xs:text-3xl ms:text-4xl md:text-5xl lg:text-[80px] font-bold text-[#333131] text-center leading-tight tracking-normal pt-5 xl:pt-8   relative"
+            "xs:text-3xl ms:text-4xl md:text-5xl lg:text-[80px] font-bold text-[#333131] text-center leading-tight tracking-normal pt-5 xl:pt-8   relative",
           )}
         >
           {text1.map((word, index) => (
@@ -89,9 +87,8 @@ const HeroSection = () => {
           
         </div> */}
         <h4 className="text-gray-400 text-center xs:text-sm ms:text-xl py-4 lg:py-6 max-w-[780px]">
-          Turn your connections into earnings with Swop—leverage networking to
-          unlock rewards, generate leads, and build meaningful relationships
-          seamlessly.
+          Monetize your connections with Swop. Use your network to earn rewards,
+          generate leads, and foster meaningful relationships, all with ease.
         </h4>
 
         <div className="flex justify-center gap-4">

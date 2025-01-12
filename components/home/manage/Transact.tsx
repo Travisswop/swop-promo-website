@@ -34,7 +34,9 @@ const Transact = () => {
       </div>
 
       <div className="w-full lg:w-4/6 m-auto pt-5">
-        <h3 className="font-semibold text-lg text-center p1-1">Transact</h3>
+        <h3 className="font-semibold text-lg text-center p1-1">
+          Accept USDC Payments
+        </h3>
 
         <h4 className="text-base text-center text-gray-400">
           Accept Crypto payment for your store today. Instantly convert card
