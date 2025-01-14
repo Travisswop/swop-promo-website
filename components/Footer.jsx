@@ -1,22 +1,24 @@
 import React, { useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import { LuFacebook } from "react-icons/lu";
 import { SITECONFIG } from "@/config/site";
 import SectionLayout from "./shared/SectionLayout";
-
+import { FiFacebook } from "react-icons/fi";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
-
+import { SlSocialLinkedin } from "react-icons/sl";
+import { IoLogoInstagram } from "react-icons/io5";
+import { SlSocialFacebook } from "react-icons/sl";
 const Footer = () => {
   const quickLinks = useMemo(() => {
     return SITECONFIG?.footer?.quick_links || [];
   }, []);
 
-  // const SocialIcon = ({ icon: Icon }) => (
-  //   <div className="bg-black rounded-full p-2">
-  //     <Icon className="text-white w-5 h-5" />
-  //   </div>
-  // );
+  const SocialIcon = ({ icon: Icon, className: className }) => (
+    <div className={className}>
+      <Icon className="text-black w-[22px] h-[22px] " />
+    </div>
+  );
 
   return (
     <footer className="bg-[#ffffff] container">
@@ -75,25 +77,40 @@ const Footer = () => {
         <p className="text-black font-normal text-md md:text-lg text-center  ">
           ©2024 Swop ®All Rights Reserved.
         </p>
-        <div className="flex items-center gap-x-2">
-          <Image
-            src="/assets/home/swopple-icon/facebook-icon.png"
-            alt=""
-            width={24}
-            height={24}
-          ></Image>
-          <Image
-            src="/assets/home/swopple-icon/instagram-icon.png"
-            alt=""
-            width={24}
-            height={24}
-          ></Image>
-          <Image
-            src="/assets/home/swopple-icon/linkedin-icon.png"
-            alt=""
-            width={24}
-            height={24}
-          ></Image>
+        <div className="flex items-end gap-x-3">
+          {/* <Image */}
+          {/*   src="/assets/home/swopple-icon/facebook-icon.png" */}
+          {/*   alt="" */}
+          {/*   width={24} */}
+          {/*   height={24} */}
+          {/* ></Image> */}
+          {/* <Image */}
+          {/*   src="/assets/home/swopple-icon/instagram-icon.png" */}
+          {/*   alt="" */}
+          {/*   width={24} */}
+          {/*   height={24} */}
+          {/* ></Image> */}
+          <Link href="#" target={"_blank"}>
+            <SocialIcon
+              icon={SlSocialFacebook}
+              className={" scale-90 translate-x-[2px]"}
+            />
+          </Link>
+          <Link href="#" target={"_blank"}>
+            <Image
+              src="/assets/home/swopple-icon/linkedin-icon.png"
+              alt=""
+              width={24}
+              height={24}
+            ></Image>
+          </Link>
+          {/* <SocialIcon icon={SlSocialLinkedin} /> */}
+          <Link href="#" target={"_blank"}>
+            <SocialIcon
+              icon={IoLogoInstagram}
+              className={" translate-y-[1px]"}
+            />
+          </Link>
         </div>
       </div>
     </footer>
