@@ -27,7 +27,7 @@
     "react-use-measure": "^2.1.1",
     "resize-observer-polyfill": "^1.5.1",
     "styled-components": "^6.1.8",
-    "sweetalert2": "^11.6.13",
+    "sweetalert2": "^11.15.10",
     "swiper": "^11.0.5"
   },
   "devDependencies": {
