@@ -40,11 +40,14 @@ const page = () => {
           <button
             type="submit"
             className={
-              "bg-red-500 mt-8 hover:scale-110 transition-all ease-in-out duration-300  text-white py-4 text-lg font-semibold px-6 rounded-3xl"
+              "bg-red-500 mt-8 hover:scale-110 transition-all ease-in-out duration-300  text-white py-2 text-lg font-semibold px-3 w-[70%] m-auto rounded-3xl"
             }
             onClick={(e) => {
               e.preventDefault();
-              handelClick();
+              setTimeout(() => {
+                handelClick();
+              }, 1500);
+
               setMail("");
             }}
             disabled={mail === ""}
