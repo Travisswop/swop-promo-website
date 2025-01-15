@@ -68,7 +68,7 @@ const Form = () => {
                 onChange={(e) => setAvgCost(e.target.value)}
               />
               <label htmlFor="avgCost" className="text-gray-500  text-xs ">
-                Paper card average is $.25-$.5 per card
+                Paper card average is $.15-$.45 per card
               </label>
             </div>
             <button
@@ -84,9 +84,9 @@ const Form = () => {
             </button>
             {open && (
               <FormCards
-                cardCost={employees}
-                businessCardCost={cards}
-                yearlySavings={avgCost}
+                employees={employees}
+                cards={cards}
+                avgCost={avgCost}
                 increase={0}
               />
             )}

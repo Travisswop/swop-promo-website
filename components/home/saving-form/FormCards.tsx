@@ -1,15 +1,15 @@
 import Image from "next/image";
 import React from "react";
 
-const FormCards = ({ cardCost, businessCardCost, yearlySavings, increase }) => {
-  if (cardCost === undefined || cardCost === null) {
-    cardCost = 0;
+const FormCards = ({ employees, cards, avgCost, increase }) => {
+  if (employees === undefined || employees === null) {
+    employees = 0;
   }
-  if (businessCardCost === undefined || businessCardCost === null) {
-    businessCardCost = 0;
+  if (cards === undefined || cards === null) {
+    cards = 0;
   }
-  if (yearlySavings === undefined || yearlySavings === null) {
-    yearlySavings = 0;
+  if (avgCost === undefined || avgCost === null) {
+    avgCost = 0;
   }
   if (increase === undefined || increase === null) {
     increase = 0;
@@ -20,13 +20,15 @@ const FormCards = ({ cardCost, businessCardCost, yearlySavings, increase }) => {
         <h3 className="text-[14px] text-center font-semibold">
           Paper Card Cost:
         </h3>
-        <h6 className="text-3xl font-semibold">${cardCost * 1}</h6>
+        <h6 className="text-3xl font-semibold">
+          ${employees * cards * avgCost}
+        </h6>
       </div>
       <div className="w-full flex flex-col gap-4 justify-around items-center p-4 bg-white rounded-2xl border border-gray-200">
         <h3 className="text-[14px] text-center font-semibold">
           Swop Digital Business Card:
         </h3>
-        <h6 className="text-3xl font-semibold">${businessCardCost * 1}</h6>
+        <h6 className="text-3xl font-semibold">${employees * 1 * 5}</h6>
       </div>
       <div className=" lg:col-span-2 w-full flex flex-col lg:flex-row-reverse gap-4 justify-between items-center p-4 bg-white rounded-2xl border border-gray-200">
         <div className="lg:pr-32">
@@ -42,7 +44,9 @@ const FormCards = ({ cardCost, businessCardCost, yearlySavings, increase }) => {
           <h3 className="text-[14px] text-center font-semibold">
             Total Yearly Savings:
           </h3>
-          <h6 className="text-3xl font-semibold">${yearlySavings * 1}</h6>
+          <h6 className="text-3xl font-semibold">
+            ${employees * cards * avgCost - employees * 1 * 5}
+          </h6>
 
           <h6 className="text-gray-500 text-[12px] text-center">{`Your Paper Card also doesn't reward you for networking #interact2earn`}</h6>
         </div>
@@ -58,7 +62,7 @@ const FormCards = ({ cardCost, businessCardCost, yearlySavings, increase }) => {
           <h3 className="text-[14px] text-center font-semibold">
             Increase in leads, reviews, followers:
           </h3>
-          <h6 className="text-3xl font-semibold">{increase * 1}</h6>
+          <h6 className="text-3xl font-semibold">{employees * 100}</h6>
           <h6 className="text-gray-500 text-[12px] text-center">{`Estimated 100 Per Device Deployed*`}</h6>
         </div>
       </div>

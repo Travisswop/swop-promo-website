@@ -168,13 +168,13 @@ const FoundersSection = () => {
         <h1
           className={`text-stone-950 xs:text-3xl ms:text-4xl md:text-5xl font-bold text-center !leading-normal`}
         >
-          Founders
+          Team Members
         </h1>
       </ScrollMotionEffect>
 
       <ScrollMotionEffect effect="fade-left" duration="2000">
         <p className="text-xl text-center text-stone-950">
-          Core Values and Ethics in Leadership
+          Learn About the Team
         </p>
       </ScrollMotionEffect>
 
