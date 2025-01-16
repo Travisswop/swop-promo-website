@@ -4,9 +4,11 @@ import SectionLayout from "../shared/SectionLayout";
 import { Button } from "@nextui-org/react";
 import { send } from "emailjs-com";
 import Swal from "sweetalert2";
-
+import Link from "next/link";
 import Image from "next/image";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
+
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const ContactSection = () => {
   const [emailForm, setEmailForm] = useState({
@@ -90,24 +92,37 @@ const ContactSection = () => {
     // }
   };
 
+  const SocialIcon = ({ icon: Icon }) => (
+    <Link href={"#"} traget="_blank">
+      <div className="bg-black rounded-full p-2">
+        <Icon className="text-white w-5 h-5" />
+      </div>
+    </Link>
+  );
   return (
-    <SectionLayout className="leading-tighter tracking-tight">
-      <ScrollMotionEffect effect="fade-up" duration="2000">
-        <h1
-          className={`text-stone-950 font-normal text-xl md:text-3xl text-center !leading-none`}
+    <SectionLayout className="leading-tighter tracking-tight mb-5">
+      <section
+        className={
+          "flex gap-10 justify-center items-center bg-[#f5f5f5] p-8 lg:p-14 rounded-3xl"
+        }
+      >
+        <div
+          className={
+            " flex-col justify-around items-center rounded-3xl bg-white self-stretch hidden lg:flex"
+          }
         >
-          <strong>Have Some Questions?</strong>
-        </h1>
-      </ScrollMotionEffect>
+          <ScrollMotionEffect effect="fade-right" duration="2000">
+            <div className="w-[130px] md:w-[230px] h-auto mx-auto">
+              <Image
+                width={400}
+                height={400}
+                src={"/assets/contact/swop.png"}
+                alt="Mail"
+                quality={100}
+              />
+            </div>{" "}
+          </ScrollMotionEffect>
 
-      <ScrollMotionEffect effect="fade-up" duration="2000">
-        <p className="text-base text-stone-950 text-center mt-4 max-w-[620px] mx-auto">
-          {`Fill out the form below and and we will get back to you as soon as possible.`}
-        </p>
-      </ScrollMotionEffect>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-x-10 gap-x-0 items-center mt-12 md:mt-20">
-        <div className="flex space-y-4 justify-center">
           <ScrollMotionEffect effect="fade-right" duration="2000">
             <div className="w-[300px] md:w-[400px] h-auto">
               <Image
@@ -119,12 +134,29 @@ const ContactSection = () => {
               />
             </div>{" "}
           </ScrollMotionEffect>
+          <div className="flex items-center gap-x-2 justify-center">
+            <SocialIcon icon={FaFacebookF} />
+            <SocialIcon icon={FaLinkedinIn} />
+            <SocialIcon icon={FaInstagram} />
+          </div>
         </div>
 
-        <div className="flex flex-col mt-6 md:mt-0 md:p-8">
+        <div>
+          <ScrollMotionEffect effect="fade-up" duration="2000">
+            <h1
+              className={`text-stone-950 font-normal text-xl md:text-3xl text-center !leading-none`}
+            >
+              <strong>Have Some Questions?</strong>
+            </h1>
+          </ScrollMotionEffect>
+
+          <ScrollMotionEffect effect="fade-up" duration="2000">
+            <p className="text-base text-stone-950 text-center mt-4 max-w-[510px] mx-auto">
+              {`Fill out the form below and and we will get back to you as soon as possible.`}
+            </p>
+          </ScrollMotionEffect>
           <ScrollMotionEffect effect="fade-left" duration="2000">
-            {" "}
-            <form className="w-full" onSubmit={handleSubmit}>
+            <form className="w-full pt-10" onSubmit={handleSubmit}>
               <div class="mb-6 w-full">
                 <input
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-full focus:ring-black focus:border-black block w-full p-2.5 py-4 placeholder:text-lg pl-5"
@@ -221,7 +253,7 @@ const ContactSection = () => {
             </form>
           </ScrollMotionEffect>
         </div>
-      </div>
+      </section>
     </SectionLayout>
   );
 };
