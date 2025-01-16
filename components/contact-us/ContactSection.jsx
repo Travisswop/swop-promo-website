@@ -101,159 +101,163 @@ const ContactSection = () => {
   );
   return (
     <SectionLayout className="leading-tighter tracking-tight mb-5">
-      <section
-        className={
-          "flex gap-10 justify-center items-center bg-[#f5f5f5] p-8 lg:p-14 rounded-3xl"
-        }
-      >
-        <div
+      <ScrollMotionEffect effect="fade-up" duration="2000">
+        <section
           className={
-            " flex-col justify-around items-center rounded-3xl bg-white self-stretch hidden lg:flex"
+            "flex gap-10 justify-center items-center bg-[#f5f5f5] p-8 lg:p-14 rounded-3xl"
           }
         >
-          <ScrollMotionEffect effect="fade-right" duration="2000">
-            <div className="w-[130px] md:w-[230px] h-auto mx-auto">
-              <Image
-                width={400}
-                height={400}
-                src={"/assets/contact/swop.png"}
-                alt="Mail"
-                quality={100}
-              />
-            </div>{" "}
-          </ScrollMotionEffect>
+          <div
+            className={
+              " flex-col justify-around items-center rounded-3xl bg-white self-stretch hidden lg:flex"
+            }
+          >
+            <ScrollMotionEffect effect="fade-up" duration="2000">
+              <div className="w-[130px] md:w-[230px] h-auto mx-auto">
+                <Image
+                  width={400}
+                  height={400}
+                  src={"/assets/contact/swop.png"}
+                  alt="Mail"
+                  quality={100}
+                />
+              </div>{" "}
+            </ScrollMotionEffect>
 
-          <ScrollMotionEffect effect="fade-right" duration="2000">
-            <div className="w-[300px] md:w-[400px] h-auto">
-              <Image
-                width={400}
-                height={400}
-                src={"/assets/contact/mail.png"}
-                alt="Mail"
-                quality={100}
-              />
-            </div>{" "}
-          </ScrollMotionEffect>
-          <div className="flex items-center gap-x-2 justify-center">
-            <SocialIcon icon={FaFacebookF} />
-            <SocialIcon icon={FaLinkedinIn} />
-            <SocialIcon icon={FaInstagram} />
+            <ScrollMotionEffect effect="fade-up" duration="2000">
+              <div className="w-[300px] md:w-[400px] h-auto">
+                <Image
+                  width={400}
+                  height={400}
+                  src={"/assets/contact/mail.png"}
+                  alt="Mail"
+                  quality={100}
+                />
+              </div>{" "}
+            </ScrollMotionEffect>
+            <ScrollMotionEffect effect="fade-up" duration="2000">
+              <div className="flex items-center gap-x-2 justify-center">
+                <SocialIcon icon={FaFacebookF} />
+                <SocialIcon icon={FaLinkedinIn} />
+                <SocialIcon icon={FaInstagram} />
+              </div>
+            </ScrollMotionEffect>
           </div>
-        </div>
 
-        <div>
-          <ScrollMotionEffect effect="fade-up" duration="2000">
-            <h1
-              className={`text-stone-950 font-normal text-xl md:text-3xl text-center !leading-none`}
-            >
-              <strong>Have Some Questions?</strong>
-            </h1>
-          </ScrollMotionEffect>
+          <div>
+            <ScrollMotionEffect effect="fade-up" duration="2000">
+              <h1
+                className={`text-stone-950 font-normal text-xl md:text-3xl text-center !leading-none`}
+              >
+                <strong>Have Some Questions?</strong>
+              </h1>
+            </ScrollMotionEffect>
 
-          <ScrollMotionEffect effect="fade-up" duration="2000">
-            <p className="text-base text-stone-950 text-center mt-4 max-w-[510px] mx-auto">
-              {`Fill out the form below and and we will get back to you as soon as possible.`}
-            </p>
-          </ScrollMotionEffect>
-          <ScrollMotionEffect effect="fade-left" duration="2000">
-            <form className="w-full pt-10" onSubmit={handleSubmit}>
-              <div class="mb-6 w-full">
-                <input
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-full focus:ring-black focus:border-black block w-full p-2.5 py-4 placeholder:text-lg pl-5"
-                  placeholder="Your name"
-                  required
-                  type="text"
-                  name="name"
-                  value={emailForm.name}
-                  onChange={(event) => {
-                    setEmailForm({
-                      ...emailForm,
-                      name: event.target.value,
-                    });
-                  }}
-                />
-                <span className="text-orange-600">{formErrors.name}</span>
-              </div>
+            <ScrollMotionEffect effect="fade-up" duration="2000">
+              <p className="text-base text-stone-950 text-center mt-4 max-w-[510px] mx-auto">
+                {`Fill out the form below and and we will get back to you as soon as possible.`}
+              </p>
+            </ScrollMotionEffect>
+            <ScrollMotionEffect effect="fade-up" duration="2000">
+              <form className="w-full pt-10" onSubmit={handleSubmit}>
+                <div class="mb-6 w-full">
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-full focus:ring-black focus:border-black block w-full p-2.5 py-4 placeholder:text-lg pl-5"
+                    placeholder="Your name"
+                    required
+                    type="text"
+                    name="name"
+                    value={emailForm.name}
+                    onChange={(event) => {
+                      setEmailForm({
+                        ...emailForm,
+                        name: event.target.value,
+                      });
+                    }}
+                  />
+                  <span className="text-orange-600">{formErrors.name}</span>
+                </div>
 
-              <div class="mb-6">
-                <input
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-full focus:ring-black focus:border-black block w-full p-2.5 py-4 placeholder:text-lg pl-5"
-                  placeholder="What's your email"
-                  required
-                  type="email"
-                  name="email"
-                  value={emailForm.email}
-                  onChange={(event) => {
-                    setEmailForm({
-                      ...emailForm,
-                      email: event.target.value,
-                    });
-                  }}
-                />
-                <span className="text-orange-600">{formErrors.email}</span>
-              </div>
+                <div class="mb-6">
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-full focus:ring-black focus:border-black block w-full p-2.5 py-4 placeholder:text-lg pl-5"
+                    placeholder="What's your email"
+                    required
+                    type="email"
+                    name="email"
+                    value={emailForm.email}
+                    onChange={(event) => {
+                      setEmailForm({
+                        ...emailForm,
+                        email: event.target.value,
+                      });
+                    }}
+                  />
+                  <span className="text-orange-600">{formErrors.email}</span>
+                </div>
 
-              <div class="mb-6">
-                <input
-                  id="phone"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-full focus:ring-black focus:border-black block w-full p-2.5 py-4 placeholder:text-lg pl-5"
-                  placeholder="What's your phone"
-                  required
-                  type="tel"
-                  name="phone"
-                  value={emailForm.phone}
-                  onChange={(event) => {
-                    setEmailForm({
-                      ...emailForm,
-                      phone: event.target.value,
-                    });
-                  }}
-                />
-                <span className="text-orange-600">{formErrors.phone}</span>
-              </div>
+                <div class="mb-6">
+                  <input
+                    id="phone"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-full focus:ring-black focus:border-black block w-full p-2.5 py-4 placeholder:text-lg pl-5"
+                    placeholder="What's your phone"
+                    required
+                    type="tel"
+                    name="phone"
+                    value={emailForm.phone}
+                    onChange={(event) => {
+                      setEmailForm({
+                        ...emailForm,
+                        phone: event.target.value,
+                      });
+                    }}
+                  />
+                  <span className="text-orange-600">{formErrors.phone}</span>
+                </div>
 
-              <div class="mb-6">
-                <textarea
-                  rows={4}
-                  id="message"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-3xl focus:ring-black focus:border-black block w-full p-2.5 py-4 placeholder:text-lg pl-5"
-                  placeholder="Your question....."
-                  required
-                  name="message"
-                  value={emailForm.message}
-                  onChange={(event) => {
-                    setEmailForm({
-                      ...emailForm,
-                      message: event.target.value,
-                    });
-                  }}
-                />
-                <span className="text-orange-600">{formErrors.message}</span>
-              </div>
+                <div class="mb-6">
+                  <textarea
+                    rows={4}
+                    id="message"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-3xl focus:ring-black focus:border-black block w-full p-2.5 py-4 placeholder:text-lg pl-5"
+                    placeholder="Your question....."
+                    required
+                    name="message"
+                    value={emailForm.message}
+                    onChange={(event) => {
+                      setEmailForm({
+                        ...emailForm,
+                        message: event.target.value,
+                      });
+                    }}
+                  />
+                  <span className="text-orange-600">{formErrors.message}</span>
+                </div>
 
-              {loading ? (
-                <Button
-                  isLoading
-                  className="text-white bg-[#000000] text-lg w-full px-5 py-3 text-center rounded-full"
-                  radius="sm"
-                  size="lg"
-                >
-                  SENDING...
-                </Button>
-              ) : (
-                <Button
-                  className="text-white bg-[#000000] text-lg w-full px-5 py-3 text-center rounded-full"
-                  radius="sm"
-                  size="lg"
-                  onClick={handleSubmit}
-                >
-                  SEND MESSAGE
-                </Button>
-              )}
-            </form>
-          </ScrollMotionEffect>
-        </div>
-      </section>
+                {loading ? (
+                  <Button
+                    isLoading
+                    className="text-white bg-[#000000] text-lg w-full px-5 py-3 text-center rounded-full"
+                    radius="sm"
+                    size="lg"
+                  >
+                    SENDING...
+                  </Button>
+                ) : (
+                  <Button
+                    className="text-white bg-[#000000] text-lg w-full px-5 py-3 text-center rounded-full"
+                    radius="sm"
+                    size="lg"
+                    onClick={handleSubmit}
+                  >
+                    SEND MESSAGE
+                  </Button>
+                )}
+              </form>
+            </ScrollMotionEffect>
+          </div>
+        </section>
+      </ScrollMotionEffect>
     </SectionLayout>
   );
 };
