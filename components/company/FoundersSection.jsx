@@ -134,12 +134,12 @@ const linkInfo = [
     title: "Web Developer",
     profieLink: "https://swopme.app/sp/testh63s",
   },
-  {
-    img: "/assets/company/Raihan Ali.png",
-    name: "Raihan Ali",
-    title: "Project Research and Management",
-    profieLink: "https://swopme.app/sp/raihandbw8",
-  },
+  // {
+  //   img: "/assets/company/Raihan Ali.png",
+  //   name: "Raihan Ali",
+  //   title: "Project Research and Management",
+  //   profieLink: "https://swopme.app/sp/raihandbw8",
+  // },
   {
     img: "/assets/company/AR Sahak.png",
     name: "AR Sahak",
