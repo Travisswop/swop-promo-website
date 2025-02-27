@@ -75,8 +75,8 @@ const Footer = () => {
               with ease.
             </p>
           </div>
-          <div className="flex flex-1 justify-center items-center  gap-10 lg:gap-24  h-full">
-            <ul className=" h-full text-black font-normal list-none  flex  flex-col gap-5   items-start  justify-start">
+          <div className="flex flex-1 justify-center items-start  gap-10 lg:gap-20  h-full">
+            <ul className=" h-full text-black font-normal list-none  flex  flex-col gap-5 md:ml-20  items-start  justify-start">
               <li className="font-semibold underline">Company</li>
               {quick_links_left.map((el, index) => (
                 <li
@@ -89,7 +89,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            <ul className=" h-full text-black font-normal list-none ml-0 flex flex-col gap-5  items-start  justify-start lg:mr-16">
+            <ul className=" h-full text-black font-normal list-none flex flex-col gap-5  items-start  justify-start ">
               <li className="font-semibold underline">Resources</li>
               {quick_links_right.map((el, index) => (
                 <li
@@ -102,7 +102,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            <div className="flex flex-col justify-center items-center md:px-2 gap-2">
+            <div className="flex flex-col justify-start items-start md:px-2 gap-2">
               <p className="font-semibold underline  ">Download</p>
               <div>
                 <Image
@@ -115,9 +115,9 @@ const Footer = () => {
                   priority
                 />
               </div>
-              <p className="text-black font-normal text-[14px] px-2  text-center w-28 !leading-5 ">
-                Scan To Get The App
-              </p>{" "}
+              {/* <p className="text-black font-normal text-[14px] px-2  text-center w-28 !leading-5 "> */}
+              {/*   Scan To Get The App */}
+              {/* </p>{" "} */}
             </div>{" "}
           </div>
         </div>
@@ -149,7 +149,10 @@ const Footer = () => {
             </Link>
             {/* <SocialIcon icon={SlSocialLinkedin} /> */}
             <Link href="#" target={"_blank"}>
-              <SocialIcon icon={IoLogoInstagram} className={"text-white "} />
+              <SocialIcon
+                icon={IoLogoInstagram}
+                className={"text-white translate-y-[1px] "}
+              />
             </Link>
           </div>
         </div>
