@@ -122,12 +122,12 @@ const linkInfo = [
     title: "Lead Frontend",
     profieLink: "https://swopme.app/sp/shouvikxaal",
   },
-  {
-    img: "/assets/company/Gazi Monir-uz-zaman.png",
-    name: "Gazi Monir-uz-zaman",
-    title: "Lead Backend",
-    profieLink: "https://swopme.app/sp/gazigqeh",
-  },
+  // {
+  //   img: "/assets/company/Gazi Monir-uz-zaman.png",
+  //   name: "Gazi Monir-uz-zaman",
+  //   title: "Lead Backend",
+  //   profieLink: "https://swopme.app/sp/gazigqeh",
+  // },
   {
     img: "/assets/company/Nuruzaman Milon.png",
     name: "Md. Nuruzaman Milon",
