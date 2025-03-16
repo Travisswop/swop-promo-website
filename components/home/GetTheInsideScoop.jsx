@@ -19,7 +19,7 @@ const GetTheInsideScoop = () => {
             type="submit"
             className="text-white bg-black font-medium  text-base w-36 rounded-lg  cursor-pointer px-5 py-2.5  text-center"
           >
-            Submit
+            Sign Up
           </button>
         </div>
       </div>
