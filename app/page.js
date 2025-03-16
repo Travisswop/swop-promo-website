@@ -1,4 +1,5 @@
 import DevicesInteraction from "@/components/hardware/DevicesInteraction";
+import GetTheInsideScoop from "@/components/home/GetTheInsideScoop";
 
 import HeroSection from "@/components/home/HeroSection";
 import InteractiveSection from "@/components/home/interactive/InteractiveSection";
@@ -15,6 +16,7 @@ export default function Home() {
       <ManageTeam />
       <Form />
       <DevicesInteraction />
+      <GetTheInsideScoop/>
 
       {/* <LinkSection /> */}
       {/* <DashboardFlow /> */}

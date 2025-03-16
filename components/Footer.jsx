@@ -1,14 +1,11 @@
-import React, { useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { LuFacebook } from "react-icons/lu";
-import { SITECONFIG } from "@/config/site";
-import SectionLayout from "./shared/SectionLayout";
-import { FiFacebook } from "react-icons/fi";
-import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import { SlSocialLinkedin } from "react-icons/sl";
-import { IoLogoInstagram } from "react-icons/io5";
-import { SlSocialFacebook } from "react-icons/sl";
+import React from "react";
+import { BsTwitterX } from "react-icons/bs";
+import { FaTiktok } from "react-icons/fa";
+import { FiInstagram } from "react-icons/fi";
+import { RiFacebookCircleLine } from "react-icons/ri";
+
 const Footer = () => {
   const SocialIcon = ({ icon: Icon, className: className }) => (
     <div className={className}>
@@ -50,111 +47,172 @@ const Footer = () => {
     },
   ];
 
+  const product = [
+    {
+      title: "Download",
+      slug: "/download",
+    },
+    {
+      title: "Support",
+      slug: "/support",
+    },
+    {
+      title: "Security",
+      slug: "/security",
+    },
+  ];
+
+  const resources = [
+    {
+      title: "Explore",
+      slug: "/explore",
+    },
+    {
+      title: "Whitepaper",
+      slug: "/whitepaper",
+    },
+    {
+      title: "Learn",
+      slug: "/learn",
+    },
+    {
+      title: "Blog",
+      slug: "/blog",
+    },
+  ];
+
+  const company = [
+    {
+      title: "About",
+      slug: "/about",
+    },
+    {
+      title: "Terms",
+      slug: "/rerms",
+    },
+    {
+      title: "Privacy",
+      slug: "/privacy",
+    },
+    {
+      title: "Careers",
+      slug: "/careers",
+    },
+    {
+      title: "Products",
+      slug: "/products",
+    },
+  ];
+
   return (
     <footer className="">
-      <div className=" bg-[#f6f6f6] py-10 min-h-56 flex items-center">
-        <div className=" container flex flex-col md:flex-row gap-5 lg:gap-16 justify-center  md:justify-between ">
-          <div className="flex flex-col justify-center md:justify-start items-center md:items-start">
-            <Link
-              href="/"
-              className="flex items-center justify-start cursor-pointer"
-            >
-              <Image
-                width={500}
-                height={500}
-                src="/assets/site-logo/swop-black-logo.png"
-                alt="Swop"
-                className="object-cover w-[90px] md:w-[100px] mb-2"
-                quality={100}
-                priority
-              />
-            </Link>
-            <p className="text-gray-500 font-normal text-sm md:text-base  md:px-0 !leading-5 mt-2 w-full max-w-[500px] text-justify md:text-left">
-              Monetize your connections with Swop. Use your network to earn
-              rewards, generate leads, and foster meaningful relationships, all
-              with ease.
-            </p>
-          </div>
-          <div className="flex flex-1 justify-center items-start  gap-10 lg:gap-20  h-full">
-            <ul className=" h-full text-black font-normal list-none  flex  flex-col gap-5 md:ml-20  items-start  justify-start">
-              <li className="font-semibold underline">Company</li>
-              {quick_links_left.map((el, index) => (
-                <li
-                  className="  flex items-center text-sm xl:text-[16px]"
-                  key={index}
-                >
-                  <Link href={el.slug} className="hover:underline">
-                    {el.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <ul className=" h-full text-black font-normal list-none flex flex-col gap-5  items-start  justify-start ">
-              <li className="font-semibold underline">Resources</li>
-              {quick_links_right.map((el, index) => (
-                <li
-                  className="  flex items-center text-sm xl:text-[16px]"
-                  key={index}
-                >
-                  <Link href={el.slug} className="hover:underline">
-                    {el.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="flex flex-col justify-start items-start md:px-2 gap-2">
-              <p className="font-semibold underline  ">Download</p>
-              <div>
-                <Image
-                  width={76}
-                  height={58}
-                  src="/assets/site-logo/qr-code-1.png"
-                  alt="Swop QR Code"
-                  className=" md:mx-auto"
-                  quality={100}
-                  priority
-                />
-              </div>
-              {/* <p className="text-black font-normal text-[14px] px-2  text-center w-28 !leading-5 "> */}
-              {/*   Scan To Get The App */}
-              {/* </p>{" "} */}
-            </div>{" "}
-          </div>
+      <div className=" py-10 min-h-56 flex items-center">
+        <div className="container grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-16 justify-center  md:justify-between ">
+          <ul className="flex-1 h-full text-black font-normal list-none  flex  flex-col gap-5 items-start  justify-start">
+            <li className="font-semibold  text-gray-400">Product</li>
+            {product.map((el, index) => (
+              <li
+                className="  flex items-center text-sm xl:text-[16px]"
+                key={index}
+              >
+                <Link href={el.slug} className="hover:underline">
+                  {el.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <ul className="flex-1 h-full text-black font-normal list-none flex flex-col gap-5  items-start  justify-start ">
+            <li className="font-semibold  text-gray-400">Resources</li>
+            {quick_links_right.map((el, index) => (
+              <li
+                className="  flex items-center text-sm xl:text-[16px]"
+                key={index}
+              >
+                <Link href={el.slug} className="hover:underline">
+                  {el.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <ul className="flex-1 h-full text-black font-normal list-none flex flex-col gap-5  items-start  justify-start ">
+            <li className="font-semibold  text-gray-400">Company</li>
+            {company.map((el, index) => (
+              <li
+                className="  flex items-center text-sm xl:text-[16px]"
+                key={index}
+              >
+                <Link href={el.slug} className="hover:underline">
+                  {el.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <ul className="flex-1 h-full text-black font-normal list-none flex flex-col gap-5  items-start  justify-start ">
+            <li className="font-semibold  text-gray-400">Social</li>
+
+            <li className="  flex items-center text-sm xl:text-[16px]">
+              <Link
+                href={"https://x.com/swoplabs"}
+                target="_blank"
+                className="hover:underline flex items-center space-x-3"
+              >
+                <BsTwitterX className="size-4" /> <span>X (FKA Twitter)</span>
+              </Link>
+            </li>
+
+            <li className="  flex items-center text-sm xl:text-[16px]">
+              <Link
+                href={"https://www.facebook.com/swoplabs"}
+                target="_blank"
+                className="hover:underline flex items-center space-x-3"
+              >
+                <RiFacebookCircleLine className="size-5" />{" "}
+                <span>Facebook</span>
+              </Link>
+            </li>
+
+            <li className="  flex items-center text-sm xl:text-[16px]">
+              <Link
+                href={"https://www.instagram.com/swop.labs"}
+                target="_blank"
+                className="hover:underline flex items-center space-x-3"
+              >
+                <FiInstagram className="size-4.5" /> <span>Instagram</span>
+              </Link>
+            </li>
+
+            <li className="  flex items-center text-sm xl:text-[16px]">
+              <Link
+                href={"https://www.tiktok.com/@swoplabs"}
+                target="_blank"
+                className="hover:underline flex items-center space-x-3"
+              >
+                <FaTiktok className="size-4" /> <span>Tiktok</span>
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
       {/* <hr className="my-6 border-gray-600 sm:mx-auto dark:border-gray-700 lg:my-4" /> */}
-      <div className="bg-[#3d4450] min-h-16 py-5 md:py-0 flex items-center text-white">
-        <div className=" container flex flex-col md:flex-row items-center justify-center md:justify-between  gap-3">
-          <p className=" font-normal text-md md:text-lg text-center  ">
-            ©2024 Swop ®All Rights Reserved.
+      <div className="py-5 mb-2 md:mb-6 md:py-0 flex items-center text-black px-6 md:px-0">
+        <div className="container flex  items-center justify-between  gap-3">
+          <Link href="/">
+            <Image
+              src="/assets/site-logo/saturn.png"
+              alt="Swop Logo"
+              width={500}
+              height={500}
+              className="w-[60px] md:w-[80px]"
+              quality={100}
+              priority
+            />
+          </Link>
+          <p className=" font-normal text-sm md:text-lg text-center  text-gray-700">
+            ©2025 Swop
           </p>
-          <div className="flex items-end gap-x-3 text-white">
-            {/* <Image */}
-            {/*   src="/assets/home/swopple-icon/facebook-icon.png" */}
-            {/*   alt="" */}
-            {/*   width={24} */}
-            {/*   height={24} */}
-            {/* ></Image> */}
-            {/* <Image */}
-            {/*   src="/assets/home/swopple-icon/instagram-icon.png" */}
-            {/*   alt="" */}
-            {/*   width={24} */}
-            {/*   height={24} */}
-            {/* ></Image> */}
-            <Link href="#" target={"_blank"}>
-              <SocialIcon icon={SlSocialFacebook} className={" text-white "} />
-            </Link>
-            <Link href="#" target={"_blank"}>
-              <SocialIcon icon={SlSocialLinkedin} className={" text-white "} />
-            </Link>
-            {/* <SocialIcon icon={SlSocialLinkedin} /> */}
-            <Link href="#" target={"_blank"}>
-              <SocialIcon
-                icon={IoLogoInstagram}
-                className={"text-white translate-y-[1px] "}
-              />
-            </Link>
-          </div>
         </div>
       </div>{" "}
     </footer>
@@ -162,3 +220,22 @@ const Footer = () => {
 };
 
 export default React.memo(Footer);
+
+{
+  /* <div className="flex items-end gap-x-3 text-white">
+
+<Link href="#" target={"_blank"}>
+  <SocialIcon icon={SlSocialFacebook} className={" text-white "} />
+</Link>
+<Link href="#" target={"_blank"}>
+  <SocialIcon icon={SlSocialLinkedin} className={" text-white "} />
+</Link>
+<SocialIcon icon={SlSocialLinkedin} />
+<Link href="#" target={"_blank"}>
+  <SocialIcon
+    icon={IoLogoInstagram}
+    className={"text-white translate-y-[1px] "}
+  />
+</Link>
+</div> */
+}
