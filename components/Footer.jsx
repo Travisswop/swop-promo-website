@@ -105,8 +105,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="">
-      <div className=" py-10 min-h-56 flex items-center">
+    <footer className=" px-6 md:px-none">
+      <div className="py-10 min-h-56 flex items-center">
         <div className="container grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-16 justify-center  md:justify-between ">
           <ul className="flex-1 h-full text-black font-normal list-none  flex  flex-col gap-5 items-start  justify-start">
             <li className="font-semibold  text-gray-400">Product</li>
@@ -197,7 +197,7 @@ const Footer = () => {
         </div>
       </div>
       {/* <hr className="my-6 border-gray-600 sm:mx-auto dark:border-gray-700 lg:my-4" /> */}
-      <div className="py-5 mb-2 md:mb-6 md:py-0 flex items-center text-black px-6 md:px-0">
+      <div className="py-5 mb-2 md:mb-6 md:py-0 flex items-center text-black">
         <div className="container flex  items-center justify-between  gap-3">
           <Link href="/">
             <Image
@@ -220,22 +220,3 @@ const Footer = () => {
 };
 
 export default React.memo(Footer);
-
-{
-  /* <div className="flex items-end gap-x-3 text-white">
-
-<Link href="#" target={"_blank"}>
-  <SocialIcon icon={SlSocialFacebook} className={" text-white "} />
-</Link>
-<Link href="#" target={"_blank"}>
-  <SocialIcon icon={SlSocialLinkedin} className={" text-white "} />
-</Link>
-<SocialIcon icon={SlSocialLinkedin} />
-<Link href="#" target={"_blank"}>
-  <SocialIcon
-    icon={IoLogoInstagram}
-    className={"text-white translate-y-[1px] "}
-  />
-</Link>
-</div> */
-}

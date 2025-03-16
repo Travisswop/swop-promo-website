@@ -2,8 +2,8 @@ import React from "react";
 
 const GetTheInsideScoop = () => {
   return (
-    <div className="container my-0 md:my-10">
-      <div className="max-w-[650px] bg-[#F7F7F9] mx-auto rounded-lg py-8 px-6 md:px-14">
+    <div className="container -my-10 md:my-10 px-6 md:px-0 ">
+      <div className="max-w-[650px] bg-[#F7F7F9] mx-auto rounded-lg py-8 px-6 md:px-14 ">
         <div className=" w-full ">
           <input
             className="bg-white w-full border border-gray-600 text-gray-900 text-base rounded-md focus:ring-black focus:border-black block p-2.5 py-2.5 placeholder:text-base"
