@@ -124,7 +124,7 @@ const Footer = () => {
 
           <ul className="flex-1 h-full text-black font-normal list-none flex flex-col gap-5  items-start  justify-start ">
             <li className="font-semibold  text-gray-400">Resources</li>
-            {quick_links_right.map((el, index) => (
+            {resources.map((el, index) => (
               <li
                 className="  flex items-center text-sm xl:text-[16px]"
                 key={index}
