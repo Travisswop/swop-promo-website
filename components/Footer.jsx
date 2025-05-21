@@ -12,76 +12,42 @@ const Footer = () => {
       <Icon className=" w-[22px] h-[22px] " />
     </div>
   );
-  const quick_links_left = [
-    {
-      title: "Jobs",
-      slug: "/jobs",
-    },
-    {
-      title: "Events",
-      slug: "/events",
-    },
-
-    {
-      title: "Blog",
-      slug: "/blog",
-    },
-    // {
-    //   title: "Hardware Collection",
-    //   slug: "/hardware-collection",
-    // },
-  ];
-  const quick_links_right = [
-    {
-      title: "Faq",
-      slug: "/faq",
-    },
-
-    {
-      title: "Legal",
-      slug: "/legal",
-    },
-    {
-      title: "Contact Us",
-      slug: "/contact-us",
-    },
-  ];
 
   const product = [
     {
       title: "Download",
-      slug: "/download",
+      slug: "#",
     },
     {
       title: "Support",
-      slug: "/support",
+      slug: "#",
     },
     {
       title: "Security",
-      slug: "/security",
+      slug: "#",
     },
   ];
 
   const resources = [
     {
       title: "About",
-      slug: "/about",
+      slug: "#",
     },
     {
       title: "Explore",
-      slug: "/explore",
+      slug: "#",
     },
     {
       title: "Whitepaper",
-      slug: "/whitepaper",
+      slug: "#",
     },
     {
       title: "Learn",
-      slug: "/learn",
+      slug: "#",
     },
     {
       title: "Blog",
-      slug: "/blog",
+      slug: "#",
     },
   ];
 
@@ -101,7 +67,7 @@ const Footer = () => {
     },
     {
       title: "Products",
-      slug: "/products",
+      slug: "#",
     },
     {
       title: "Refund Policy",
