@@ -64,6 +64,10 @@ const Footer = () => {
 
   const resources = [
     {
+      title: "About",
+      slug: "/about",
+    },
+    {
       title: "Explore",
       slug: "/explore",
     },
@@ -83,17 +87,14 @@ const Footer = () => {
 
   const company = [
     {
-      title: "About",
-      slug: "/about",
-    },
-    {
       title: "Terms",
-      slug: "/rerms",
+      slug: "/terms",
     },
     {
       title: "Privacy",
       slug: "/privacy",
     },
+
     {
       title: "Careers",
       slug: "/careers",
@@ -101,6 +102,10 @@ const Footer = () => {
     {
       title: "Products",
       slug: "/products",
+    },
+    {
+      title: "Refund Policy",
+      slug: "/refund-policy",
     },
   ];
 

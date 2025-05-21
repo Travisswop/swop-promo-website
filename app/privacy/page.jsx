@@ -10,7 +10,7 @@ const page = () => {
         <h1
           className={`text-stone-950 xs:text-3xl ms:text-4xl md:text-5xl font-bold text-center !leading-normal`}
         >
-          Privacy Policy
+          Swop Privacy Policy
         </h1>
       </ScrollMotionEffect>
       <PrivacyAndPolicy />
