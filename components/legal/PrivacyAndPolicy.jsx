@@ -80,7 +80,7 @@ const PrivacyAndPolicy = () => {
         <p className="py-2 text-md md:text-lg">
           We may update this policy to reflect evolving community norms or legal
           obligations. Material changes will be posted at
-          <Link href="https://swopme.co." className="hover:underline ps-3">
+          <Link href="https://swopme.co." className="underline px-2">
             https://swopme.co.
           </Link>
         </p>
@@ -90,7 +90,7 @@ const PrivacyAndPolicy = () => {
         <h1 className="font-bold  text-2xl lg:text-2xl">8. Contact</h1>
         <p className="py-2 text-md md:text-lg">
           For data questions or requests, contact:
-          <Link href="mailto:support@swopme.co" className="underline ps-3">
+          <Link href="mailto:support@swopme.co" className="underline px-2">
             support@swopme.co
           </Link>
         </p>

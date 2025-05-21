@@ -1,5 +1,4 @@
-import PrivacyAndPolicy from "@/components/legal/PrivacyAndPolicy";
-import TermsAndConditions from "@/components/legal/TermsAndConditions";
+import RefundPolicy from "@/components/legal/RefundPolicy";
 import ScrollMotionEffect from "@/components/motion/ScrollMotionEffect";
 import React from "react";
 
@@ -10,10 +9,10 @@ const page = () => {
         <h1
           className={`text-stone-950 xs:text-3xl ms:text-4xl md:text-5xl font-bold text-center !leading-normal`}
         >
-          refund-policy
+          Swop Refund Policy
         </h1>
       </ScrollMotionEffect>
-      <PrivacyAndPolicy />
+      <RefundPolicy />
     </div>
   );
 };
