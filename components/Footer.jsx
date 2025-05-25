@@ -35,11 +35,11 @@ const Footer = () => {
     },
     {
       title: "Explore",
-      slug: "https://www.swopme.app/sp/support.swop.id",
+      slug: "http://support.swop.id",
     },
     {
       title: "Whitepaper",
-      slug: "#",
+      slug: "https://swopple.gitbook.io/swopple",
     },
     // {
     //   title: "Learn",
@@ -86,7 +86,11 @@ const Footer = () => {
                 className="  flex items-center text-sm xl:text-[16px]"
                 key={index}
               >
-                <Link href={el.slug} className="hover:underline">
+                <Link
+                  href={el.slug}
+                  className="hover:underline"
+                  target="_blank"
+                >
                   {el.title}
                 </Link>
               </li>
@@ -100,7 +104,11 @@ const Footer = () => {
                 className="  flex items-center text-sm xl:text-[16px]"
                 key={index}
               >
-                <Link href={el.slug} className="hover:underline">
+                <Link
+                  href={el.slug}
+                  className="hover:underline"
+                  target="_blank"
+                >
                   {el.title}
                 </Link>
               </li>
@@ -114,7 +122,11 @@ const Footer = () => {
                 className="  flex items-center text-sm xl:text-[16px]"
                 key={index}
               >
-                <Link href={el.slug} className="hover:underline">
+                <Link
+                  href={el.slug}
+                  className="hover:underline"
+                  target="_blank"
+                >
                   {el.title}
                 </Link>
               </li>
