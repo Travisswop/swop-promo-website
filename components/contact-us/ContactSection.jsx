@@ -1,14 +1,10 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import SectionLayout from "../shared/SectionLayout";
 import { Button } from "@nextui-org/react";
-import { send } from "emailjs-com";
-import Swal from "sweetalert2";
 import Link from "next/link";
-import Image from "next/image";
+import React, { useState } from "react";
+import Swal from "sweetalert2";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
-
-import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import SectionLayout from "../shared/SectionLayout";
 
 const ContactSection = () => {
   const [emailForm, setEmailForm] = useState({
@@ -43,7 +39,12 @@ const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setLoading(true); // Start loading
+    setLoading(true);
+    Swal.fire({
+      icon: "success",
+      text: "Thank you for reaching out. Your information has been successfully submitted. Our team will respond to your inquiry shortly.",
+      confirmButtonColor: "#131b2a",
+    });
 
     // // Validate the form and set errors
     // const errors = validate(emailForm);
@@ -88,7 +89,7 @@ const ContactSection = () => {
     //       });
     //     });
     // } else {
-    //   setLoading(false); // Stop loading
+    setLoading(false); // Stop loading
     // }
   };
 

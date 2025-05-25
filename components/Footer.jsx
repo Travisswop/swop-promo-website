@@ -16,38 +16,38 @@ const Footer = () => {
   const product = [
     {
       title: "Download",
-      slug: "#",
+      slug: "https://apps.apple.com/us/app/swop-connecting-the-world/id1593201322",
     },
     {
       title: "Support",
-      slug: "#",
+      slug: "/support",
     },
-    {
-      title: "Security",
-      slug: "#",
-    },
+    // {
+    //   title: "Security",
+    //   slug: "#",
+    // },
   ];
 
   const resources = [
     {
       title: "About",
-      slug: "#",
+      slug: "/about",
     },
     {
       title: "Explore",
-      slug: "#",
+      slug: "https://www.swopme.app/sp/support.swop.id",
     },
     {
       title: "Whitepaper",
       slug: "#",
     },
-    {
-      title: "Learn",
-      slug: "#",
-    },
+    // {
+    //   title: "Learn",
+    //   slug: "#",
+    // },
     {
       title: "Blog",
-      slug: "#",
+      slug: "http://support.swop.id",
     },
   ];
 
@@ -67,7 +67,7 @@ const Footer = () => {
     },
     {
       title: "Products",
-      slug: "#",
+      slug: "http://support.swop.id",
     },
     {
       title: "Refund Policy",
