@@ -31,7 +31,7 @@ const Footer = () => {
   const resources = [
     {
       title: "About",
-      slug: "/about",
+      slug: "/company",
     },
     {
       title: "Explore",
@@ -81,56 +81,98 @@ const Footer = () => {
         <div className="container grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-16 justify-center  md:justify-between ">
           <ul className="flex-1 h-full text-black font-normal list-none  flex  flex-col gap-5 items-start  justify-start">
             <li className="font-semibold  text-gray-400">Product</li>
-            {product.map((el, index) => (
-              <li
-                className="  flex items-center text-sm xl:text-[16px]"
-                key={index}
+
+            <li className="  flex items-center text-sm xl:text-[16px]">
+              <Link
+                href={
+                  "https://apps.apple.com/us/app/swop-connecting-the-world/id1593201322"
+                }
+                className="hover:underline"
+                target="_blank"
               >
-                <Link
-                  href={el.slug}
-                  className="hover:underline"
-                  target="_blank"
-                >
-                  {el.title}
-                </Link>
-              </li>
-            ))}
+                Download
+              </Link>
+            </li>
+            <li className="  flex items-center text-sm xl:text-[16px]">
+              <Link href={"/support"} className="hover:underline">
+                Support
+              </Link>
+            </li>
           </ul>
 
           <ul className="flex-1 h-full text-black font-normal list-none flex flex-col gap-5  items-start  justify-start ">
             <li className="font-semibold  text-gray-400">Resources</li>
-            {resources.map((el, index) => (
-              <li
-                className="  flex items-center text-sm xl:text-[16px]"
-                key={index}
+
+            <li className="  flex items-center text-sm xl:text-[16px]">
+              <Link href={"/company"} className="hover:underline">
+                About
+              </Link>
+            </li>
+            <li className="  flex items-center text-sm xl:text-[16px]">
+              <Link
+                href={"http://support.swop.id"}
+                className="hover:underline"
+                target="_blank"
               >
-                <Link
-                  href={el.slug}
-                  className="hover:underline"
-                  target="_blank"
-                >
-                  {el.title}
-                </Link>
-              </li>
-            ))}
+                Explore
+              </Link>
+            </li>
+            <li className="  flex items-center text-sm xl:text-[16px]">
+              <Link
+                href={"https://swopple.gitbook.io/swopple"}
+                className="hover:underline"
+                target="_blank"
+              >
+                Whitepaper
+              </Link>
+            </li>
+            <li className="  flex items-center text-sm xl:text-[16px]">
+              <Link
+                href={"http://support.swop.id"}
+                className="hover:underline"
+                target="_blank"
+              >
+                Blog
+              </Link>
+            </li>
           </ul>
 
           <ul className="flex-1 h-full text-black font-normal list-none flex flex-col gap-5  items-start  justify-start ">
             <li className="font-semibold  text-gray-400">Company</li>
-            {company.map((el, index) => (
-              <li
-                className="  flex items-center text-sm xl:text-[16px]"
-                key={index}
+
+            <li className="  flex items-center text-sm xl:text-[16px]">
+              <Link href={"/terms"} className="hover:underline">
+                Terms
+              </Link>
+            </li>
+
+            <li className="  flex items-center text-sm xl:text-[16px]">
+              <Link href={"/privacy"} className="hover:underline">
+                Privacy
+              </Link>
+            </li>
+
+            <li className="  flex items-center text-sm xl:text-[16px]">
+              <Link href={"/careers"} className="hover:underline">
+                Careers
+              </Link>
+            </li>
+
+            <li className="  flex items-center text-sm xl:text-[16px]">
+              <Link
+                href={"http://support.swop.id"}
+                className="hover:underline"
+                target="_blank"
               >
-                <Link
-                  href={el.slug}
-                  className="hover:underline"
-                  target="_blank"
-                >
-                  {el.title}
-                </Link>
-              </li>
-            ))}
+                Products
+              </Link>
+            </li>
+
+            <li className=" flex items-center text-sm xl:text-[16px]">
+              <Link href={"/refund-policy"} className="hover:underline">
+                Refund Policy
+              </Link>
+            </li>
           </ul>
 
           <ul className="flex-1 h-full text-black font-normal list-none flex flex-col gap-5  items-start  justify-start ">
