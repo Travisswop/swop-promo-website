@@ -223,23 +223,23 @@
 // export default React.memo(MainNavbar);
 
 "use client";
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  NavbarMenuToggle,
   cn,
 } from "@nextui-org/react";
-import { LuUserRound } from "react-icons/lu";
-import { IoCall } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { IoCall } from "react-icons/io5";
+import { LuUserRound } from "react-icons/lu";
 
 const debounce = (func, wait) => {
   let timeout;
@@ -264,7 +264,7 @@ const MainNavbar = () => {
     debounce(() => {
       setNavbarColor(window.scrollY >= 100);
     }, 100),
-    [],
+    []
   );
 
   useEffect(() => {
@@ -313,7 +313,7 @@ const MainNavbar = () => {
             <div
               className={cn(
                 "hidden md:flex justify-between items-center gap-2 text-gray-300 bg-[#F6F6F6] rounded-full p-3 h-12 w-full",
-                pathname === "/" ? "bounce-nav" : "",
+                pathname === "/" ? "bounce-nav" : ""
               )}
             >
               <div className="hidden md:flex justify-between items-center gap-2 text-gray-400 bg-[#F6F6F6] rounded-full pl-3 h-12 -translate-x-5">
@@ -366,7 +366,7 @@ const MainNavbar = () => {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href={"https://desktop-app-psi.vercel.app/"} target="_blank">
+            <Link href={"https://www.swopme.app"} target="_blank">
               <div className="bg-[#F6F6F6] p-2  rounded-full">
                 <LuUserRound className="w-4 h-4 md:w-7 md:h-7 text-[#282828] hover:text-[#AF97D4]" />
               </div>
