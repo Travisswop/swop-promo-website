@@ -1,8 +1,6 @@
-import React from "react";
-import SectionLayout from "../shared/SectionLayout";
 import Image from "next/image";
+import React from "react";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
-import Link from "next/link";
 
 const linkInfo = [
   // {
@@ -146,12 +144,12 @@ const linkInfo = [
     title: "Frontend Developer",
     profieLink: "https://swopme.app/sp/ar",
   },
-  {
-    img: "/assets/company/Nurul Islam.png",
-    name: "Nurul Islam ",
-    title: "Frontend Developer",
-    profieLink: "https://swopme.app/sp/raihanqyf1",
-  },
+  // {
+  //   img: "/assets/company/Nurul Islam.png",
+  //   name: "Nurul Islam ",
+  //   title: "Frontend Developer",
+  //   profieLink: "https://swopme.app/sp/raihanqyf1",
+  // },
 
   {
     img: "/assets/company/Fuad Hasan.png",
@@ -196,13 +194,13 @@ const FoundersSection = () => {
                 {el.name}
               </h2>
               <p className="text-center text-md text-stone-950">{el.title}</p>
-              <Link
+              {/* <Link
                 href={el.profieLink}
                 target="_blank"
                 className="flex justify-center text-md  text-stone-950"
               >
                 {el.profieLink.slice(8)}
-              </Link>
+              </Link> */}
             </div>
           </ScrollMotionEffect>
         ))}
