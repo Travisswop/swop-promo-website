@@ -5,12 +5,16 @@ import { InlineWidget } from "react-calendly";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
 
 const EventsSections = () => {
+  const calendlyUrl =
+    process.env.NEXT_PUBLIC_CALENDLY_EVENT_URL ||
+    "https://calendly.com/kaitlin-age/introductory-call";
+
   return (
     <div className="">
       <ScrollMotionEffect effect="fade-up" duration="2000">
         <div className=" md:hidden">
           <InlineWidget
-            url="https://calendly.com/kaitlin-age/introductory-call"
+            url={calendlyUrl}
             styles={{
               height: "800px",
             }}
@@ -25,7 +29,7 @@ const EventsSections = () => {
         </div>
         <div className="hidden md:block">
           <InlineWidget
-            url="https://calendly.com/kaitlin-age/introductory-call"
+            url={calendlyUrl}
             styles={{
               height: "930px",
             }}
