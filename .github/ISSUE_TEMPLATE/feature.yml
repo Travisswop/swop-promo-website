@@ -1,0 +1,58 @@
+name: Feature Request
+description: Plan a feature with agent ownership and handoff
+title: "[Feature] "
+labels: ["feature"]
+body:
+- type: input
+id: goal
+attributes:
+label: Business goal
+placeholder: What outcome are we trying to achieve?
+validations:
+required: true
+
+- type: textarea
+id: acceptance
+attributes:
+label: Acceptance criteria
+placeholder: |
+- [ ] Criterion 1
+- [ ] Criterion 2
+validations:
+required: true
+
+- type: dropdown
+id: owner
+attributes:
+label: Owner agent
+options:
+- coordinator-agent
+- backend-agent
+- api-test-agent
+- frontend-agent
+- qa-agent
+- devops-agent
+validations:
+required: true
+
+- type: dropdown
+id: handoff
+attributes:
+label: Next handoff target
+options:
+- backend-agent
+- api-test-agent
+- frontend-agent
+- qa-agent
+- coordinator-agent
+- devops-agent
+validations:
+required: true
+
+- type: checkboxes
+id: gate
+attributes:
+label: Approval gate
+options:
+- label: Merge requires explicit approval from Father
+required: true
